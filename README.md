@@ -60,11 +60,32 @@ Entfernen mit `bash webapp/url-handler/uninstall.sh`.
 Die Tokens werden lokal in `webapp/tokens.json` abgelegt. Diese Datei steht in
 `.gitignore` und darf nicht geteilt werden.
 
+## Weitere Funktionen
+
+- Zu jedem Endpunkt lässt sich der Aufruf als curl-Befehl kopieren.
+- Antwort- und Body-Modelle werden aus der Doku eingeblendet.
+- Schreibende Endpunkte sind markiert und fragen vor dem Senden nach.
+- Der Proxy wiederholt bei einem Sprach-Längenfehler automatisch mit zweistelligem Accept-Language.
+- Die React-Native-Pfade erscheinen als eigener, nur lesender Abschnitt.
+- Eine Postman-Collection liegt unter `webapp/postman_collection.json` und ist in der App verlinkt.
+
+## Abhängigkeiten
+
+Der Server selbst braucht nur Python 3 und die Standardbibliothek. Optional,
+siehe `requirements.txt`: `requests` für das CLI-Werkzeug, `brotlicffi` und
+`zstandard` für das Entpacken brotli- und zstd-komprimierter Antworten.
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Dateien
 
 - `webapp/server.py` lokaler Server und Proxy, nur Standardbibliothek
 - `webapp/index.html` die Oberfläche
-- `webapp/endpoints.json` die Endpunkt-Daten
+- `webapp/endpoints.json` die Endpunkt-Daten, Modelle und RN-Pfade
+- `webapp/postman_collection.json` importierbare Postman-Collection
 - `webapp/url-handler/` optionaler Handler für das App-Schema
 - `lidl_auth.py` dasselbe als Kommandozeilen-Werkzeug
 - `LIDL_PLUS_API.md` und `lidl_plus_api.json` die rekonstruierte API-Doku
+- `test_basic.py` kleiner Selbsttest

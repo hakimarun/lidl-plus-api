@@ -109,6 +109,7 @@ dialog::backdrop{background:rgba(0,0,0,.28)}
   <button class="btn" id="btnAuth">Anmelden</button>
   <button class="btn small" id="btnRefresh" style="display:none">Token erneuern</button>
   <button class="btn small" id="btnLogout" style="display:none">Abmelden</button>
+  <a class="btn small" href="/postman_collection.json" download>Postman</a>
 </header>
 
 <div class="layout">
@@ -178,11 +179,22 @@ let DATA=null
 
 async function j(url,opts){const r=await fetch(url,opts);return r.json()}
 
+let _refreshing=false
 async function refreshStatus(){
   const s=await j("/api/auth/status")
   const on=s.authenticated
   $("#authDot").classList.toggle("on",on)
   let txt=on?("angemeldet "+(s.country||"")):"nicht angemeldet"
+  if(on&&s.expires_at){
+    const rem=Math.floor(s.expires_at-Date.now()/1000)
+    if(rem>0)txt+=", Token "+(rem>=60?Math.floor(rem/60)+" min":rem+" s")
+    else txt+=", Token abgelaufen"
+    // kurz vor Ablauf automatisch erneuern
+    if(rem<120&&!_refreshing){
+      _refreshing=true
+      try{await j("/api/auth/refresh",{method:"POST"})}finally{_refreshing=false}
+    }
+  }
   const lc=s.last_catch
   if(!on&&lc&&(Date.now()/1000-lc.at)<15)txt="Weiterleitung empfangen: "+lc.msg
   $("#authText").textContent=txt
@@ -193,6 +205,13 @@ async function refreshStatus(){
 
 // ---- Datenquellen fuer Dropdowns (Vorschlagslisten)
 const _opt={}
+// localStorage-Cache mit Verfallszeit, alles in try/catch
+function lsGet(k,maxAgeMs){
+  try{const o=JSON.parse(localStorage.getItem("lp:"+k)||"null")
+    if(o&&(Date.now()-o.t)<maxAgeMs)return o.v}catch(e){}
+  return null
+}
+function lsSet(k,v){try{localStorage.setItem("lp:"+k,JSON.stringify({t:Date.now(),v}))}catch(e){}}
 async function proxyGet(url,auth){
   const cc=DATA.authCountry||"DE", lang=(DATA.authLang||"de")
   const r=await j("/api/proxy",{method:"POST",headers:{"Content-Type":"application/json"},
@@ -201,9 +220,12 @@ async function proxyGet(url,auth){
 }
 async function loadCountries(){
   if(_opt.countries)return _opt.countries
+  const cached=lsGet("countries",7*864e5)
+  if(cached){_opt.countries=cached;return cached}
   const a=await proxyGet("https://appgateway.lidlplus.com/configurationapp/v3/countries",false)
   _opt.countries=(Array.isArray(a)?a:[]).map(c=>({value:c.id,label:(c.id+" "+(c.defaultName||"")).trim(),
     languages:(c.languages||[]).map(l=>l.id)}))
+  if(_opt.countries.length)lsSet("countries",_opt.countries)
   return _opt.countries
 }
 async function loadLanguages(country){
@@ -216,9 +238,12 @@ async function loadLanguages(country){
 }
 async function loadStores(country){
   const k="st:"+country; if(_opt[k])return _opt[k]
+  const cached=lsGet(k,864e5)
+  if(cached){_opt[k]=cached;return cached}
   const a=await proxyGet("https://stores.lidlplus.com/api/v4/"+country,true)
   _opt[k]=(Array.isArray(a)?a:[]).map(s=>({value:s.storeKey,
     label:((s.name||"")+" "+(s.locality||"")).trim()||s.storeKey}))
+  if(_opt[k].length)lsSet(k,_opt[k])
   return _opt[k]
 }
 async function loadTickets(country){
@@ -317,13 +342,32 @@ function fullUrl(ep,vals){
 function renderEp(ep){
   const body=el("div",{class:"body"})
   const wrap=el("div",{class:"ep"})
+  const write=ep.verb!=="GET"&&ep.verb!=="HEAD"
   const top=el("div",{class:"top"},
     el("span",{class:"verb "+ep.verb},ep.verb),
     el("span",{class:"path mono"},ep.path||"(dynamische URL)"),
-    el("span",{class:"d"},ep.desc))
+    write?el("span",{style:"color:#b91c1c;font-size:11px;flex:0 0 auto;margin-left:auto"},"schreibend"):el("span",{class:"d"},ep.desc))
   top.onclick=()=>{body.classList.toggle("open");if(!body.dataset.built){buildBody(ep,body);body.dataset.built="1"}}
   wrap.append(top,body)
   return wrap
+}
+
+function modelBox(title,name){
+  const m=name&&DATA.models&&DATA.models[name]
+  if(!m)return null
+  const d=el("details",{style:"margin:8px 0"})
+  d.append(el("summary",{style:"cursor:pointer;font-size:12px;color:var(--muted)"},title+": "+name))
+  if(m.enum){
+    d.append(el("div",{class:"k",style:"margin:8px 0"},"Enum: "+m.enum.join(", ")))
+  }else if(m.fields&&m.fields.length){
+    const t=el("table",{class:"params",style:"margin:8px 0"})
+    t.append(el("tr",{},el("th",{},"Feld"),el("th",{},"Typ")))
+    for(const [n,ty] of m.fields)t.append(el("tr",{},el("td",{class:"mono"},n),el("td",{class:"k mono"},ty)))
+    d.append(t)
+  }else{
+    d.append(el("div",{class:"k",style:"margin:8px 0"},"keine Felder bekannt"))
+  }
+  return d
 }
 
 function buildBody(ep,body){
@@ -334,6 +378,11 @@ function buildBody(ep,body){
   body.append(meta)
   for(const h of ep.headers)body.append(el("span",{class:"pill"},"Header "+h))
   for(const f of ep.flags)body.append(el("span",{class:"pill"},f))
+  if(ep.verb!=="GET"&&ep.verb!=="HEAD")
+    body.append(el("div",{class:"warn",style:"margin:10px 0"},
+      "Dieser Endpunkt veraendert Daten. Senden fragt noch einmal nach."))
+  const mb=modelBox("Antwort-Modell",ep.respModel); if(mb)body.append(mb)
+  const bb=modelBox("Body-Modell",ep.bodyModel); if(bb)body.append(bb)
 
   const vals={}
   const inputs=ep.params.filter(p=>["Path","Query","Header"].includes(p.kind))
@@ -376,7 +425,10 @@ function buildBody(ep,body){
         inp=el("input",{class:"mono"})
         cell=inp
       }
-      inp.oninput=()=>{vals[key]=inp.value;upd()}
+      const saveKey="v:"+ep.module+":"+ep.path+":"+key
+      const saved=lsGet(saveKey,30*864e5)
+      if(saved){inp.value=saved;vals[key]=saved}
+      inp.oninput=()=>{vals[key]=inp.value;lsSet(saveKey,inp.value);upd()}
       tbl.append(el("tr",{},el("td",{class:"k"},p.kind),el("td",{class:"mono"},p.name||"-"),
         el("td",{class:"k mono"},p.type),el("td",{},cell)))
     }
@@ -394,8 +446,10 @@ function buildBody(ep,body){
   const urlBox=el("div",{class:"urlbox"})
   const sendBtn=el("button",{class:"btn solid small"},"Senden")
   const noAuthBtn=el("button",{class:"btn small"},"Ohne Token")
+  const curlBtn=el("button",{class:"btn small"},"Als curl kopieren")
   const row=el("div",{class:"row"},urlBox,sendBtn)
   if(ep.verb==="GET")row.append(noAuthBtn)
+  row.append(curlBtn)
   body.append(row)
 
   const resp=el("div",{class:"resp"})
@@ -404,7 +458,33 @@ function buildBody(ep,body){
   function upd(){urlBox.textContent=fullUrl(ep,vals)}
   upd()
 
+  function collectHeaders(withAuth){
+    const h={"App":"com.lidl.eci.lidlplus","App-Version":DATA.app_version||"",
+             "Operating-System":"Android","Accept-Language":(DATA.authLang||"de")+"-"+(curCountry())}
+    if(withAuth)h["Authorization"]="Bearer <TOKEN>"
+    for(const p of ep.params)if(p.kind==="Header"){const v=vals["H:"+p.name];if(v)h[p.name]=v}
+    return h
+  }
+  function bodyText(){return bodyTa&&bodyTa.value.trim()?bodyTa.value.trim():null}
+
+  function toCurl(){
+    const h=collectHeaders(ep.verb!=="GET"||true)
+    let c="curl -X "+ep.verb+" '"+fullUrl(ep,vals)+"'"
+    for(const k in h)c+=" \\\n  -H '"+k+": "+h[k]+"'"
+    const b=bodyText(); if(b)c+=" \\\n  --data '"+b.replace(/'/g,"'\\''")+"'"
+    return c
+  }
+  curlBtn.onclick=async()=>{
+    const t=toCurl()
+    try{await navigator.clipboard.writeText(t);curlBtn.textContent="kopiert"}
+    catch(e){curlBtn.textContent="siehe unten";resp.classList.add("show");resp.innerHTML="";resp.append(el("pre",{class:"mono"},t))}
+    setTimeout(()=>curlBtn.textContent="Als curl kopieren",1500)
+  }
+
   async function send(withAuth){
+    if(ep.verb!=="GET"&&ep.verb!=="HEAD"){
+      if(!confirm(ep.verb+" "+fullUrl(ep,vals)+"\n\nVeraendert echte Daten in deinem Konto. Wirklich senden?"))return
+    }
     let parsedBody=undefined
     if(bodyTa&&bodyTa.value.trim()){
       try{parsedBody=JSON.parse(bodyTa.value)}catch(e){alert("Body ist kein gültiges JSON");return}
@@ -420,7 +500,8 @@ function buildBody(ep,body){
     resp.append(el("div",{class:"st"},
       el("span",{class:"code "+(ok?"ok":"err")},"HTTP "+r.status),
       el("span",{class:"note"},r.ms+" ms"),
-      el("span",{class:"note mono"},r.content_type||"")))
+      el("span",{class:"note mono"},r.content_type||""),
+      r.retried_short_lang?el("span",{class:"note"},"Accept-Language auf 2 Zeichen korrigiert"):""))
     const out=r.json!==null?JSON.stringify(r.json,null,2):(r.text||"")
     resp.append(el("pre",{class:"mono"},out||"(leer)"))
   }
@@ -448,7 +529,20 @@ function render(){
     for(const ep of byMod[m.name])sec.append(renderEp(ep))
     list.append(sec)
   }
-  if(!mods.length)list.append(el("div",{class:"note"},"Keine Treffer"))
+  // React-Native-Endpunkte, nur lesend (HTTP-Methoden aus dem Bundle nicht bestimmbar)
+  const rn=(DATA.rn||[]).map(s=>({...s,paths:s.paths.filter(p=>!f||p.toLowerCase().includes(f)||s.group.toLowerCase().includes(f))})).filter(s=>s.paths.length)
+  if(rn.length){
+    nav.append(el("a",{href:"#rn"},el("span",{},"React Native"),el("span",{class:"n"},String(rn.reduce((a,s)=>a+s.paths.length,0)))))
+    const sec=el("div",{class:"mod",id:"rn"})
+    sec.append(el("h2",{},"React Native, nur Doku"))
+    sec.append(el("div",{class:"mdesc"},"Aus dem Hermes-Bundle. HTTP-Methoden nicht sicher ableitbar, daher nicht ausprobierbar."))
+    for(const s of rn){
+      sec.append(el("div",{class:"base mono",style:"margin-top:12px"},s.group+(s.host?"  "+s.host:"")))
+      for(const p of s.paths)sec.append(el("div",{class:"mono",style:"font-size:12px;padding:3px 0;color:var(--muted)"},p))
+    }
+    list.append(sec)
+  }
+  if(!mods.length&&!rn.length)list.append(el("div",{class:"note"},"Keine Treffer"))
 }
 
 // auth dialog

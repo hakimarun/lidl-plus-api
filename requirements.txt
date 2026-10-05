@@ -1,0 +1,10 @@
+# Der lokale Server webapp/server.py braucht nur die Standardbibliothek.
+# Diese Pakete sind optional und nur fuer einzelne Faelle noetig:
+
+# Kommandozeilen-Werkzeug lidl_auth.py
+requests
+
+# Entpacken komprimierter Antworten im Proxy (brotli und zstd).
+# Fehlen sie, bleiben nur solche Antworten unlesbar, der Rest laeuft.
+brotlicffi
+zstandard

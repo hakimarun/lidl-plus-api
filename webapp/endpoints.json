@@ -337,7 +337,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 alerts pending"
+   "desc": "Senden v1 alerts pending",
+   "respModel": null,
+   "bodyModel": "PendingAlertsRequestModel"
   },
   {
    "module": "alerts",
@@ -367,7 +369,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DeleteAllAlertsModel>",
-   "desc": "Löschen v2"
+   "desc": "Löschen v2",
+   "respModel": "DeleteAllAlertsModel"
   },
   {
    "module": "alerts",
@@ -402,7 +405,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<AlertModel>>",
-   "desc": "Abruf v2"
+   "desc": "Abruf v2",
+   "respModel": "AlertModel"
   },
   {
    "module": "alerts",
@@ -437,7 +441,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<UnreadAlertModel>",
-   "desc": "Abruf v2 alerts unread"
+   "desc": "Abruf v2 alerts unread",
+   "respModel": "UnreadAlertModel"
   },
   {
    "module": "alerts",
@@ -472,7 +477,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DeleteAlertModel>",
-   "desc": "Löschen v2 alerts"
+   "desc": "Löschen v2 alerts",
+   "respModel": "DeleteAlertModel"
   },
   {
    "module": "alerts",
@@ -507,7 +513,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ReadAlertModel>",
-   "desc": "Senden v3 alerts read"
+   "desc": "Senden v3 alerts read",
+   "respModel": "ReadAlertModel"
   },
   {
    "module": "announcements",
@@ -532,7 +539,9 @@
    "headers": [],
    "flags": [],
    "returns": "Unit",
-   "desc": "Senden v1 viewed"
+   "desc": "Senden v1 viewed",
+   "respModel": null,
+   "bodyModel": "AnnouncementViewedRequest"
   },
   {
    "module": "announcements",
@@ -577,7 +586,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<AnnouncementModel>>",
-   "desc": "Abruf v2"
+   "desc": "Abruf v2",
+   "respModel": "AnnouncementModel"
   },
   {
    "module": "app-update",
@@ -632,7 +642,8 @@
    "headers": [],
    "flags": [],
    "returns": "uk3<Response>",
-   "desc": "Abruf v1 init"
+   "desc": "Abruf v1 init",
+   "respModel": "Response"
   },
   {
    "module": "authentication-web",
@@ -659,7 +670,8 @@
     "form-urlencoded"
    ],
    "returns": "i1p<yij>",
-   "desc": "Senden connect nonce"
+   "desc": "Senden connect nonce",
+   "respModel": null
   },
   {
    "module": "benefits",
@@ -684,7 +696,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<StampCardBenefitsModel>",
-   "desc": "Abruf v3 user promotions"
+   "desc": "Abruf v3 user promotions",
+   "respModel": "StampCardBenefitsModel"
   },
   {
    "module": "benefits",
@@ -714,7 +727,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern promotions cards viewed"
+   "desc": "Aendern promotions cards viewed",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "benefits",
@@ -739,7 +754,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<CongratulationsModel>",
-   "desc": "Abruf user promotions congrats"
+   "desc": "Abruf user promotions congrats",
+   "respModel": "CongratulationsModel"
   },
   {
    "module": "benefits",
@@ -764,7 +780,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DetailModel>",
-   "desc": "Abruf user promotions detail"
+   "desc": "Abruf user promotions detail",
+   "respModel": "DetailModel"
   },
   {
    "module": "benefits",
@@ -789,7 +806,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern user promotions started"
+   "desc": "Aendern user promotions started",
+   "respModel": null
   },
   {
    "module": "branddeals-ads",
@@ -824,7 +842,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 ad clicks"
+   "desc": "Senden v2 ad clicks",
+   "respModel": null,
+   "bodyModel": "DispatchEventBody"
   },
   {
    "module": "branddeals-ads",
@@ -859,7 +879,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v3 ad impressions"
+   "desc": "Senden v3 ad impressions",
+   "respModel": null,
+   "bodyModel": "DispatchEventBody"
   },
   {
    "module": "branddeals-ads",
@@ -894,7 +916,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v3 ad views"
+   "desc": "Senden v3 ad views",
+   "respModel": null,
+   "bodyModel": "DispatchEventBody"
   },
   {
    "module": "branddeals-ads",
@@ -924,7 +948,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<BrandDealsSessionResponse>",
-   "desc": "Abruf v3 ads"
+   "desc": "Abruf v3 ads",
+   "respModel": "BrandDealsSessionResponse"
   },
   {
    "module": "branddeals-ads",
@@ -964,7 +989,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<CouponCard>",
-   "desc": "Senden v3 ads claim"
+   "desc": "Senden v3 ads claim",
+   "respModel": "CouponCard",
+   "bodyModel": "ClaimEventBody"
   },
   {
    "module": "brochures",
@@ -989,7 +1016,8 @@
    "headers": [],
    "flags": [],
    "returns": "List<FlyerCategory>",
-   "desc": "Abruf api v2 Brochures"
+   "desc": "Abruf api v2 Brochures",
+   "respModel": "FlyerCategory"
   },
   {
    "module": "clickandpick",
@@ -1014,7 +1042,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ClickandpickOrderResponseModel>",
-   "desc": "Abruf v1 clickandpick order"
+   "desc": "Abruf v1 clickandpick order",
+   "respModel": "ClickandpickOrderResponseModel"
   },
   {
    "module": "clickandpick",
@@ -1039,7 +1068,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen v1 clickandpick order"
+   "desc": "Löschen v1 clickandpick order",
+   "respModel": null
   },
   {
    "module": "clickandpick",
@@ -1064,7 +1094,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern v1 clickandpick order"
+   "desc": "Aendern v1 clickandpick order",
+   "respModel": null
   },
   {
    "module": "clickandpick",
@@ -1094,7 +1125,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ClickandpickCartCartResponseModel>",
-   "desc": "Abruf clickandpick stores cart"
+   "desc": "Abruf clickandpick stores cart",
+   "respModel": "ClickandpickCartCartResponseModel"
   },
   {
    "module": "clickandpick",
@@ -1129,7 +1161,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden stores cart checkout"
+   "desc": "Senden stores cart checkout",
+   "respModel": null,
+   "bodyModel": "ClickandpickCartCheckoutRequestModel"
   },
   {
    "module": "clickandpick",
@@ -1169,7 +1203,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ClickandpickCartCartResponseModel>",
-   "desc": "Aendern stores cart product"
+   "desc": "Aendern stores cart product",
+   "respModel": "ClickandpickCartCartResponseModel",
+   "bodyModel": "ClickandpickCartAddProductRequestModel"
   },
   {
    "module": "clickandpick",
@@ -1209,7 +1245,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ClickandpickCartAddProductResponseModel>",
-   "desc": "Senden stores cart product"
+   "desc": "Senden stores cart product",
+   "respModel": "ClickandpickCartAddProductResponseModel",
+   "bodyModel": "ClickandpickCartAddProductRequestModel"
   },
   {
    "module": "clickandpick",
@@ -1239,7 +1277,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ClickandpickListResponseModel>",
-   "desc": "Abruf clickandpick stores products"
+   "desc": "Abruf clickandpick stores products",
+   "respModel": "ClickandpickListResponseModel"
   },
   {
    "module": "clickandpick",
@@ -1274,7 +1313,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ClickandpickProductModel>",
-   "desc": "Abruf clickandpick stores products"
+   "desc": "Abruf clickandpick stores products",
+   "respModel": "ClickandpickProductModel"
   },
   {
    "module": "clickandpick",
@@ -1299,7 +1339,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ClickandpickCampaignResponseModel>",
-   "desc": "Abruf stores campaign status"
+   "desc": "Abruf stores campaign status",
+   "respModel": "ClickandpickCampaignResponseModel"
   },
   {
    "module": "collectionmodel",
@@ -1329,7 +1370,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen api v1 favorite"
+   "desc": "Löschen api v1 favorite",
+   "respModel": null
   },
   {
    "module": "collectionmodel",
@@ -1359,7 +1401,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren api v1 favorite"
+   "desc": "Aktualisieren api v1 favorite",
+   "respModel": null
   },
   {
    "module": "collectionmodel",
@@ -1389,7 +1432,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<OnBoardingDTO>",
-   "desc": "Abruf api v1 onboarding"
+   "desc": "Abruf api v1 onboarding",
+   "respModel": "OnBoardingDTO"
   },
   {
    "module": "collectionmodel",
@@ -1419,7 +1463,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<OnboardingCompletedDTO>",
-   "desc": "Senden api v1 onboarding"
+   "desc": "Senden api v1 onboarding",
+   "respModel": "OnboardingCompletedDTO"
   },
   {
    "module": "collectionmodel",
@@ -1444,7 +1489,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 userReward undo"
+   "desc": "Senden v1 userReward undo",
+   "respModel": null,
+   "bodyModel": "UndoRewardBody"
   },
   {
    "module": "collectionmodel",
@@ -1474,7 +1521,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<UndoRewardDataDTO>",
-   "desc": "Abruf v1 userReward undo"
+   "desc": "Abruf v1 userReward undo",
+   "respModel": "UndoRewardDataDTO"
   },
   {
    "module": "collectionmodel",
@@ -1499,7 +1547,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<UserPoints>",
-   "desc": "Abruf api v1 userpoints"
+   "desc": "Abruf api v1 userpoints",
+   "respModel": "UserPoints"
   },
   {
    "module": "collectionmodel",
@@ -1579,7 +1628,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<MarketPlaceDTO>",
-   "desc": "Abruf v10 marketplace all"
+   "desc": "Abruf v10 marketplace all",
+   "respModel": "MarketPlaceDTO"
   },
   {
    "module": "collectionmodel",
@@ -1619,7 +1669,8 @@
    "headers": [],
    "flags": [],
    "returns": "Unit",
-   "desc": "Senden api v2 exchange"
+   "desc": "Senden api v2 exchange",
+   "respModel": null
   },
   {
    "module": "collectionmodel",
@@ -1654,7 +1705,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<CampaignDetailDTO>",
-   "desc": "Abruf v2 freepoints campaign"
+   "desc": "Abruf v2 freepoints campaign",
+   "respModel": "CampaignDetailDTO"
   },
   {
    "module": "collectionmodel",
@@ -1679,7 +1731,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<SummaryDTO>",
-   "desc": "Abruf api v2 summary"
+   "desc": "Abruf api v2 summary",
+   "respModel": "SummaryDTO"
   },
   {
    "module": "collectionmodel",
@@ -1714,7 +1767,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<FreePointsDTO>",
-   "desc": "Abruf v3 freepoints all"
+   "desc": "Abruf v3 freepoints all",
+   "respModel": "FreePointsDTO"
   },
   {
    "module": "collectionmodel",
@@ -1759,7 +1813,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<RewardDetailDTO>",
-   "desc": "Abruf v7 marketplace id"
+   "desc": "Abruf v7 marketplace id",
+   "respModel": "RewardDetailDTO"
   },
   {
    "module": "commons-configuration",
@@ -1779,7 +1834,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<LidlPlusConfigurationAppApiFeaturesGetCountriesV3ModelsCountryResponse>>",
-   "desc": "Abruf v3 countries"
+   "desc": "Abruf v3 countries",
+   "respModel": "LidlPlusConfigurationAppApiFeaturesGetCountriesV3ModelsCountryResponse"
   },
   {
    "module": "commons-configuration",
@@ -1819,7 +1875,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<LidlPlusConfigurationAppApiFeaturesGetCountryConfigurationByStoreV3CountryConfigurationModel>",
-   "desc": "Abruf v3 countryconfigurations"
+   "desc": "Abruf v3 countryconfigurations",
+   "respModel": "LidlPlusConfigurationAppApiFeaturesGetCountryConfigurationByStoreV3CountryConfigurationModel"
   },
   {
    "module": "commons-literalsprovider",
@@ -1854,7 +1911,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<LocalizationResponse>",
-   "desc": "Abruf v1 resources"
+   "desc": "Abruf v1 resources",
+   "respModel": "LocalizationResponse"
   },
   {
    "module": "commons-user",
@@ -1874,7 +1932,8 @@
    "headers": [],
    "flags": [],
    "returns": "List<String>",
-   "desc": "Abruf api v1 usersegments"
+   "desc": "Abruf api v1 usersegments",
+   "respModel": null
   },
   {
    "module": "commons-user-model",
@@ -1894,7 +1953,8 @@
    "headers": [],
    "flags": [],
    "returns": "Map<String, wpf>",
-   "desc": "Abruf api v1 usermodel"
+   "desc": "Abruf api v1 usermodel",
+   "respModel": null
   },
   {
    "module": "consent",
@@ -1924,7 +1984,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v4 evidence storeevidence"
+   "desc": "Senden v4 evidence storeevidence",
+   "respModel": null,
+   "bodyModel": "ConsentBodyRequest"
   },
   {
    "module": "contentpartners",
@@ -1944,7 +2006,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<wh2>",
-   "desc": "Abruf v1 billinginfo"
+   "desc": "Abruf v1 billinginfo",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -1974,7 +2037,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<zvl>",
-   "desc": "Senden v1 checkout"
+   "desc": "Senden v1 checkout",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -1999,7 +2064,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 events track"
+   "desc": "Senden v1 events track",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2024,7 +2091,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<yzh>",
-   "desc": "Abruf v1 marketplace"
+   "desc": "Abruf v1 marketplace",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -2044,7 +2112,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<q2l>>",
-   "desc": "Abruf v1 partners"
+   "desc": "Abruf v1 partners",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -2064,7 +2133,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<j2l>>",
-   "desc": "Abruf v1 partners minified"
+   "desc": "Abruf v1 partners minified",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -2094,7 +2164,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren paymentConfiguration plans paymentMethod"
+   "desc": "Aktualisieren paymentConfiguration plans paymentMethod",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2114,7 +2186,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<oul>",
-   "desc": "Abruf v1 planManager"
+   "desc": "Abruf v1 planManager",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -2139,7 +2212,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern v1 planManager gamification"
+   "desc": "Aendern v1 planManager gamification",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2164,7 +2239,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ksl>",
-   "desc": "Abruf v1 plans"
+   "desc": "Abruf v1 plans",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -2189,7 +2265,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren v1 plans cancel"
+   "desc": "Aktualisieren v1 plans cancel",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -2219,7 +2296,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<o24>",
-   "desc": "Aktualisieren v1 plans cancelform"
+   "desc": "Aktualisieren v1 plans cancelform",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2249,7 +2328,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<x86>",
-   "desc": "Senden v1 plans connect"
+   "desc": "Senden v1 plans connect",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2274,7 +2355,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<uwl>",
-   "desc": "Abruf v1 plans update-info"
+   "desc": "Abruf v1 plans update-info",
+   "respModel": null
   },
   {
    "module": "contentpartners",
@@ -2299,7 +2381,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<a15>",
-   "desc": "Senden v3 checkout"
+   "desc": "Senden v3 checkout",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2329,7 +2413,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<dkv>",
-   "desc": "Senden v3 transactions creation"
+   "desc": "Senden v3 transactions creation",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2361,7 +2447,9 @@
    ],
    "flags": [],
    "returns": "i1p<dkv>",
-   "desc": "Senden v3 transactions update"
+   "desc": "Senden v3 transactions update",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "contentpartners",
@@ -2386,7 +2474,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<pjv>",
-   "desc": "Senden v4 transactions confirmation"
+   "desc": "Senden v4 transactions confirmation",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "coupid",
@@ -2421,7 +2511,8 @@
    "headers": [],
    "flags": [],
    "returns": "o1p",
-   "desc": "Abruf v1 game status"
+   "desc": "Abruf v1 game status",
+   "respModel": null
   },
   {
    "module": "couponplus",
@@ -2446,7 +2537,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<CouponPlusApiModel>",
-   "desc": "Abruf v4 user promotions"
+   "desc": "Abruf v4 user promotions",
+   "respModel": "CouponPlusApiModel"
   },
   {
    "module": "couponplus",
@@ -2471,7 +2563,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern promotions goals view"
+   "desc": "Aendern promotions goals view",
+   "respModel": null
   },
   {
    "module": "couponplus",
@@ -2501,7 +2594,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern user promotions start"
+   "desc": "Aendern user promotions start",
+   "respModel": null
   },
   {
    "module": "coupons",
@@ -2521,7 +2615,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 users activity"
+   "desc": "Senden v1 users activity",
+   "respModel": null
   },
   {
    "module": "coupons",
@@ -2551,7 +2646,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ActivePromotionsCount>",
-   "desc": "Abruf v1 promotionscount"
+   "desc": "Abruf v1 promotionscount",
+   "respModel": "ActivePromotionsCount"
   },
   {
    "module": "coupons",
@@ -2576,7 +2672,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 promotionviewevents"
+   "desc": "Senden v1 promotionviewevents",
+   "respModel": null,
+   "bodyModel": "PromotionEventModel"
   },
   {
    "module": "coupons",
@@ -2606,7 +2704,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<PromotionTitleModel>>",
-   "desc": "Abruf v2 promotions titles"
+   "desc": "Abruf v2 promotions titles",
+   "respModel": "PromotionTitleModel"
   },
   {
    "module": "coupons",
@@ -2641,7 +2740,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen v2 promotions activation"
+   "desc": "Löschen v2 promotions activation",
+   "respModel": null
   },
   {
    "module": "coupons",
@@ -2686,7 +2786,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 promotions activation"
+   "desc": "Senden v2 promotions activation",
+   "respModel": null,
+   "bodyModel": "ArticleSelection"
   },
   {
    "module": "coupons",
@@ -2726,7 +2828,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern v4 overrides discount"
+   "desc": "Aendern v4 overrides discount",
+   "respModel": null,
+   "bodyModel": "ArticleSelection"
   },
   {
    "module": "coupons",
@@ -2761,7 +2865,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<PromotionCardModel>>",
-   "desc": "Abruf v4 promotions cards"
+   "desc": "Abruf v4 promotions cards",
+   "respModel": "PromotionCardModel"
   },
   {
    "module": "coupons",
@@ -2806,7 +2911,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PromotionsByArticleResponseModel>",
-   "desc": "Abruf v4 promotionsbyarticle"
+   "desc": "Abruf v4 promotionsbyarticle",
+   "respModel": "PromotionsByArticleResponseModel"
   },
   {
    "module": "coupons",
@@ -2846,7 +2952,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PromotionsByArticleResponseModel>",
-   "desc": "Abruf v4 promotionsbyarticle anonymous"
+   "desc": "Abruf v4 promotionsbyarticle anonymous",
+   "respModel": "PromotionsByArticleResponseModel"
   },
   {
    "module": "coupons",
@@ -2886,7 +2993,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PromotionDetailModel>",
-   "desc": "Abruf v4 promotionsdetails"
+   "desc": "Abruf v4 promotionsdetails",
+   "respModel": "PromotionDetailModel"
   },
   {
    "module": "coupons",
@@ -2936,7 +3044,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PromotionListModel>",
-   "desc": "Abruf v4 promotionslist"
+   "desc": "Abruf v4 promotionslist",
+   "respModel": "PromotionListModel"
   },
   {
    "module": "coupons",
@@ -2976,7 +3085,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PromotionListModel>",
-   "desc": "Abruf v4 promotionslist anonymous"
+   "desc": "Abruf v4 promotionslist anonymous",
+   "respModel": "PromotionListModel"
   },
   {
    "module": "deposits",
@@ -3001,7 +3111,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DepositDetailResponse>",
-   "desc": "Abruf v1 deposit"
+   "desc": "Abruf v1 deposit",
+   "respModel": "DepositDetailResponse"
   },
   {
    "module": "deposits",
@@ -3031,7 +3142,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern v1 deposit status"
+   "desc": "Aendern v1 deposit status",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "deposits",
@@ -3056,7 +3169,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DepositSummaryResponse>",
-   "desc": "Abruf v1 deposit summary"
+   "desc": "Abruf v1 deposit summary",
+   "respModel": "DepositSummaryResponse"
   },
   {
    "module": "deposits",
@@ -3076,7 +3190,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DepositsResponse>",
-   "desc": "Abruf v1 deposits"
+   "desc": "Abruf v1 deposits",
+   "respModel": "DepositsResponse"
   },
   {
    "module": "deposits",
@@ -3101,7 +3216,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 identification"
+   "desc": "Senden v1 identification",
+   "respModel": null,
+   "bodyModel": "RVMRequest"
   },
   {
    "module": "deposits",
@@ -3126,7 +3243,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren v1 settings"
+   "desc": "Aktualisieren v1 settings",
+   "respModel": null,
+   "bodyModel": "SettingsRequest"
   },
   {
    "module": "digitalleaflet",
@@ -3156,7 +3275,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DigitalLeafletResponseCampaignGroupsModel>",
-   "desc": "Abruf api v1 campaignGroups"
+   "desc": "Abruf api v1 campaignGroups",
+   "respModel": "DigitalLeafletResponseCampaignGroupsModel"
   },
   {
    "module": "digitalleaflet",
@@ -3191,7 +3311,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DigitalLeafletResponseCampaignDetailModel>",
-   "desc": "Abruf api v1 campaigns"
+   "desc": "Abruf api v1 campaigns",
+   "respModel": "DigitalLeafletResponseCampaignDetailModel"
   },
   {
    "module": "digitalleaflet",
@@ -3231,7 +3352,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DigitalLeafletResponseProductDetailModel>",
-   "desc": "Abruf api v1 products"
+   "desc": "Abruf api v1 products",
+   "respModel": "DigitalLeafletResponseProductDetailModel"
   },
   {
    "module": "digitalleaflet",
@@ -3256,7 +3378,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden api v1 useractivity"
+   "desc": "Senden api v1 useractivity",
+   "respModel": null,
+   "bodyModel": "DigitalLeafletRequestPostUserActivityModel"
   },
   {
    "module": "ecommerce",
@@ -3276,7 +3400,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<Unit, ResponseError>",
-   "desc": "Abruf"
+   "desc": "Abruf",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3301,7 +3426,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<vji, hji>",
-   "desc": "Abruf"
+   "desc": "Abruf",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -3331,7 +3457,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<yh6, ResponseError>",
-   "desc": "Abruf c api content-pages"
+   "desc": "Abruf c api content-pages",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3356,7 +3483,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<icr, ResponseError>",
-   "desc": "Abruf c api shop_the_look_component"
+   "desc": "Abruf c api shop_the_look_component",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3381,7 +3509,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<List<icr>, ResponseError>",
-   "desc": "Abruf c api shop_the_look_slider_component"
+   "desc": "Abruf c api shop_the_look_slider_component",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3401,7 +3530,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<gc9, ResponseError>",
-   "desc": "Abruf n disclaimer-text"
+   "desc": "Abruf n disclaimer-text",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3415,7 +3545,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<fwh, ResponseError>",
-   "desc": "Abruf n navigation-marketing-message"
+   "desc": "Abruf n navigation-marketing-message",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3435,7 +3566,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<tdl, ResponseError>",
-   "desc": "Abruf n pdp-layers"
+   "desc": "Abruf n pdp-layers",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3465,7 +3597,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<eim, ResponseError>",
-   "desc": "Abruf p api detail"
+   "desc": "Abruf p api detail",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3495,7 +3628,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<String, ResponseError>",
-   "desc": "Abruf api digital general-terms"
+   "desc": "Abruf api digital general-terms",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3525,7 +3659,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<String, ResponseError>",
-   "desc": "Abruf api digital redemption-conditions"
+   "desc": "Abruf api digital redemption-conditions",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3560,7 +3695,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<List<i3n>, ResponseError>",
-   "desc": "Abruf p api gridboxes"
+   "desc": "Abruf p api gridboxes",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3615,7 +3751,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<tp1, ResponseError>",
-   "desc": "Senden mobile back-in-stock subscribe"
+   "desc": "Senden mobile back-in-stock subscribe",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3629,7 +3766,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<xit, ResponseError>",
-   "desc": "Abruf mobile back-in-stock subscriber"
+   "desc": "Abruf mobile back-in-stock subscriber",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3689,7 +3827,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<tp1, ResponseError>",
-   "desc": "Senden mobile back-in-stock unsubscribe"
+   "desc": "Senden mobile back-in-stock unsubscribe",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3719,7 +3858,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<Map<String, gdr>, ResponseError>",
-   "desc": "Abruf p api shopthelook"
+   "desc": "Abruf p api shopthelook",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3739,7 +3879,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<Double, ResponseError>",
-   "desc": "Abruf prbs-api aplazame minRate"
+   "desc": "Abruf prbs-api aplazame minRate",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3769,7 +3910,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<p6o, ResponseError>",
-   "desc": "Abruf u api product"
+   "desc": "Abruf u api product",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3794,7 +3936,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<tvc, ResponseError>",
-   "desc": "Senden user-api get-session"
+   "desc": "Senden user-api get-session",
+   "respModel": "ResponseError",
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -3824,7 +3968,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<kv3, ResponseError>",
-   "desc": "Abruf c api campaigns"
+   "desc": "Abruf c api campaigns",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3869,7 +4014,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<vji, hji>",
-   "desc": "Abruf category h"
+   "desc": "Abruf category h",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -3889,7 +4035,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<Unit, ResponseError>",
-   "desc": "Abruf delivery retailmedia"
+   "desc": "Abruf delivery retailmedia",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -3944,7 +4091,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<pm7, ResponseError>",
-   "desc": "Abruf delivery retailmedia"
+   "desc": "Abruf delivery retailmedia",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4004,7 +4152,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<pm7, ResponseError>",
-   "desc": "Abruf delivery retailmedia"
+   "desc": "Abruf delivery retailmedia",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4036,7 +4185,8 @@
     "form-urlencoded"
    ],
    "returns": "NetworkResponse<t9, ResponseError>",
-   "desc": "Senden oauth accesstoken"
+   "desc": "Senden oauth accesstoken",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4071,7 +4221,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<xx2, ResponseError>",
-   "desc": "Abruf recommendations web bestsellers"
+   "desc": "Abruf recommendations web bestsellers",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4126,7 +4277,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<xx2, ResponseError>",
-   "desc": "Abruf recommendations web bestsellers"
+   "desc": "Abruf recommendations web bestsellers",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4161,7 +4313,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<xx2, ResponseError>",
-   "desc": "Abruf recommendations web bestsellers"
+   "desc": "Abruf recommendations web bestsellers",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4196,7 +4349,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<njo, ResponseError>",
-   "desc": "Abruf recommendations web bundles"
+   "desc": "Abruf recommendations web bundles",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4231,7 +4385,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<njo, ResponseError>",
-   "desc": "Abruf recommendations web cross"
+   "desc": "Abruf recommendations web cross",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4266,7 +4421,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<njo, ResponseError>",
-   "desc": "Abruf recommendations web customers"
+   "desc": "Abruf recommendations web customers",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4301,7 +4457,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<tkl, ResponseError>",
-   "desc": "Abruf recommendations web marketingmessage"
+   "desc": "Abruf recommendations web marketingmessage",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4336,7 +4493,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<njo, ResponseError>",
-   "desc": "Abruf recommendations web multicross"
+   "desc": "Abruf recommendations web multicross",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4371,7 +4529,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<njo, ResponseError>",
-   "desc": "Abruf recommendations web products"
+   "desc": "Abruf recommendations web products",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4411,7 +4570,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<zgp, ResponseError>",
-   "desc": "Abruf recommendations web shopthelook"
+   "desc": "Abruf recommendations web shopthelook",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4456,7 +4616,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<vji, hji>",
-   "desc": "Abruf search"
+   "desc": "Abruf search",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4506,7 +4667,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<vji, hji>",
-   "desc": "Abruf search"
+   "desc": "Abruf search",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4536,7 +4698,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<List<w9n>, ResponseError>",
-   "desc": "Senden stocks country search-by-products"
+   "desc": "Senden stocks country search-by-products",
+   "respModel": "ResponseError",
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -4571,7 +4735,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<w9n, ResponseError>",
-   "desc": "Abruf country store product"
+   "desc": "Abruf country store product",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -4606,7 +4771,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<List<a0x>, ResponseError>",
-   "desc": "Senden variant-stocks country search-by-product-or-variant"
+   "desc": "Senden variant-stocks country search-by-product-or-variant",
+   "respModel": "ResponseError",
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -4626,7 +4793,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<phk, li4>",
-   "desc": "Abruf v1 cart-api order"
+   "desc": "Abruf v1 cart-api order",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4646,7 +4814,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<phk, li4>",
-   "desc": "Abruf v1 cart-api order"
+   "desc": "Abruf v1 cart-api order",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4676,7 +4845,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<Unit, ResponseError>",
-   "desc": "Senden cart-api salesforce events"
+   "desc": "Senden cart-api salesforce events",
+   "respModel": "ResponseError",
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -4706,7 +4877,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Aendern cart-api v2 cart"
+   "desc": "Aendern cart-api v2 cart",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -4731,7 +4904,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Abruf cart-api v2 cart"
+   "desc": "Abruf cart-api v2 cart",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4761,7 +4935,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Löschen cart-api v2 cart"
+   "desc": "Löschen cart-api v2 cart",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4801,7 +4976,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Senden v2 cart list"
+   "desc": "Senden v2 cart list",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -4841,7 +5018,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Senden cart-api v2 cart"
+   "desc": "Senden cart-api v2 cart",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -4866,7 +5045,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Abruf cart-api v2 cart"
+   "desc": "Abruf cart-api v2 cart",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4891,7 +5071,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Abruf v3 cart customer"
+   "desc": "Abruf v3 cart customer",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -4941,7 +5122,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Senden v3 cart list"
+   "desc": "Senden v3 cart list",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -4991,7 +5174,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Aendern cart-api v3 cart"
+   "desc": "Aendern cart-api v3 cart",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -5041,7 +5226,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Löschen cart-api v3 cart"
+   "desc": "Löschen cart-api v3 cart",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -5091,7 +5277,9 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Senden cart-api v3 cart"
+   "desc": "Senden cart-api v3 cart",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "ecommerce",
@@ -5141,7 +5329,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<li4, li4>",
-   "desc": "Abruf cart-api v3 cart"
+   "desc": "Abruf cart-api v3 cart",
+   "respModel": null
   },
   {
    "module": "ecommerce",
@@ -5181,7 +5370,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<fna, ResponseError>",
-   "desc": "Abruf my-api edd v1"
+   "desc": "Abruf my-api edd v1",
+   "respModel": "ResponseError"
   },
   {
    "module": "ecommerce",
@@ -5216,7 +5406,8 @@
    "headers": [],
    "flags": [],
    "returns": "NetworkResponse<kki, ResponseError>",
-   "desc": "Abruf suggest"
+   "desc": "Abruf suggest",
+   "respModel": "ResponseError"
   },
   {
    "module": "emobilitySDK_release",
@@ -5236,7 +5427,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<gt6>>",
-   "desc": "Abruf api v1 country"
+   "desc": "Abruf api v1 country",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5256,7 +5448,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<rh2>>",
-   "desc": "Abruf api v1 address"
+   "desc": "Abruf api v1 address",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5286,7 +5479,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Aktualisieren api v1 address"
+   "desc": "Aktualisieren api v1 address",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5311,7 +5506,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Aendern v1 coupon activate"
+   "desc": "Aendern v1 coupon activate",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5336,7 +5532,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Aendern v1 coupon deactivate"
+   "desc": "Aendern v1 coupon deactivate",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5361,7 +5558,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Senden api v1 form"
+   "desc": "Senden api v1 form",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5386,7 +5585,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<cx4>>",
-   "desc": "Abruf v1 invoice pdf"
+   "desc": "Abruf v1 invoice pdf",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5411,7 +5611,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<j7m>>",
-   "desc": "Senden v1 preauth request"
+   "desc": "Senden v1 preauth request",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5436,7 +5638,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<v7m>>",
-   "desc": "Abruf v1 preauth session"
+   "desc": "Abruf v1 preauth session",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5461,7 +5664,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Aendern v1 preauth status"
+   "desc": "Aendern v1 preauth status",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5481,7 +5686,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<eqw>>",
-   "desc": "Abruf api v1 user"
+   "desc": "Abruf api v1 user",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5511,7 +5717,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<hm6>>",
-   "desc": "Abruf v1 user contract"
+   "desc": "Abruf v1 user contract",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5536,7 +5743,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<List<vua>>>",
-   "desc": "Löschen v1 user favorite"
+   "desc": "Löschen v1 user favorite",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5561,7 +5769,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<List<vua>>>",
-   "desc": "Senden v1 user favorite"
+   "desc": "Senden v1 user favorite",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5586,7 +5795,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<uf7>>",
-   "desc": "Abruf api v2 coupons"
+   "desc": "Abruf api v2 coupons",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5606,7 +5816,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<mel>>",
-   "desc": "Senden api v3 pending-charges"
+   "desc": "Senden api v3 pending-charges",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5631,7 +5842,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<oob>>",
-   "desc": "Abruf api v1 form"
+   "desc": "Abruf api v1 form",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5656,7 +5868,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<lel>>",
-   "desc": "Aktualisieren api v1 pending-charge"
+   "desc": "Aktualisieren api v1 pending-charge",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5681,7 +5894,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<dx4>>",
-   "desc": "Abruf api v2 charge-log"
+   "desc": "Abruf api v2 charge-log",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5706,7 +5920,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<qa6>>",
-   "desc": "Abruf v2 cp connector"
+   "desc": "Abruf v2 cp connector",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5731,7 +5946,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<ix4>>",
-   "desc": "Abruf api v2 cp"
+   "desc": "Abruf api v2 cp",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5751,7 +5967,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<lx4>>",
-   "desc": "Abruf api v2 cps"
+   "desc": "Abruf api v2 cps",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5776,7 +5993,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Aktualisieren v2 user contact"
+   "desc": "Aktualisieren v2 user contact",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5801,7 +6020,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<wuo>>",
-   "desc": "Senden api v3 remote-start"
+   "desc": "Senden api v3 remote-start",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5826,7 +6047,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Senden v3 user acceptance"
+   "desc": "Senden v3 user acceptance",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5846,7 +6069,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<fx4>>",
-   "desc": "Abruf api v4 charge-logs"
+   "desc": "Abruf api v4 charge-logs",
+   "respModel": null
   },
   {
    "module": "emobilitySDK_release",
@@ -5871,7 +6095,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mt9<Unit>>",
-   "desc": "Senden api v4 remote-stop"
+   "desc": "Senden api v4 remote-stop",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "employee-benefits",
@@ -5901,7 +6127,8 @@
    "headers": [],
    "flags": [],
    "returns": "o1p",
-   "desc": "Abruf bff-api v3 loyaltytab"
+   "desc": "Abruf bff-api v3 loyaltytab",
+   "respModel": null
   },
   {
    "module": "flashsales",
@@ -5926,7 +6153,8 @@
    "headers": [],
    "flags": [],
    "returns": "List<FlashSaleProductResponse>",
-   "desc": "Abruf v1 all"
+   "desc": "Abruf v1 all",
+   "respModel": "FlashSaleProductResponse"
   },
   {
    "module": "flashsales",
@@ -5956,7 +6184,9 @@
    "headers": [],
    "flags": [],
    "returns": "FlashSaleOrderResponse",
-   "desc": "Senden v1 createOrder"
+   "desc": "Senden v1 createOrder",
+   "respModel": "FlashSaleOrderResponse",
+   "bodyModel": "FlashSaleOrderInfoRequest"
   },
   {
    "module": "flashsales",
@@ -5986,7 +6216,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<FlashSaleDetailResponse>",
-   "desc": "Abruf v1 getdetail"
+   "desc": "Abruf v1 getdetail",
+   "respModel": "FlashSaleDetailResponse"
   },
   {
    "module": "frederix",
@@ -6000,7 +6231,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Abruf ."
+   "desc": "Abruf .",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6025,7 +6257,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<hgd>",
-   "desc": "Abruf v1 orders details"
+   "desc": "Abruf v1 orders details",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6050,7 +6283,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 orders locker"
+   "desc": "Senden v1 orders locker",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6080,7 +6314,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 orders parking"
+   "desc": "Senden v1 orders parking",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6110,7 +6346,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<zgd>",
-   "desc": "Abruf v1 stores associated"
+   "desc": "Abruf v1 stores associated",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6145,7 +6382,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<gad>",
-   "desc": "Senden stores carts addonproducts"
+   "desc": "Senden stores carts addonproducts",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6180,7 +6419,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<rad>",
-   "desc": "Senden stores carts preauth"
+   "desc": "Senden stores carts preauth",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6215,7 +6456,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<cbd>",
-   "desc": "Senden stores carts summary"
+   "desc": "Senden stores carts summary",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6250,7 +6493,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<rbd>",
-   "desc": "Senden stores carts sync"
+   "desc": "Senden stores carts sync",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6280,7 +6525,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<fhd>",
-   "desc": "Abruf v1 stores config"
+   "desc": "Abruf v1 stores config",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6315,7 +6561,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<tfd>",
-   "desc": "Senden v1 stores orders"
+   "desc": "Senden v1 stores orders",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6345,7 +6593,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen v1 stores orders"
+   "desc": "Löschen v1 stores orders",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6380,7 +6629,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<yed>",
-   "desc": "Aktualisieren v1 stores orders"
+   "desc": "Aktualisieren v1 stores orders",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6410,7 +6661,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<kdd>",
-   "desc": "Abruf stores orders collected"
+   "desc": "Abruf stores orders collected",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6440,7 +6692,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ydd>",
-   "desc": "Abruf stores orders details"
+   "desc": "Abruf stores orders details",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6470,7 +6723,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ded>",
-   "desc": "Abruf stores orders status"
+   "desc": "Abruf stores orders status",
+   "respModel": null
   },
   {
    "module": "grocerypickup",
@@ -6505,7 +6759,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<whd>",
-   "desc": "Senden stores timeslots availables"
+   "desc": "Senden stores timeslots availables",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "grocerypickup",
@@ -6540,7 +6796,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<nid>",
-   "desc": "Senden stores timeslots suggested"
+   "desc": "Senden stores timeslots suggested",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "home",
@@ -6570,7 +6828,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<HomeConfigResponse>",
-   "desc": "Abruf v1 config"
+   "desc": "Abruf v1 config",
+   "respModel": "HomeConfigResponse"
   },
   {
    "module": "home",
@@ -6605,7 +6864,9 @@
    "headers": [],
    "flags": [],
    "returns": "o1p",
-   "desc": "Senden v2 home anonymous"
+   "desc": "Senden v2 home anonymous",
+   "respModel": null,
+   "bodyModel": "HomeBodyRequest"
   },
   {
    "module": "home",
@@ -6645,7 +6906,9 @@
    "headers": [],
    "flags": [],
    "returns": "o1p",
-   "desc": "Senden v2 home logged"
+   "desc": "Senden v2 home logged",
+   "respModel": null,
+   "bodyModel": "HomeBodyRequest"
   },
   {
    "module": "integration",
@@ -6690,7 +6953,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<o1p>",
-   "desc": "Abruf v{version} countries worlds"
+   "desc": "Abruf v{version} countries worlds",
+   "respModel": null
   },
   {
    "module": "inviteyourfriends",
@@ -6715,7 +6979,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 sessions guests"
+   "desc": "Senden v2 sessions guests",
+   "respModel": null
   },
   {
    "module": "inviteyourfriends",
@@ -6740,7 +7005,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden sessions guests validation"
+   "desc": "Senden sessions guests validation",
+   "respModel": null
   },
   {
    "module": "inviteyourfriends",
@@ -6760,7 +7026,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<SessionsCreateResponseModel>",
-   "desc": "Senden v2 sessions"
+   "desc": "Senden v2 sessions",
+   "respModel": "SessionsCreateResponseModel"
   },
   {
    "module": "inviteyourfriends",
@@ -6790,7 +7057,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<SessionsShareCreateResponseModel>",
-   "desc": "Senden v2 sessions share"
+   "desc": "Senden v2 sessions share",
+   "respModel": "SessionsShareCreateResponseModel"
   },
   {
    "module": "inviteyourfriends",
@@ -6815,7 +7083,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<SessionResponseModel>",
-   "desc": "Abruf v2 sessions"
+   "desc": "Abruf v2 sessions",
+   "respModel": "SessionResponseModel"
   },
   {
    "module": "lib_release",
@@ -6845,7 +7114,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v4 json ingest"
+   "desc": "Senden v4 json ingest",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "libs-tracking-adobe-experience",
@@ -6875,7 +7146,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v4 json ingest"
+   "desc": "Senden v4 json ingest",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "libs-tracking-adobe-experience",
@@ -6889,7 +7162,8 @@
    "headers": [],
    "flags": [],
    "returns": "ugf",
-   "desc": "Abruf ?format=json"
+   "desc": "Abruf ?format=json",
+   "respModel": null
   },
   {
    "module": "libs-unleash",
@@ -6914,7 +7188,8 @@
    "headers": [],
    "flags": [],
    "returns": "w8v",
-   "desc": "Abruf api frontend"
+   "desc": "Abruf api frontend",
+   "respModel": null
   },
   {
    "module": "libs-unleash",
@@ -6939,7 +7214,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden frontend client metrics"
+   "desc": "Senden frontend client metrics",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "lidlplusPaymentsSDK",
@@ -6964,7 +7241,9 @@
    "headers": [],
    "flags": [],
    "returns": "Unit",
-   "desc": "Aktualisieren eTicket v1 status"
+   "desc": "Aktualisieren eTicket v1 status",
+   "respModel": null,
+   "bodyModel": "ETicketStatusApiModel"
   },
   {
    "module": "lidlplusPaymentsSDK",
@@ -6984,7 +7263,8 @@
    "headers": [],
    "flags": [],
    "returns": "ETicketStatusApiModel",
-   "desc": "Abruf eTicket v1 status"
+   "desc": "Abruf eTicket v1 status",
+   "respModel": "ETicketStatusApiModel"
   },
   {
    "module": "lottery",
@@ -7009,7 +7289,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<StampCardLotteryModel>",
-   "desc": "Abruf v4 user promotions"
+   "desc": "Abruf v4 user promotions",
+   "respModel": "StampCardLotteryModel"
   },
   {
    "module": "lottery",
@@ -7034,7 +7315,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern promotions cards send"
+   "desc": "Aendern promotions cards send",
+   "respModel": null
   },
   {
    "module": "lottery",
@@ -7059,7 +7341,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern promotions cards view"
+   "desc": "Aendern promotions cards view",
+   "respModel": null
   },
   {
    "module": "lottery",
@@ -7084,7 +7367,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<CongratulationsModel>",
-   "desc": "Abruf user promotions congrats"
+   "desc": "Abruf user promotions congrats",
+   "respModel": "CongratulationsModel"
   },
   {
    "module": "lottery",
@@ -7109,7 +7393,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DetailModel>",
-   "desc": "Abruf user promotions detail"
+   "desc": "Abruf user promotions detail",
+   "respModel": "DetailModel"
   },
   {
    "module": "lottery",
@@ -7134,7 +7419,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern promotions legalterms accept"
+   "desc": "Aendern promotions legalterms accept",
+   "respModel": null
   },
   {
    "module": "lottery",
@@ -7159,7 +7445,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern user promotions start"
+   "desc": "Aendern user promotions start",
+   "respModel": null
   },
   {
    "module": "loyalty",
@@ -7184,7 +7471,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<LoyaltyCardsResponse>",
-   "desc": "Abruf v2"
+   "desc": "Abruf v2",
+   "respModel": "LoyaltyCardsResponse"
   },
   {
    "module": "metahome",
@@ -7214,7 +7502,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<HomeConfigResponse>",
-   "desc": "Abruf v1 config"
+   "desc": "Abruf v1 config",
+   "respModel": "HomeConfigResponse"
   },
   {
    "module": "metahome",
@@ -7249,7 +7538,9 @@
    "headers": [],
    "flags": [],
    "returns": "o1p",
-   "desc": "Senden v2 home anonymous"
+   "desc": "Senden v2 home anonymous",
+   "respModel": null,
+   "bodyModel": "HomeBodyRequest"
   },
   {
    "module": "metahome",
@@ -7289,7 +7580,9 @@
    "headers": [],
    "flags": [],
    "returns": "o1p",
-   "desc": "Senden v2 home logged"
+   "desc": "Senden v2 home logged",
+   "respModel": null,
+   "bodyModel": "HomeBodyRequest"
   },
   {
    "module": "offers",
@@ -7314,7 +7607,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<OfferListResponse>",
-   "desc": "Abruf v4 offers"
+   "desc": "Abruf v4 offers",
+   "respModel": "OfferListResponse"
   },
   {
    "module": "offers",
@@ -7344,7 +7638,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<OfferDetailResponse>",
-   "desc": "Abruf v4 offers"
+   "desc": "Abruf v4 offers",
+   "respModel": "OfferDetailResponse"
   },
   {
    "module": "opengift",
@@ -7364,7 +7659,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<o1p>",
-   "desc": "Abruf"
+   "desc": "Abruf",
+   "respModel": null
   },
   {
    "module": "opengift",
@@ -7384,7 +7680,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<o1p>",
-   "desc": "Abruf"
+   "desc": "Abruf",
+   "respModel": null
   },
   {
    "module": "opengift",
@@ -7414,7 +7711,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<iz8>",
-   "desc": "Abruf triggeredBoxes me detail"
+   "desc": "Abruf triggeredBoxes me detail",
+   "respModel": null
   },
   {
    "module": "opengift",
@@ -7454,7 +7752,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern opengift me opened"
+   "desc": "Aendern opengift me opened",
+   "respModel": null
   },
   {
    "module": "opengift",
@@ -7489,7 +7788,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<n8k>",
-   "desc": "Abruf users opengift current"
+   "desc": "Abruf users opengift current",
+   "respModel": null
   },
   {
    "module": "opengift",
@@ -7529,7 +7829,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern current boxes opened"
+   "desc": "Aendern current boxes opened",
+   "respModel": null
   },
   {
    "module": "opengift",
@@ -7564,7 +7865,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<lz8>",
-   "desc": "Abruf opengift current detail"
+   "desc": "Abruf opengift current detail",
+   "respModel": null
   },
   {
    "module": "paymentsSDK",
@@ -7578,7 +7880,8 @@
    "headers": [],
    "flags": [],
    "returns": "AddressListResponse",
-   "desc": "Abruf api addresses v1"
+   "desc": "Abruf api addresses v1",
+   "respModel": "AddressListResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7598,7 +7901,8 @@
    "headers": [],
    "flags": [],
    "returns": "AddressResponse",
-   "desc": "Abruf api addresses v1"
+   "desc": "Abruf api addresses v1",
+   "respModel": "AddressResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7633,7 +7937,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<SubscriptionsResponse>",
-   "desc": "Abruf payment-methods v1 subscriptions"
+   "desc": "Abruf payment-methods v1 subscriptions",
+   "respModel": "SubscriptionsResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7668,7 +7973,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<TransactionsResponse>",
-   "desc": "Abruf payment-methods v1 transactions"
+   "desc": "Abruf payment-methods v1 transactions",
+   "respModel": "TransactionsResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7698,7 +8004,9 @@
    "headers": [],
    "flags": [],
    "returns": "Unit",
-   "desc": "Aendern payment-methods v2"
+   "desc": "Aendern payment-methods v2",
+   "respModel": null,
+   "bodyModel": "SetPaymentMethodRequest"
   },
   {
    "module": "paymentsSDK",
@@ -7723,7 +8031,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DefaultPaymentMethodInfoResponse>",
-   "desc": "Abruf payment-methods v2 default-payment-method-info"
+   "desc": "Abruf payment-methods v2 default-payment-method-info",
+   "respModel": "DefaultPaymentMethodInfoResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7753,7 +8062,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ValidateDefaultPaymentMethodInfoResponse>",
-   "desc": "Senden payment-methods v2 validate-default-payment-method-info"
+   "desc": "Senden payment-methods v2 validate-default-payment-method-info",
+   "respModel": "ValidateDefaultPaymentMethodInfoResponse",
+   "bodyModel": "ValidateDefaultPaymentMethodData"
   },
   {
    "module": "paymentsSDK",
@@ -7788,7 +8099,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen payment-methods v2 payment-methods"
+   "desc": "Löschen payment-methods v2 payment-methods",
+   "respModel": null
   },
   {
    "module": "paymentsSDK",
@@ -7838,7 +8150,9 @@
    "headers": [],
    "flags": [],
    "returns": "QrResponse",
-   "desc": "Senden payment-methods v2 qr"
+   "desc": "Senden payment-methods v2 qr",
+   "respModel": "QrResponse",
+   "bodyModel": "QrRequest"
   },
   {
    "module": "paymentsSDK",
@@ -7883,7 +8197,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<SepaPaymentLimitResponse>",
-   "desc": "Abruf v2 users limit"
+   "desc": "Abruf v2 users limit",
+   "respModel": "SepaPaymentLimitResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7913,7 +8228,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<GenericPaymentMethodsResponse>",
-   "desc": "Abruf payment-methods v3 all"
+   "desc": "Abruf payment-methods v3 all",
+   "respModel": "GenericPaymentMethodsResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7938,7 +8254,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ConfigurationResponse>",
-   "desc": "Abruf psp v1 configuration"
+   "desc": "Abruf psp v1 configuration",
+   "respModel": "ConfigurationResponse"
   },
   {
    "module": "paymentsSDK",
@@ -7978,7 +8295,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<AddBalanceResponse>",
-   "desc": "Senden v1 payment-methods top-up"
+   "desc": "Senden v1 payment-methods top-up",
+   "respModel": "AddBalanceResponse",
+   "bodyModel": "AddBalanceRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8023,7 +8342,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<AddBalanceResponse>",
-   "desc": "Senden v1 payment-methods top-up"
+   "desc": "Senden v1 payment-methods top-up",
+   "respModel": "AddBalanceResponse",
+   "bodyModel": "AddBalanceRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8073,7 +8394,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PreAuthStandardResponse>",
-   "desc": "Senden psp v3 preauth"
+   "desc": "Senden psp v3 preauth",
+   "respModel": "PreAuthStandardResponse",
+   "bodyModel": "PreAuthStandardRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8103,7 +8426,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden user-profiles v2"
+   "desc": "Senden user-profiles v2",
+   "respModel": null,
+   "bodyModel": "CreateProfileRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8133,7 +8458,9 @@
    "headers": [],
    "flags": [],
    "returns": "Unit",
-   "desc": "Aktualisieren user-profiles v2 address"
+   "desc": "Aktualisieren user-profiles v2 address",
+   "respModel": null,
+   "bodyModel": "AddressRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8168,7 +8495,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren user-profiles v2 pin"
+   "desc": "Aktualisieren user-profiles v2 pin",
+   "respModel": null,
+   "bodyModel": "ForgotPinRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8203,7 +8532,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren user-profiles v2 pin"
+   "desc": "Aktualisieren user-profiles v2 pin",
+   "respModel": null,
+   "bodyModel": "ChangePinRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8233,7 +8564,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden user-profiles v2 pin"
+   "desc": "Senden user-profiles v2 pin",
+   "respModel": null,
+   "bodyModel": "CreatePinRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8263,7 +8596,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ValidatePinResult>",
-   "desc": "Senden v2 pin validate"
+   "desc": "Senden v2 pin validate",
+   "respModel": "ValidatePinResult",
+   "bodyModel": "ValidatePinRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8288,7 +8623,8 @@
    "headers": [],
    "flags": [],
    "returns": "Unit",
-   "desc": "Senden user-profiles v2 send-otp"
+   "desc": "Senden user-profiles v2 send-otp",
+   "respModel": null
   },
   {
    "module": "paymentsSDK",
@@ -8318,7 +8654,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ValidateOTPResultResponse>",
-   "desc": "Senden user-profiles v2 validate-otp"
+   "desc": "Senden user-profiles v2 validate-otp",
+   "respModel": "ValidateOTPResultResponse",
+   "bodyModel": "ValidateOTPRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8348,7 +8686,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen user-profiles v2"
+   "desc": "Löschen user-profiles v2",
+   "respModel": null
   },
   {
    "module": "paymentsSDK",
@@ -8383,7 +8722,9 @@
    "headers": [],
    "flags": [],
    "returns": "ActivateResult",
-   "desc": "Aktualisieren user-profiles v3 activate"
+   "desc": "Aktualisieren user-profiles v3 activate",
+   "respModel": "ActivateResult",
+   "bodyModel": "ActivateRequest"
   },
   {
    "module": "paymentsSDK",
@@ -8413,7 +8754,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PaymentProfileResponse>",
-   "desc": "Abruf user-profiles v6"
+   "desc": "Abruf user-profiles v6",
+   "respModel": "PaymentProfileResponse"
   },
   {
    "module": "paymentsSDK",
@@ -8443,7 +8785,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PollingTransactionStatusResponse>",
-   "desc": "Abruf psp v1 transaction"
+   "desc": "Abruf psp v1 transaction",
+   "respModel": "PollingTransactionStatusResponse"
   },
   {
    "module": "paymentsSDK",
@@ -8488,7 +8831,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PaymentTypeEnrollmentResponse>",
-   "desc": "Senden psp v1 enrollment"
+   "desc": "Senden psp v1 enrollment",
+   "respModel": "PaymentTypeEnrollmentResponse"
   },
   {
    "module": "paymentsSDK",
@@ -8513,7 +8857,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<LastAcceptedResponse>",
-   "desc": "Abruf v2 transactions last-accepted"
+   "desc": "Abruf v2 transactions last-accepted",
+   "respModel": "LastAcceptedResponse"
   },
   {
    "module": "paymentsSDK",
@@ -8538,7 +8883,8 @@
    "headers": [],
    "flags": [],
    "returns": "IsMailVerifiedResult",
-   "desc": "Abruf user-profiles v2 check-mail-validated"
+   "desc": "Abruf user-profiles v2 check-mail-validated",
+   "respModel": "IsMailVerifiedResult"
   },
   {
    "module": "paymentsSDK",
@@ -8563,7 +8909,8 @@
    "headers": [],
    "flags": [],
    "returns": "IsMailSentResult",
-   "desc": "Senden user-profiles v2 send-validation-email"
+   "desc": "Senden user-profiles v2 send-validation-email",
+   "respModel": "IsMailSentResult"
   },
   {
    "module": "personalisedsurveys",
@@ -8588,7 +8935,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ktt>",
-   "desc": "Abruf v1 surveys"
+   "desc": "Abruf v1 surveys",
+   "respModel": null
   },
   {
    "module": "personalisedsurveys",
@@ -8623,7 +8971,9 @@
    "headers": [],
    "flags": [],
    "returns": "Unit",
-   "desc": "Aktualisieren surveys questions answer"
+   "desc": "Aktualisieren surveys questions answer",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "productcatalog",
@@ -8648,7 +8998,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<akm>",
-   "desc": "Abruf v1 store categories"
+   "desc": "Abruf v1 store categories",
+   "respModel": null
   },
   {
    "module": "productcatalog",
@@ -8678,7 +9029,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<akm>",
-   "desc": "Abruf store categories categories"
+   "desc": "Abruf store categories categories",
+   "respModel": null
   },
   {
    "module": "productcatalog",
@@ -8728,7 +9080,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<dkm>",
-   "desc": "Abruf categories categories products"
+   "desc": "Abruf categories categories products",
+   "respModel": null
   },
   {
    "module": "productcatalog",
@@ -8773,7 +9126,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<dkm>",
-   "desc": "Abruf store categories products"
+   "desc": "Abruf store categories products",
+   "respModel": null
   },
   {
    "module": "productcatalog",
@@ -8808,7 +9162,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<cwm>",
-   "desc": "Abruf v1 store products"
+   "desc": "Abruf v1 store products",
+   "respModel": null
   },
   {
    "module": "productcatalog",
@@ -8843,7 +9198,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<som>",
-   "desc": "Abruf v1 store search"
+   "desc": "Abruf v1 store search",
+   "respModel": null
   },
   {
    "module": "productcatalog",
@@ -8873,7 +9229,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<hqm>",
-   "desc": "Abruf v1 store startingpage"
+   "desc": "Abruf v1 store startingpage",
+   "respModel": null
   },
   {
    "module": "productcatalog",
@@ -8898,7 +9255,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden app v1 useractivity"
+   "desc": "Senden app v1 useractivity",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "products-featured",
@@ -8923,7 +9282,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<vim>",
-   "desc": "Abruf v1 info"
+   "desc": "Abruf v1 info",
+   "respModel": null
   },
   {
    "module": "products-featured",
@@ -8953,7 +9313,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<vim>>",
-   "desc": "Abruf v2 products"
+   "desc": "Abruf v2 products",
+   "respModel": null
   },
   {
    "module": "products-recommended",
@@ -8978,7 +9339,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<tim>>",
-   "desc": "Abruf v1"
+   "desc": "Abruf v1",
+   "respModel": null
   },
   {
    "module": "products-related",
@@ -9008,7 +9370,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<uim>>",
-   "desc": "Abruf v1"
+   "desc": "Abruf v1",
+   "respModel": null
   },
   {
    "module": "productshowcase",
@@ -9038,7 +9401,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<n9n>",
-   "desc": "Abruf carrousels v1 dynamic"
+   "desc": "Abruf carrousels v1 dynamic",
+   "respModel": null
   },
   {
    "module": "profile",
@@ -9058,7 +9422,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren v4 device"
+   "desc": "Aktualisieren v4 device",
+   "respModel": null,
+   "bodyModel": "DeviceRequestDTO"
   },
   {
    "module": "profile-user",
@@ -9072,7 +9438,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<String>",
-   "desc": "Abruf v1 profile salesforceid"
+   "desc": "Abruf v1 profile salesforceid",
+   "respModel": null
   },
   {
    "module": "profile-user",
@@ -9092,7 +9459,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<mfn>",
-   "desc": "Senden v1 updateCountryInfo"
+   "desc": "Senden v1 updateCountryInfo",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "profile-user",
@@ -9112,7 +9481,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<sfn>",
-   "desc": "Senden v1 upsertProfile"
+   "desc": "Senden v1 upsertProfile",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "profile-user",
@@ -9132,7 +9503,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<String>",
-   "desc": "Abruf v1 loyalty"
+   "desc": "Abruf v1 loyalty",
+   "respModel": null
   },
   {
    "module": "purchaselottery",
@@ -9152,7 +9524,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<String>",
-   "desc": "Abruf"
+   "desc": "Abruf",
+   "respModel": null
   },
   {
    "module": "purchaselottery",
@@ -9182,7 +9555,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<jzc>>",
-   "desc": "Abruf v2 lotteries"
+   "desc": "Abruf v2 lotteries",
+   "respModel": null
   },
   {
    "module": "purchaselottery",
@@ -9212,7 +9586,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<wtc>",
-   "desc": "Abruf v2 lotteries"
+   "desc": "Abruf v2 lotteries",
+   "respModel": null
   },
   {
    "module": "purchaselottery",
@@ -9242,7 +9617,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern v2 lotteries redeemed"
+   "desc": "Aendern v2 lotteries redeemed",
+   "respModel": null
   },
   {
    "module": "purchasesummary",
@@ -9267,7 +9643,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen v3 notifications"
+   "desc": "Löschen v3 notifications",
+   "respModel": null
   },
   {
    "module": "purchasesummary",
@@ -9302,7 +9679,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PurchaseSummaryAggregatorResponse>",
-   "desc": "Abruf v3 tickets summary"
+   "desc": "Abruf v3 tickets summary",
+   "respModel": "PurchaseSummaryAggregatorResponse"
   },
   {
    "module": "push",
@@ -9327,7 +9705,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 push device"
+   "desc": "Senden v2 push device",
+   "respModel": null,
+   "bodyModel": "SetDeviceRegistrationRequest"
   },
   {
    "module": "push",
@@ -9352,7 +9732,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen v2 push device"
+   "desc": "Löschen v2 push device",
+   "respModel": null
   },
   {
    "module": "rewards",
@@ -9377,7 +9758,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<StampCardRewardsModel>",
-   "desc": "Abruf v3 user promotions"
+   "desc": "Abruf v3 user promotions",
+   "respModel": "StampCardRewardsModel"
   },
   {
    "module": "rewards",
@@ -9407,7 +9789,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern user promotions cards"
+   "desc": "Aendern user promotions cards",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "rewards",
@@ -9432,7 +9816,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<CongratulationsModel>",
-   "desc": "Abruf user promotions congrats"
+   "desc": "Abruf user promotions congrats",
+   "respModel": "CongratulationsModel"
   },
   {
    "module": "rewards",
@@ -9457,7 +9842,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<DetailDataModel>",
-   "desc": "Abruf user promotions detail"
+   "desc": "Abruf user promotions detail",
+   "respModel": "DetailDataModel"
   },
   {
    "module": "rewards",
@@ -9482,7 +9868,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aendern user promotions started"
+   "desc": "Aendern user promotions started",
+   "respModel": null
   },
   {
    "module": "shortcut",
@@ -9507,7 +9894,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<ShortcutDTO>>",
-   "desc": "Abruf v1 shortcuts"
+   "desc": "Abruf v1 shortcuts",
+   "respModel": "ShortcutDTO"
   },
   {
    "module": "stores",
@@ -9547,7 +9935,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<PlaceModel>>",
-   "desc": "Abruf v1 autocomplete places"
+   "desc": "Abruf v1 autocomplete places",
+   "respModel": "PlaceModel"
   },
   {
    "module": "stores",
@@ -9587,7 +9976,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<StoreSearchModel>>",
-   "desc": "Abruf v1 autocomplete"
+   "desc": "Abruf v1 autocomplete",
+   "respModel": "StoreSearchModel"
   },
   {
    "module": "stores",
@@ -9612,7 +10002,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren users me favorite"
+   "desc": "Aktualisieren users me favorite",
+   "respModel": null,
+   "bodyModel": "FavoriteStoreModel"
   },
   {
    "module": "stores",
@@ -9632,7 +10024,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<FavoriteStoreModel>",
-   "desc": "Abruf users me favorite"
+   "desc": "Abruf users me favorite",
+   "respModel": "FavoriteStoreModel"
   },
   {
    "module": "stores",
@@ -9657,7 +10050,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ScheduleModel>",
-   "desc": "Abruf v3 schedule"
+   "desc": "Abruf v3 schedule",
+   "respModel": "ScheduleModel"
   },
   {
    "module": "stores",
@@ -9677,7 +10071,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<StoreDetailModel>>",
-   "desc": "Abruf v4"
+   "desc": "Abruf v4",
+   "respModel": "StoreDetailModel"
   },
   {
    "module": "stores",
@@ -9702,7 +10097,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<StoreDetailModel>>",
-   "desc": "Abruf v5 details"
+   "desc": "Abruf v5 details",
+   "respModel": "StoreDetailModel"
   },
   {
    "module": "surveys",
@@ -9742,7 +10138,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<ManualCampaignResponse>",
-   "desc": "Abruf v2 surveys"
+   "desc": "Abruf v2 surveys",
+   "respModel": "ManualCampaignResponse"
   },
   {
    "module": "surveys",
@@ -9772,7 +10169,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<CampaignResponse>",
-   "desc": "Abruf v2 surveys"
+   "desc": "Abruf v2 surveys",
+   "respModel": "CampaignResponse"
   },
   {
    "module": "surveys",
@@ -9807,7 +10205,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Aktualisieren v2 surveys complete"
+   "desc": "Aktualisieren v2 surveys complete",
+   "respModel": null,
+   "bodyModel": "CompleteUserCampaignRequest"
   },
   {
    "module": "surveys",
@@ -9832,7 +10232,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 surveys dismiss"
+   "desc": "Senden v2 surveys dismiss",
+   "respModel": null
   },
   {
    "module": "surveys",
@@ -9862,7 +10263,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 surveys visualize"
+   "desc": "Senden v2 surveys visualize",
+   "respModel": null
   },
   {
    "module": "thirdpartybenefit",
@@ -9892,7 +10294,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<mzk>>",
-   "desc": "Abruf v1 categories"
+   "desc": "Abruf v1 categories",
+   "respModel": null
   },
   {
    "module": "thirdpartybenefit",
@@ -9927,7 +10330,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<o1p>",
-   "desc": "Abruf v2 campaigns"
+   "desc": "Abruf v2 campaigns",
+   "respModel": null
   },
   {
    "module": "thirdpartybenefit",
@@ -9967,7 +10371,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<q0l>",
-   "desc": "Abruf v2 campaigns"
+   "desc": "Abruf v2 campaigns",
+   "respModel": null
   },
   {
    "module": "thirdpartybenefit",
@@ -10007,7 +10412,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<wzk>",
-   "desc": "Abruf v2 campaigns code"
+   "desc": "Abruf v2 campaigns code",
+   "respModel": null
   },
   {
    "module": "tickets",
@@ -10032,7 +10438,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 tickets delete"
+   "desc": "Senden v2 tickets delete",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "tickets",
@@ -10057,7 +10465,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 tickets favorite"
+   "desc": "Senden v2 tickets favorite",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "tickets",
@@ -10082,7 +10492,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v2 tickets unfavorite"
+   "desc": "Senden v2 tickets unfavorite",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "tickets",
@@ -10107,7 +10519,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<o1p>",
-   "desc": "Abruf v3 invoice"
+   "desc": "Abruf v3 invoice",
+   "respModel": null
   },
   {
    "module": "tickets",
@@ -10132,7 +10545,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<List<TicketListResponse>>",
-   "desc": "Abruf v3 tickets"
+   "desc": "Abruf v3 tickets",
+   "respModel": "TicketListResponse"
   },
   {
    "module": "tickets",
@@ -10162,7 +10576,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<TicketUnifiedResponse>",
-   "desc": "Abruf v3 tickets"
+   "desc": "Abruf v3 tickets",
+   "respModel": "TicketUnifiedResponse"
   },
   {
    "module": "tipcards",
@@ -10187,7 +10602,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 devicestatus"
+   "desc": "Senden v1 devicestatus",
+   "respModel": null,
+   "bodyModel": "DeviceStatusModel"
   },
   {
    "module": "tipcards",
@@ -10207,7 +10624,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden v1 sendemailvalidation"
+   "desc": "Senden v1 sendemailvalidation",
+   "respModel": null
   },
   {
    "module": "tipcards",
@@ -10242,7 +10660,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<GetTipcardModel>",
-   "desc": "Abruf v1 tipcard"
+   "desc": "Abruf v1 tipcard",
+   "respModel": "GetTipcardModel"
   },
   {
    "module": "travel",
@@ -10262,7 +10681,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<TravelListResponse>",
-   "desc": "Abruf v2 travel"
+   "desc": "Abruf v2 travel",
+   "respModel": "TravelListResponse"
   },
   {
    "module": "uniqueaccount",
@@ -10276,7 +10696,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<PersonalData>",
-   "desc": "Abruf api personal-data v1"
+   "desc": "Abruf api personal-data v1",
+   "respModel": "PersonalData"
   },
   {
    "module": "worldofneeds",
@@ -10296,7 +10717,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Abruf"
+   "desc": "Abruf",
+   "respModel": null
   },
   {
    "module": "worldofneeds",
@@ -10326,7 +10748,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<dll>",
-   "desc": "Abruf countries worlds profiles"
+   "desc": "Abruf countries worlds profiles",
+   "respModel": null
   },
   {
    "module": "worldofneeds",
@@ -10356,7 +10779,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Löschen countries worlds profiles"
+   "desc": "Löschen countries worlds profiles",
+   "respModel": null
   },
   {
    "module": "worldofneeds",
@@ -10383,7 +10807,8 @@
    ],
    "flags": [],
    "returns": "i1p<wpb>",
-   "desc": "Abruf countries worlds form"
+   "desc": "Abruf countries worlds form",
+   "respModel": null
   },
   {
    "module": "worldofneeds",
@@ -10420,7 +10845,9 @@
    ],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden worlds form submission"
+   "desc": "Senden worlds form submission",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "worldofneeds",
@@ -10445,7 +10872,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden worlds gift claim"
+   "desc": "Senden worlds gift claim",
+   "respModel": null
   },
   {
    "module": "worldofneeds",
@@ -10470,7 +10898,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden worlds raffle participation"
+   "desc": "Senden worlds raffle participation",
+   "respModel": null
   },
   {
    "module": "worldofneeds",
@@ -10490,7 +10919,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden app v1 events"
+   "desc": "Senden app v1 events",
+   "respModel": null,
+   "bodyModel": null
   },
   {
    "module": "wrapped",
@@ -10510,7 +10941,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<o1p>",
-   "desc": "Abruf"
+   "desc": "Abruf",
+   "respModel": null
   },
   {
    "module": "wrapped",
@@ -10540,7 +10972,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<WrappedModel>",
-   "desc": "Abruf countries campaigns wrapped"
+   "desc": "Abruf countries campaigns wrapped",
+   "respModel": "WrappedModel"
   },
   {
    "module": "wrapped",
@@ -10565,7 +10998,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden campaigns wrapped complete"
+   "desc": "Senden campaigns wrapped complete",
+   "respModel": null
   },
   {
    "module": "wrapped",
@@ -10590,7 +11024,8 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden wrapped lottery participate"
+   "desc": "Senden wrapped lottery participate",
+   "respModel": null
   },
   {
    "module": "wrapped",
@@ -10620,7 +11055,9 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden campaigns wrapped quizzes"
+   "desc": "Senden campaigns wrapped quizzes",
+   "respModel": null,
+   "bodyModel": "WrappedAssignCouponBody"
   },
   {
    "module": "wrapped",
@@ -10645,7 +11082,7184 @@
    "headers": [],
    "flags": [],
    "returns": "i1p<Unit>",
-   "desc": "Senden campaigns wrapped share"
+   "desc": "Senden campaigns wrapped share",
+   "respModel": null
+  }
+ ],
+ "models": {
+  "HomeBodyRequest": {
+   "fields": [
+    [
+     "storeId",
+     "String"
+    ],
+    [
+     "modules",
+     "List<HomeBodyRequest.Module>"
+    ]
+   ]
+  },
+  "Module": {
+   "fields": [
+    [
+     "moduleName",
+     "String"
+    ],
+    [
+     "aggregateVersion",
+     "int"
+    ]
+   ]
+  },
+  "ConsentBodyRequest": {
+   "fields": [
+    [
+     "consents",
+     "List<ConsentBodyRequest.Consent>"
+    ],
+    [
+     "itemName",
+     "String"
+    ],
+    [
+     "platform",
+     "String"
+    ],
+    [
+     "version",
+     "String"
+    ],
+    [
+     "deviceId",
+     "String"
+    ],
+    [
+     "tCString",
+     "String"
+    ],
+    [
+     "oneTrustId",
+     "String"
+    ],
+    [
+     "utiqMarTechPassId",
+     "String"
+    ]
+   ]
+  },
+  "Consent": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "granted",
+     "Boolean"
+    ]
+   ]
+  },
+  "ClickandpickListResponseModel": {
+   "fields": [
+    [
+     "products",
+     "List<ClickandpickSimpleProductModel>"
+    ]
+   ]
+  },
+  "ClickandpickSimpleProductModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "stock",
+     "int"
+    ],
+    [
+     "price",
+     "ClickandpickPriceModel"
+    ],
+    [
+     "brand",
+     "String"
+    ]
+   ]
+  },
+  "ClickandpickPriceModel": {
+   "fields": [
+    [
+     "amount",
+     "BigDecimal"
+    ],
+    [
+     "hasAsterisk",
+     "boolean"
+    ],
+    [
+     "unitaryDescription",
+     "String"
+    ],
+    [
+     "packaging",
+     "String"
+    ],
+    [
+     "originalAmount",
+     "BigDecimal"
+    ],
+    [
+     "infoText",
+     "String"
+    ]
+   ]
+  },
+  "ClickandpickProductModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "stock",
+     "int"
+    ],
+    [
+     "maxProductsReservation",
+     "int"
+    ],
+    [
+     "price",
+     "ClickandpickPriceModel"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "imagesUrl",
+     "List<String>"
+    ],
+    [
+     "stickers",
+     "List<ClickandpickStickerModel>"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "shortDescription",
+     "String"
+    ],
+    [
+     "longDescription",
+     "String"
+    ],
+    [
+     "videoUrl",
+     "String"
+    ]
+   ]
+  },
+  "ClickandpickStickerModel": {
+   "fields": [
+    [
+     "imageUrl",
+     "String"
+    ]
+   ]
+  },
+  "StoreDetailModel": {
+   "fields": [
+    [
+     "storeKey",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ],
+    [
+     "weekDays",
+     "List<StoreDetailWeekDaysModel>"
+    ],
+    [
+     "address",
+     "String"
+    ],
+    [
+     "postalCode",
+     "String"
+    ],
+    [
+     "locality",
+     "String"
+    ],
+    [
+     "location",
+     "GeoLocationModel"
+    ],
+    [
+     "state",
+     "String"
+    ],
+    [
+     "amenities",
+     "List<AmenityModel>"
+    ],
+    [
+     "province",
+     "String"
+    ],
+    [
+     "countryZone",
+     "CountryZoneModel"
+    ],
+    [
+     "showOfferRegion",
+     "String"
+    ],
+    [
+     "zone",
+     "String"
+    ]
+   ]
+  },
+  "StoreDetailWeekDaysModel": {
+   "fields": [
+    [
+     "day",
+     "String"
+    ],
+    [
+     "isOpen",
+     "boolean"
+    ],
+    [
+     "openingHours",
+     "List<StoreDetailOpeningHoursModel>"
+    ]
+   ]
+  },
+  "StoreDetailOpeningHoursModel": {
+   "fields": [
+    [
+     "from",
+     "String"
+    ],
+    [
+     "to",
+     "String"
+    ]
+   ]
+  },
+  "GeoLocationModel": {
+   "fields": [
+    [
+     "latitude",
+     "double"
+    ],
+    [
+     "longitude",
+     "double"
+    ]
+   ]
+  },
+  "AmenityModel": {
+   "fields": [
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "literalKey",
+     "String"
+    ]
+   ]
+  },
+  "CountryZoneModel": {
+   "fields": [
+    [
+     "zoneId",
+     "String"
+    ],
+    [
+     "isPilot",
+     "Boolean"
+    ]
+   ]
+  },
+  "FlashSaleDetailResponse": {
+   "fields": [
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "priceFormat",
+     "FlashSalePriceFormat"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "endValidityDate",
+     "Instant"
+    ],
+    [
+     "id",
+     "String"
+    ],
+    [
+     "imageUrls",
+     "List<String>"
+    ],
+    [
+     "moreSpecs",
+     "String"
+    ],
+    [
+     "price",
+     "FlashSaleDetailPrice"
+    ],
+    [
+     "priceRules",
+     "List<FlashSaleDetailPriceRule>"
+    ],
+    [
+     "status",
+     "abb"
+    ],
+    [
+     "unitsSold",
+     "int"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "totalStock",
+     "int"
+    ],
+    [
+     "energyInfo",
+     "FlashSaleDetailEnergyInfo"
+    ]
+   ]
+  },
+  "FlashSalePriceFormat": {
+   "fields": [
+    [
+     "currencySeparator",
+     "String"
+    ],
+    [
+     "groupingSeparator",
+     "String"
+    ],
+    [
+     "minDecimalDigits",
+     "int"
+    ],
+    [
+     "maxDecimalDigits",
+     "int"
+    ],
+    [
+     "currencyPosition",
+     "s9b"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "decimalDelimiter",
+     "String"
+    ]
+   ]
+  },
+  "s9b": {
+   "enum": [
+    "L",
+    "R"
+   ]
+  },
+  "FlashSaleDetailPrice": {
+   "fields": [
+    [
+     "discountAmount",
+     "BigDecimal"
+    ],
+    [
+     "discountPercentage",
+     "BigDecimal"
+    ],
+    [
+     "originalAmount",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "FlashSaleDetailPriceRule": {
+   "fields": [
+    [
+     "discountAmount",
+     "BigDecimal"
+    ],
+    [
+     "quantity",
+     "int"
+    ]
+   ]
+  },
+  "abb": {
+   "enum": [
+    "A",
+    "N",
+    "E",
+    "C",
+    "M"
+   ]
+  },
+  "FlashSaleDetailEnergyInfo": {
+   "fields": [
+    [
+     "iconUrl",
+     "String"
+    ],
+    [
+     "labelUrl",
+     "String"
+    ],
+    [
+     "dataSheetUrl",
+     "String"
+    ]
+   ]
+  },
+  "FlashSaleOrderInfoRequest": {
+   "fields": [
+    [
+     "flashSaleId",
+     "String"
+    ],
+    [
+     "quantity",
+     "int"
+    ],
+    [
+     "salesChannel",
+     "String"
+    ]
+   ]
+  },
+  "FlashSaleOrderResponse": {
+   "fields": [
+    [
+     "checkoutUrl",
+     "String"
+    ],
+    [
+     "status",
+     "ubb"
+    ],
+    [
+     "ssoPlatformId",
+     "String"
+    ]
+   ]
+  },
+  "ubb": {
+   "enum": [
+    "A",
+    "N",
+    "E",
+    "C",
+    "M"
+   ]
+  },
+  "FlashSaleProductResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "endValidityDate",
+     "Instant"
+    ],
+    [
+     "startDate",
+     "Instant"
+    ],
+    [
+     "price",
+     "FlashSaleListPrice"
+    ],
+    [
+     "priceDelimiter",
+     "String"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "status",
+     "pbb"
+    ],
+    [
+     "energyInfo",
+     "FlashSaleEnergyInfo"
+    ]
+   ]
+  },
+  "FlashSaleListPrice": {
+   "fields": [
+    [
+     "originalAmount",
+     "BigDecimal"
+    ],
+    [
+     "discountAmount",
+     "BigDecimal"
+    ],
+    [
+     "discountPercentage",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "pbb": {
+   "enum": [
+    "ACTIVE",
+    "NO_STOCK",
+    "EXPIRED",
+    "COMING_SOON"
+   ]
+  },
+  "FlashSaleEnergyInfo": {
+   "fields": [
+    [
+     "iconUrl",
+     "String"
+    ],
+    [
+     "labelUrl",
+     "String"
+    ]
+   ]
+  },
+  "FavoriteStoreModel": {
+   "fields": [
+    [
+     "country",
+     "String"
+    ],
+    [
+     "storeKey",
+     "String"
+    ]
+   ]
+  },
+  "TicketListResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "isFavorite",
+     "boolean"
+    ],
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "totalAmount",
+     "BigDecimal"
+    ],
+    [
+     "savings",
+     "BigDecimal"
+    ],
+    [
+     "articlesCount",
+     "int"
+    ],
+    [
+     "couponsUsedCount",
+     "int"
+    ],
+    [
+     "returns",
+     "List<ReturnResponse>"
+    ],
+    [
+     "isHtml",
+     "boolean"
+    ],
+    [
+     "iconUrl",
+     "String"
+    ],
+    [
+     "vendor",
+     "VendorResponse"
+    ],
+    [
+     "badges",
+     "BadgesResponse"
+    ],
+    [
+     "origin",
+     "TicketListResponse.a"
+    ]
+   ]
+  },
+  "ReturnResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "amount",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "VendorResponse": {
+   "fields": [
+    [
+     "vendorId",
+     "String"
+    ],
+    [
+     "vendorTransactionId",
+     "String"
+    ],
+    [
+     "vendorLogoUrl",
+     "String"
+    ]
+   ]
+  },
+  "BadgesResponse": {
+   "fields": [
+    [
+     "coupons",
+     "int"
+    ],
+    [
+     "invoice",
+     "boolean"
+    ],
+    [
+     "returns",
+     "int"
+    ],
+    [
+     "isAvailable",
+     "boolean"
+    ]
+   ]
+  },
+  "a": {
+   "enum": [
+    "S",
+    "HGA"
+   ]
+  },
+  "TicketUnifiedResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "ticketType",
+     "o0v"
+    ],
+    [
+     "barCode",
+     "String"
+    ],
+    [
+     "couponsUsed",
+     "List<TicketCouponResponse>"
+    ],
+    [
+     "offersUsed",
+     "List<TicketOfferResponse>"
+    ],
+    [
+     "returnedHtmlTickets",
+     "List<ReturnedHtmlTicketResponse>"
+    ],
+    [
+     "isFavorite",
+     "boolean"
+    ],
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "totalAmount",
+     "BigDecimal"
+    ],
+    [
+     "store",
+     "StoreResponse"
+    ],
+    [
+     "languageCode",
+     "String"
+    ],
+    [
+     "htmlPrintedReceipt",
+     "String"
+    ],
+    [
+     "printedReceiptState",
+     "TicketUnifiedResponse.a"
+    ],
+    [
+     "hasInvoice",
+     "Boolean"
+    ],
+    [
+     "sequenceNumber",
+     "String"
+    ],
+    [
+     "workstation",
+     "String"
+    ],
+    [
+     "itemsLine",
+     "List<TicketLineResponse>"
+    ],
+    [
+     "taxes",
+     "List<TicketTaxResponse>"
+    ],
+    [
+     "returnedNativeTickets",
+     "List<ReturnedNativeTicketResponse>"
+    ],
+    [
+     "totalAmountString",
+     "String"
+    ],
+    [
+     "currency",
+     "TicketCurrencyResponse"
+    ],
+    [
+     "payments",
+     "List<TicketPaymentResponse>"
+    ],
+    [
+     "tenderChange",
+     "List<TicketTenderChangeResponse>"
+    ],
+    [
+     "isEmployee",
+     "Boolean"
+    ],
+    [
+     "linesScannedCount",
+     "Integer"
+    ],
+    [
+     "taxExemptTexts",
+     "v8u"
+    ],
+    [
+     "storeID",
+     "String"
+    ],
+    [
+     "fiscalDataAt",
+     "FiscalDataAtResponse"
+    ],
+    [
+     "totalTaxes",
+     "TicketTotalTaxesResponse"
+    ],
+    [
+     "fiscalDataCZ",
+     "FiscalDataCZResponse"
+    ],
+    [
+     "fiscalDataDe",
+     "FiscalDataDeResponse"
+    ],
+    [
+     "totalDiscount",
+     "String"
+    ],
+    [
+     "ustIdNr",
+     "String"
+    ],
+    [
+     "operatorId",
+     "String"
+    ],
+    [
+     "logoUrl",
+     "String"
+    ],
+    [
+     "watermarkUrl",
+     "String"
+    ],
+    [
+     "codes",
+     "List<CodeResponse>"
+    ],
+    [
+     "showCopy",
+     "Boolean"
+    ],
+    [
+     "collectingModel",
+     "CollectingModelResponse"
+    ],
+    [
+     "netTotalAmount",
+     "BigDecimal"
+    ],
+    [
+     "savings",
+     "BigDecimal"
+    ],
+    [
+     "items",
+     "List<TicketHGAItemResponse>"
+    ]
+   ]
+  },
+  "o0v": {
+   "enum": [
+    "NATIVE",
+    "HTML",
+    "BROKEN_HTML",
+    "HARD_PRINTED",
+    "HGA"
+   ]
+  },
+  "TicketCouponResponse": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "discount",
+     "String"
+    ],
+    [
+     "block2Description",
+     "String"
+    ],
+    [
+     "couponTitle",
+     "String"
+    ],
+    [
+     "couponDescription",
+     "String"
+    ]
+   ]
+  },
+  "TicketOfferResponse": {
+   "fields": [
+    [
+     "offerTitle",
+     "String"
+    ],
+    [
+     "offerDescription",
+     "String"
+    ]
+   ]
+  },
+  "ReturnedHtmlTicketResponse": {
+   "fields": [
+    [
+     "ticketId",
+     "String"
+    ],
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "itemsReturnedCount",
+     "int"
+    ],
+    [
+     "fiscalBarcodeAt",
+     "String"
+    ],
+    [
+     "htmlPrintedReceipt",
+     "String"
+    ],
+    [
+     "codes",
+     "List<CodeResponse>"
+    ]
+   ]
+  },
+  "CodeResponse": {
+   "fields": [
+    [
+     "code",
+     "String"
+    ],
+    [
+     "format",
+     "mj5"
+    ],
+    [
+     "position",
+     "sj5"
+    ],
+    [
+     "codeType",
+     "bk5"
+    ],
+    [
+     "size",
+     "vj5"
+    ],
+    [
+     "label",
+     "CodeLabelResponse"
+    ]
+   ]
+  },
+  "mj5": {
+   "enum": [
+    "CODE_128",
+    "ITF",
+    "QR_C",
+    "PDF_417"
+   ]
+  },
+  "sj5": {
+   "enum": [
+    "Bottom",
+    "Top"
+   ]
+  },
+  "bk5": {
+   "enum": [
+    "ReturnInfo",
+    "Fiscal"
+   ]
+  },
+  "vj5": {
+   "enum": [
+    "S",
+    "L"
+   ]
+  },
+  "CodeLabelResponse": {
+   "fields": [
+    [
+     "label",
+     "String"
+    ],
+    [
+     "isLokaliseKey",
+     "boolean"
+    ],
+    [
+     "position",
+     "sj5"
+    ]
+   ]
+  },
+  "StoreResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ],
+    [
+     "address",
+     "String"
+    ],
+    [
+     "postalCode",
+     "String"
+    ],
+    [
+     "locality",
+     "String"
+    ],
+    [
+     "schedule",
+     "String"
+    ]
+   ]
+  },
+  "TicketLineResponse": {
+   "fields": [
+    [
+     "currentUnitPrice",
+     "String"
+    ],
+    [
+     "quantity",
+     "String"
+    ],
+    [
+     "isWeight",
+     "boolean"
+    ],
+    [
+     "originalAmount",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ],
+    [
+     "taxGroupName",
+     "String"
+    ],
+    [
+     "codeInput",
+     "String"
+    ],
+    [
+     "discounts",
+     "List<TicketDiscountResponse>"
+    ],
+    [
+     "deposit",
+     "TicketDepositResponse"
+    ],
+    [
+     "giftSerialNumber",
+     "String"
+    ]
+   ]
+  },
+  "TicketDiscountResponse": {
+   "fields": [
+    [
+     "description",
+     "String"
+    ],
+    [
+     "amount",
+     "String"
+    ]
+   ]
+  },
+  "TicketDepositResponse": {
+   "fields": [
+    [
+     "amount",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "unitPrice",
+     "String"
+    ],
+    [
+     "quantity",
+     "Integer"
+    ],
+    [
+     "taxGroupName",
+     "String"
+    ]
+   ]
+  },
+  "TicketTaxResponse": {
+   "fields": [
+    [
+     "taxGroupName",
+     "String"
+    ],
+    [
+     "percentage",
+     "String"
+    ],
+    [
+     "amount",
+     "String"
+    ],
+    [
+     "taxableAmount",
+     "String"
+    ],
+    [
+     "netAmount",
+     "String"
+    ]
+   ]
+  },
+  "ReturnedNativeTicketResponse": {
+   "fields": [
+    [
+     "ticketId",
+     "String"
+    ],
+    [
+     "store",
+     "StoreResponse"
+    ],
+    [
+     "sequenceNumber",
+     "String"
+    ],
+    [
+     "workstation",
+     "String"
+    ],
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "totalAmountString",
+     "String"
+    ],
+    [
+     "totalAmount",
+     "BigDecimal"
+    ],
+    [
+     "itemsReturned",
+     "List<TicketReturnedLineResponse>"
+    ],
+    [
+     "taxes",
+     "List<TicketTaxResponse>"
+    ],
+    [
+     "tenderChange",
+     "List<TicketTenderChangeResponse>"
+    ],
+    [
+     "linesScannedCount",
+     "int"
+    ],
+    [
+     "totalTaxes",
+     "TicketTotalTaxesResponse"
+    ],
+    [
+     "fiscalDataAt",
+     "FiscalDataAtResponse"
+    ],
+    [
+     "fiscalDataCZ",
+     "FiscalDataCZResponse"
+    ],
+    [
+     "operatorId",
+     "String"
+    ],
+    [
+     "fiscalDataDe",
+     "FiscalDataDeResponse"
+    ]
+   ]
+  },
+  "TicketReturnedLineResponse": {
+   "fields": [
+    [
+     "currentUnitPrice",
+     "String"
+    ],
+    [
+     "currentPrice",
+     "String"
+    ],
+    [
+     "quantity",
+     "String"
+    ],
+    [
+     "isWeight",
+     "boolean"
+    ],
+    [
+     "amount",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "taxGroupName",
+     "String"
+    ],
+    [
+     "codeInput",
+     "String"
+    ],
+    [
+     "discounts",
+     "List<TicketDiscountResponse>"
+    ],
+    [
+     "priceDifference",
+     "String"
+    ],
+    [
+     "reason",
+     "String"
+    ],
+    [
+     "deposit",
+     "TicketDepositResponse"
+    ]
+   ]
+  },
+  "TicketTenderChangeResponse": {
+   "fields": [
+    [
+     "roundingDifference",
+     "String"
+    ],
+    [
+     "type",
+     "f0v"
+    ],
+    [
+     "amount",
+     "String"
+    ],
+    [
+     "cardInfo",
+     "TicketCardPaymentResponse"
+    ]
+   ]
+  },
+  "f0v": {
+   "enum": [
+    "C",
+    "C"
+   ]
+  },
+  "TicketCardPaymentResponse": {
+   "fields": [
+    [
+     "accountNumber",
+     "String"
+    ]
+   ]
+  },
+  "TicketTotalTaxesResponse": {
+   "fields": [
+    [
+     "totalAmount",
+     "String"
+    ],
+    [
+     "totalTaxableAmount",
+     "String"
+    ],
+    [
+     "totalNetAmount",
+     "String"
+    ]
+   ]
+  },
+  "FiscalDataAtResponse": {
+   "fields": [
+    [
+     "fiscalSequenceNumber",
+     "String"
+    ],
+    [
+     "fiscalPrinterId",
+     "String"
+    ],
+    [
+     "fiscalBarcode",
+     "String"
+    ]
+   ]
+  },
+  "FiscalDataCZResponse": {
+   "fields": [
+    [
+     "fiscalDataStoreTax",
+     "String"
+    ],
+    [
+     "fiscalDataBkp",
+     "String"
+    ],
+    [
+     "fiscalDataPkp",
+     "String"
+    ],
+    [
+     "fiscalDataRin",
+     "String"
+    ],
+    [
+     "fiscalDataFik",
+     "String"
+    ]
+   ]
+  },
+  "FiscalDataDeResponse": {
+   "fields": [
+    [
+     "isActive",
+     "boolean"
+    ],
+    [
+     "fiscalSequenceNumber",
+     "String"
+    ],
+    [
+     "fiscalSignatureStart",
+     "OffsetDateTime"
+    ],
+    [
+     "fiscalTimeStamp",
+     "OffsetDateTime"
+    ],
+    [
+     "fiscalSignatureCounter",
+     "String"
+    ],
+    [
+     "fiscalReceiptLabel",
+     "String"
+    ],
+    [
+     "posSerialnumber",
+     "String"
+    ]
+   ]
+  },
+  "TicketCurrencyResponse": {
+   "fields": [
+    [
+     "code",
+     "String"
+    ],
+    [
+     "symbol",
+     "String"
+    ]
+   ]
+  },
+  "TicketPaymentResponse": {
+   "fields": [
+    [
+     "type",
+     "ryu"
+    ],
+    [
+     "amount",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "roundingDifference",
+     "String"
+    ],
+    [
+     "foreignPayment",
+     "GetTicketTicketForeignPaymentResponse"
+    ],
+    [
+     "cardInfo",
+     "TicketCardPaymentResponse"
+    ],
+    [
+     "rawPaymentInformationHTML",
+     "String"
+    ]
+   ]
+  },
+  "ryu": {
+   "enum": [
+    "C",
+    "C",
+    "G",
+    "F",
+    "M",
+    "L",
+    "SMP"
+   ]
+  },
+  "GetTicketTicketForeignPaymentResponse": {
+   "fields": [
+    [
+     "foreignAmount",
+     "String"
+    ],
+    [
+     "amount",
+     "String"
+    ],
+    [
+     "foreignCurrency",
+     "String"
+    ]
+   ]
+  },
+  "v8u": {
+   "enum": [
+    "N",
+    "E",
+    "P",
+    "E",
+    "IGIC"
+   ]
+  },
+  "CollectingModelResponse": {
+   "fields": [
+    [
+     "points",
+     "int"
+    ],
+    [
+     "pointsDate",
+     "OffsetDateTime"
+    ],
+    [
+     "arePointsAvailable",
+     "boolean"
+    ]
+   ]
+  },
+  "TicketHGAItemResponse": {
+   "fields": [
+    [
+     "quantity",
+     "int"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "grossAmount",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "HomeConfigResponse": {
+   "fields": [
+    [
+     "configurations",
+     "List<Configuration>"
+    ]
+   ]
+  },
+  "Configuration": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "modules",
+     "List<String>"
+    ]
+   ]
+  },
+  "WrappedModel": {
+   "fields": [
+    [
+     "status",
+     "WrappedModel.b"
+    ],
+    [
+     "configuration",
+     "WrappedModel.Configuration"
+    ],
+    [
+     "smartBuyer",
+     "WrappedModel.SmartBuyer"
+    ],
+    [
+     "frequencyShop",
+     "WrappedModel.FrequencyShop"
+    ],
+    [
+     "savings",
+     "WrappedModel.Savings"
+    ],
+    [
+     "topArticles",
+     "WrappedModel.TopArticles"
+    ],
+    [
+     "categoryPicker",
+     "WrappedModel.CategoryPicker"
+    ],
+    [
+     "topCategories",
+     "WrappedModel.TopCategories"
+    ],
+    [
+     "couponPlus",
+     "WrappedModel.CouponPlus"
+    ],
+    [
+     "lidlPoints",
+     "WrappedModel.LidlPoints"
+    ],
+    [
+     "sustainableChoices",
+     "WrappedModel.SustainableChoices"
+    ],
+    [
+     "recognitions",
+     "WrappedModel.a"
+    ],
+    [
+     "lottery",
+     "WrappedModel.Lottery"
+    ]
+   ]
+  },
+  "b": {
+   "enum": [
+    "E",
+    "N",
+    "N"
+   ]
+  },
+  "CategoryPicker": {
+   "fields": [
+    [
+     "categories",
+     "List<WrappedModel.Category>"
+    ],
+    [
+     "assignedCoupon",
+     "String"
+    ]
+   ]
+  },
+  "Category": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "position",
+     "int"
+    ]
+   ]
+  },
+  "FrequencyShop": {
+   "fields": [
+    [
+     "yearlyPurchases",
+     "int"
+    ],
+    [
+     "percentile",
+     "int"
+    ],
+    [
+     "buyerLevel",
+     "WrappedModel.a"
+    ],
+    [
+     "months",
+     "List<WrappedModel.Month>"
+    ]
+   ]
+  },
+  "Month": {
+   "fields": [
+    [
+     "id",
+     "int"
+    ],
+    [
+     "storePurchases",
+     "int"
+    ],
+    [
+     "onlinePurchases",
+     "int"
+    ]
+   ]
+  },
+  "Lottery": {
+   "fields": [
+    [
+     "isLotteryParticipant",
+     "boolean"
+    ],
+    [
+     "prizes",
+     "List<WrappedModel.Prize>"
+    ],
+    [
+     "legalTerms",
+     "String"
+    ],
+    [
+     "privacyNote",
+     "String"
+    ]
+   ]
+  },
+  "Prize": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "units",
+     "int"
+    ],
+    [
+     "image",
+     "String"
+    ]
+   ]
+  },
+  "Savings": {
+   "fields": [
+    [
+     "totalSavings",
+     "BigDecimal"
+    ],
+    [
+     "coupons",
+     "WrappedModel.SavingType"
+    ],
+    [
+     "offers",
+     "WrappedModel.SavingType"
+    ]
+   ]
+  },
+  "SavingType": {
+   "fields": [
+    [
+     "used",
+     "int"
+    ],
+    [
+     "saved",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "SustainableChoices": {
+   "fields": [
+    [
+     "choices",
+     "List<WrappedModel.Choice>"
+    ]
+   ]
+  },
+  "Choice": {
+   "fields": [
+    [
+     "type",
+     "WrappedModel.a"
+    ],
+    [
+     "quantity",
+     "int"
+    ]
+   ]
+  },
+  "TopArticles": {
+   "fields": [
+    [
+     "articles",
+     "List<WrappedModel.Article>"
+    ]
+   ]
+  },
+  "Article": {
+   "fields": [
+    [
+     "name",
+     "String"
+    ],
+    [
+     "tickets",
+     "int"
+    ]
+   ]
+  },
+  "TopCategories": {
+   "fields": [
+    [
+     "categories",
+     "List<WrappedModel.TopCategory>"
+    ]
+   ]
+  },
+  "TopCategory": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "percent",
+     "int"
+    ]
+   ]
+  },
+  "CouponPlus": {
+   "fields": [
+    [
+     "goalsAchieved",
+     "int"
+    ]
+   ]
+  },
+  "LidlPoints": {
+   "fields": [
+    [
+     "points",
+     "int"
+    ]
+   ]
+  },
+  "SmartBuyer": {
+   "fields": [
+    [
+     "smartPercent",
+     "int"
+    ]
+   ]
+  },
+  "WrappedAssignCouponBody": {
+   "fields": [
+    [
+     "categoryId",
+     "String"
+    ]
+   ]
+  },
+  "LoyaltyCardsResponse": {
+   "fields": [
+    [
+     "activated",
+     "List<String>"
+    ]
+   ]
+  },
+  "SetPaymentMethodRequest": {
+   "fields": [
+    [
+     "paymentMethodId",
+     "String"
+    ],
+    [
+     "alias",
+     "String"
+    ],
+    [
+     "isDefault",
+     "boolean"
+    ]
+   ]
+  },
+  "GenericPaymentMethodsResponse": {
+   "fields": [
+    [
+     "paymentMethods",
+     "List<GenericPaymentMethodResponse>"
+    ]
+   ]
+  },
+  "GenericPaymentMethodResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "status",
+     "String"
+    ],
+    [
+     "number",
+     "String"
+    ],
+    [
+     "alias",
+     "String"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "isDefault",
+     "boolean"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "defaultInBusinessModel",
+     "List<String>"
+    ],
+    [
+     "bankName",
+     "String"
+    ],
+    [
+     "accountHolder",
+     "String"
+    ],
+    [
+     "icon",
+     "String"
+    ],
+    [
+     "cardBackgroundImage",
+     "String"
+    ],
+    [
+     "balance",
+     "BigDecimal"
+    ],
+    [
+     "minTopUpAmount",
+     "BigDecimal"
+    ],
+    [
+     "maxTopUpAmount",
+     "BigDecimal"
+    ],
+    [
+     "currency",
+     "String"
+    ]
+   ]
+  },
+  "TransactionsResponse": {
+   "fields": [
+    [
+     "transactions",
+     "List<TransactionResponse>"
+    ]
+   ]
+  },
+  "TransactionResponse": {
+   "fields": [
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "amount",
+     "BigDecimal"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "icon",
+     "String"
+    ],
+    [
+     "country",
+     "String"
+    ]
+   ]
+  },
+  "QrRequest": {
+   "fields": [
+    [
+     "loyaltyId",
+     "String"
+    ],
+    [
+     "paymentMethodId",
+     "String"
+    ]
+   ]
+  },
+  "QrResponse": {
+   "fields": [
+    [
+     "paymentQR",
+     "String"
+    ],
+    [
+     "creditLimit",
+     "BigDecimal"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "errors",
+     "List<ErrorItemResponse>"
+    ]
+   ]
+  },
+  "ErrorItemResponse": {
+   "fields": [
+    [
+     "type",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ]
+   ]
+  },
+  "SepaPaymentLimitResponse": {
+   "fields": [
+    [
+     "creditLimit",
+     "BigDecimal"
+    ],
+    [
+     "currency",
+     "String"
+    ]
+   ]
+  },
+  "ValidateDefaultPaymentMethodData": {
+   "fields": [
+    [
+     "defaultPaymentMethodInfo",
+     "String"
+    ]
+   ]
+  },
+  "ValidateDefaultPaymentMethodInfoResponse": {
+   "fields": [
+    [
+     "status",
+     "ValidateDefaultPaymentMethodInfoStatusResponse"
+    ],
+    [
+     "remainingAttempts",
+     "int"
+    ]
+   ]
+  },
+  "SubscriptionsResponse": {
+   "fields": [
+    [
+     "subscriptions",
+     "List<SubscriptionResponse>"
+    ]
+   ]
+  },
+  "SubscriptionResponse": {
+   "fields": [
+    [
+     "name",
+     "String"
+    ],
+    [
+     "iconUrl",
+     "String"
+    ]
+   ]
+  },
+  "DefaultPaymentMethodInfoResponse": {
+   "fields": [
+    [
+     "number",
+     "String"
+    ],
+    [
+     "paymentType",
+     "PaymentTypeApi"
+    ]
+   ]
+  },
+  "SetDeviceRegistrationRequest": {
+   "fields": [
+    [
+     "deviceId",
+     "String"
+    ],
+    [
+     "pnsHandle",
+     "String"
+    ],
+    [
+     "platform",
+     "int"
+    ],
+    [
+     "country",
+     "String"
+    ],
+    [
+     "languageCode",
+     "String"
+    ]
+   ]
+  },
+  "SessionResponseModel": {
+   "fields": [
+    [
+     "sessionHash",
+     "String"
+    ],
+    [
+     "country",
+     "String"
+    ],
+    [
+     "entityType",
+     "String"
+    ],
+    [
+     "entityId",
+     "String"
+    ],
+    [
+     "entityStatus",
+     "l8r"
+    ],
+    [
+     "campaignType",
+     "y04"
+    ]
+   ]
+  },
+  "l8r": {
+   "enum": [
+    "U",
+    "A",
+    "N"
+   ]
+  },
+  "y04": {
+   "enum": [
+    "I",
+    "U"
+   ]
+  },
+  "DigitalLeafletRequestPostUserActivityModel": {
+   "fields": [
+    [
+     "deviceId",
+     "String"
+    ],
+    [
+     "eventName",
+     "String"
+    ],
+    [
+     "itemName",
+     "String"
+    ],
+    [
+     "itemLocation",
+     "String"
+    ],
+    [
+     "campaignId",
+     "String"
+    ],
+    [
+     "clientId",
+     "String"
+    ],
+    [
+     "itemId",
+     "String"
+    ],
+    [
+     "itemIds",
+     "List<String>"
+    ],
+    [
+     "itemContent",
+     "String"
+    ],
+    [
+     "productWawiId",
+     "String"
+    ],
+    [
+     "productWawiIds",
+     "List<String>"
+    ],
+    [
+     "productPrice",
+     "BigDecimal"
+    ],
+    [
+     "productCurrencySymbol",
+     "String"
+    ],
+    [
+     "productHasDiscount",
+     "Boolean"
+    ],
+    [
+     "productPriceType",
+     "String"
+    ],
+    [
+     "productMainBgColor",
+     "String"
+    ],
+    [
+     "productDiscountBgColor",
+     "String"
+    ]
+   ]
+  },
+  "UserPoints": {
+   "fields": [
+    [
+     "availablePoints",
+     "int"
+    ],
+    [
+     "upcomingPoints",
+     "int"
+    ]
+   ]
+  },
+  "SummaryDTO": {
+   "fields": [
+    [
+     "expired",
+     "int"
+    ],
+    [
+     "total",
+     "int"
+    ],
+    [
+     "upcoming",
+     "int"
+    ],
+    [
+     "ratio",
+     "int"
+    ],
+    [
+     "campaigns",
+     "List<SummaryDTO.CampaignDTO>"
+    ]
+   ]
+  },
+  "CampaignDTO": {
+   "fields": [
+    [
+     "campaignId",
+     "String"
+    ],
+    [
+     "startDate",
+     "Instant"
+    ]
+   ]
+  },
+  "ReadAlertModel": {
+   "fields": [
+    [
+     "alertId",
+     "String"
+    ]
+   ]
+  },
+  "LidlPlusConfigurationAppApiFeaturesGetCountryConfigurationByStoreV3CountryConfigurationModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "zoneId",
+     "String"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "pushApplicationId",
+     "String"
+    ],
+    [
+     "pushToken",
+     "String"
+    ],
+    [
+     "active",
+     "List<String>"
+    ],
+    [
+     "bottomBar",
+     "List<String>"
+    ],
+    [
+     "more",
+     "List<String>"
+    ],
+    [
+     "legal",
+     "List<String>"
+    ],
+    [
+     "mcAppEndpoint",
+     "String"
+    ],
+    [
+     "pushMId",
+     "String"
+    ],
+    [
+     "isRatingPopUpEnabled",
+     "Boolean"
+    ],
+    [
+     "moreFromLidl",
+     "List<String>"
+    ],
+    [
+     "businessModels",
+     "List<SuperHomeItemModel>"
+    ],
+    [
+     "firebaseConfig",
+     "String"
+    ],
+    [
+     "purchases",
+     "List<String>"
+    ],
+    [
+     "segmentId",
+     "String"
+    ]
+   ]
+  },
+  "SuperHomeItemModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "type",
+     "xot"
+    ],
+    [
+     "iconUrl",
+     "String"
+    ],
+    [
+     "googleAppId",
+     "String"
+    ],
+    [
+     "huaweiAppId",
+     "String"
+    ],
+    [
+     "androidDeeplinkUrl",
+     "String"
+    ]
+   ]
+  },
+  "xot": {
+   "enum": [
+    "FEATURE",
+    "APP",
+    "URL"
+   ]
+  },
+  "ClickandpickOrderResponseModel": {
+   "fields": [
+    [
+     "storeId",
+     "String"
+    ],
+    [
+     "storeName",
+     "String"
+    ],
+    [
+     "reservationNumber",
+     "String"
+    ],
+    [
+     "creationDate",
+     "Instant"
+    ],
+    [
+     "price",
+     "ClickandpickCartPriceModel"
+    ],
+    [
+     "pickupDate",
+     "ClickandpickPickUpDateModel"
+    ],
+    [
+     "status",
+     "ze5"
+    ],
+    [
+     "daysUntilPickup",
+     "int"
+    ],
+    [
+     "products",
+     "List<ClickandpickProductOfOrderResponseModel>"
+    ]
+   ]
+  },
+  "ClickandpickCartPriceModel": {
+   "fields": [
+    [
+     "taxes",
+     "BigDecimal"
+    ],
+    [
+     "totalWithoutTaxes",
+     "BigDecimal"
+    ],
+    [
+     "total",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "ClickandpickPickUpDateModel": {
+   "fields": [
+    [
+     "fromTimestamp",
+     "int"
+    ],
+    [
+     "toTimestamp",
+     "int"
+    ]
+   ]
+  },
+  "ze5": {
+   "enum": [
+    "Open",
+    "InTransit",
+    "ReadyToPickup",
+    "Expired"
+   ]
+  },
+  "ClickandpickProductOfOrderResponseModel": {
+   "fields": [
+    [
+     "productId",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "quantity",
+     "int"
+    ],
+    [
+     "unitaryPrice",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "AddressResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "lastUpdate",
+     "String"
+    ],
+    [
+     "country",
+     "String"
+    ],
+    [
+     "city",
+     "String"
+    ],
+    [
+     "street",
+     "String"
+    ],
+    [
+     "number",
+     "String"
+    ],
+    [
+     "door",
+     "String"
+    ],
+    [
+     "postcode",
+     "String"
+    ],
+    [
+     "isDefault",
+     "Boolean"
+    ],
+    [
+     "fullName",
+     "String"
+    ],
+    [
+     "isCompleted",
+     "Boolean"
+    ]
+   ]
+  },
+  "AddressListResponse": {
+   "fields": [
+    [
+     "addresses",
+     "List<AddressResponse>"
+    ]
+   ]
+  },
+  "StampCardRewardsModel": {
+   "fields": [
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "endDate",
+     "OffsetDateTime"
+    ],
+    [
+     "status",
+     "StampCardRewardsModel.a"
+    ],
+    [
+     "configuration",
+     "StampCardRewardsModel.Configuration"
+    ],
+    [
+     "userPromotion",
+     "StampCardRewardsModel.UserPromotion"
+    ],
+    [
+     "intro",
+     "StampCardRewardsModel.Intro"
+    ]
+   ]
+  },
+  "Intro": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "altTextImage",
+     "String"
+    ]
+   ]
+  },
+  "UserPromotion": {
+   "fields": [
+    [
+     "unitsAchieved",
+     "int"
+    ],
+    [
+     "hasNotViewedCards",
+     "boolean"
+    ],
+    [
+     "completedCards",
+     "int"
+    ]
+   ]
+  },
+  "CongratulationsModel": {
+   "fields": [
+    [
+     "cards",
+     "List<CongratulationsCardModel>"
+    ],
+    [
+     "legalTerms",
+     "String"
+    ]
+   ]
+  },
+  "CongratulationsCardModel": {
+   "fields": [
+    [
+     "id",
+     "UUID"
+    ],
+    [
+     "userCouponId",
+     "UUID"
+    ]
+   ]
+  },
+  "DetailDataModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "endDate",
+     "OffsetDateTime"
+    ],
+    [
+     "information",
+     "DetailDataModel.Information"
+    ],
+    [
+     "prizes",
+     "List<DetailDataModel.Prize>"
+    ],
+    [
+     "configuration",
+     "DetailDataModel.Configuration"
+    ],
+    [
+     "userPromotion",
+     "DetailDataModel.UserPromotion"
+    ]
+   ]
+  },
+  "Coupon": {
+   "fields": [
+    [
+     "couponId",
+     "String"
+    ],
+    [
+     "isRedeemed",
+     "boolean"
+    ]
+   ]
+  },
+  "Information": {
+   "fields": [
+    [
+     "description",
+     "String"
+    ],
+    [
+     "moreInformationUrl",
+     "String"
+    ]
+   ]
+  },
+  "ETicketStatusApiModel": {
+   "fields": [
+    [
+     "shouldPrint",
+     "boolean"
+    ]
+   ]
+  },
+  "PaymentTypeEnrollmentResponse": {
+   "fields": [
+    [
+     "status",
+     "String"
+    ],
+    [
+     "transactionId",
+     "String"
+    ],
+    [
+     "enrollmentUrl",
+     "String"
+    ],
+    [
+     "scaUrls",
+     "List<String>"
+    ]
+   ]
+  },
+  "PreAuthStandardRequest": {
+   "fields": [
+    [
+     "paymentMethodId",
+     "String"
+    ],
+    [
+     "preAuthRequestId",
+     "String"
+    ]
+   ]
+  },
+  "PreAuthStandardResponse": {
+   "fields": [
+    [
+     "businessModelTransactionId",
+     "String"
+    ],
+    [
+     "status",
+     "String"
+    ],
+    [
+     "amount",
+     "String"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "redirectUrl",
+     "String"
+    ],
+    [
+     "successUrl",
+     "String"
+    ],
+    [
+     "errorUrl",
+     "String"
+    ],
+    [
+     "cancelUrl",
+     "String"
+    ]
+   ]
+  },
+  "AddBalanceRequest": {
+   "fields": [
+    [
+     "paymentMethodIdUsedFor",
+     "String"
+    ],
+    [
+     "amount",
+     "double"
+    ]
+   ]
+  },
+  "AddBalanceResponse": {
+   "fields": [
+    [
+     "balance",
+     "Double"
+    ],
+    [
+     "status",
+     "String"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "redirectUrl",
+     "String"
+    ],
+    [
+     "errors",
+     "List<AddBalanceErrorResponse>"
+    ],
+    [
+     "points",
+     "Integer"
+    ]
+   ]
+  },
+  "AddBalanceErrorResponse": {
+   "fields": [
+    [
+     "message",
+     "String"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "points",
+     "Integer"
+    ]
+   ]
+  },
+  "PollingTransactionStatusResponse": {
+   "fields": [
+    [
+     "status",
+     "String"
+    ]
+   ]
+  },
+  "LastAcceptedResponse": {
+   "fields": [
+    [
+     "bankTransactionId",
+     "String"
+    ],
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "cardNo",
+     "String"
+    ],
+    [
+     "date",
+     "String"
+    ],
+    [
+     "hour",
+     "String"
+    ],
+    [
+     "merchantCode",
+     "String"
+    ],
+    [
+     "terminal",
+     "String"
+    ],
+    [
+     "till",
+     "String"
+    ],
+    [
+     "authorizationCode",
+     "String"
+    ],
+    [
+     "validationCode",
+     "String"
+    ],
+    [
+     "totalSum",
+     "double"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "wawiId",
+     "String"
+    ],
+    [
+     "storeStockId",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "imageUrls",
+     "List<String>"
+    ],
+    [
+     "logos",
+     "List<DigitalLeafletResponseProductDetailLogoModel>"
+    ],
+    [
+     "mainPrice",
+     "DigitalLeafletResponsePriceModel"
+    ],
+    [
+     "shippingInfo",
+     "String"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "badges",
+     "List<DigitalLeafletResponseProductDetailBadgeModel>"
+    ],
+    [
+     "relatedProducts",
+     "List<DigitalLeafletResponseProductDetailRelatedProductModel>"
+    ],
+    [
+     "config",
+     "DigitalLeafletResponseProductDetailConfigModel"
+    ],
+    [
+     "articleNumber",
+     "String"
+    ],
+    [
+     "ecommerceId",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "online",
+     "Boolean"
+    ],
+    [
+     "ecommerceUrl",
+     "String"
+    ],
+    [
+     "energeticInformation",
+     "DigitalLeafletResponseProductDetailEnergeticInformationModel"
+    ],
+    [
+     "rating",
+     "DigitalLeafletResponseProductDetailRatingModel"
+    ],
+    [
+     "legalTexts",
+     "List<String>"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailLogoModel": {
+   "fields": [
+    [
+     "imageUrl",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponsePriceModel": {
+   "fields": [
+    [
+     "price",
+     "BigDecimal"
+    ],
+    [
+     "symbol",
+     "String"
+    ],
+    [
+     "crossOutOldPrice",
+     "boolean"
+    ],
+    [
+     "theme",
+     "DigitalLeafletResponsePriceThemeModel"
+    ],
+    [
+     "priceType",
+     "DigitalLeafletResponsePriceModel.a"
+    ],
+    [
+     "altPrice",
+     "BigDecimal"
+    ],
+    [
+     "altSymbol",
+     "String"
+    ],
+    [
+     "discount",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "oldPricePrefix",
+     "String"
+    ],
+    [
+     "oldPrice",
+     "BigDecimal"
+    ],
+    [
+     "altOldPrice",
+     "BigDecimal"
+    ],
+    [
+     "disclaimers",
+     "List<String>"
+    ],
+    [
+     "oldPriceAnnotation",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponsePriceThemeModel": {
+   "fields": [
+    [
+     "main",
+     "DigitalLeafletResponsePriceThemeSpanModel"
+    ],
+    [
+     "discount",
+     "DigitalLeafletResponsePriceThemeSpanModel"
+    ]
+   ]
+  },
+  "DigitalLeafletResponsePriceThemeSpanModel": {
+   "fields": [
+    [
+     "backgroundColor",
+     "String"
+    ],
+    [
+     "textColor",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailBadgeModel": {
+   "fields": [
+    [
+     "type",
+     "DigitalLeafletResponseProductDetailBadgeModel.a"
+    ],
+    [
+     "title",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailRelatedProductModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "wawiId",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailConfigModel": {
+   "fields": [
+    [
+     "hideShare",
+     "boolean"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailEnergeticInformationModel": {
+   "fields": [
+    [
+     "withVariants",
+     "DigitalLeafletResponseProductDetailEnergeticInformationWithVariantsModel"
+    ],
+    [
+     "withoutVariants",
+     "DigitalLeafletResponseProductDetailEnergeticInformationWithoutVariantsModel"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailEnergeticInformationWithVariantsModel": {
+   "fields": [
+    [
+     "types",
+     "List<? extends l99>"
+    ],
+    [
+     "url",
+     "String"
+    ]
+   ]
+  },
+  "l99": {
+   "enum": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+   ]
+  },
+  "DigitalLeafletResponseProductDetailEnergeticInformationWithoutVariantsModel": {
+   "fields": [
+    [
+     "type",
+     "l99"
+    ],
+    [
+     "scaleUrl",
+     "String"
+    ],
+    [
+     "dataSheetUrl",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductDetailRatingModel": {
+   "fields": [
+    [
+     "count",
+     "int"
+    ],
+    [
+     "stars",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "UnreadAlertModel": {
+   "fields": [
+    [
+     "count",
+     "Integer"
+    ]
+   ]
+  },
+  "DeviceRequestDTO": {
+   "fields": [
+    [
+     "country_code",
+     "String"
+    ],
+    [
+     "device_id",
+     "String"
+    ],
+    [
+     "appVersion",
+     "String"
+    ],
+    [
+     "adjust_id",
+     "String"
+    ],
+    [
+     "model",
+     "String"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "operating_system",
+     "String"
+    ],
+    [
+     "operating_system_version",
+     "String"
+    ],
+    [
+     "one_trust_id",
+     "String"
+    ],
+    [
+     "apps_flyer_id",
+     "String"
+    ]
+   ]
+  },
+  "StoreSearchModel": {
+   "fields": [
+    [
+     "storeKey",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ],
+    [
+     "address",
+     "String"
+    ],
+    [
+     "locality",
+     "String"
+    ],
+    [
+     "distance",
+     "double"
+    ],
+    [
+     "postalCode",
+     "String"
+    ],
+    [
+     "location",
+     "GeoLocationModel"
+    ]
+   ]
+  },
+  "PlaceModel": {
+   "fields": [
+    [
+     "placeId",
+     "String"
+    ],
+    [
+     "placeDescription",
+     "String"
+    ],
+    [
+     "distance",
+     "double"
+    ]
+   ]
+  },
+  "DepositSummaryResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "amount",
+     "BigDecimal"
+    ],
+    [
+     "store",
+     "StoreResponse"
+    ],
+    [
+     "depositDate",
+     "OffsetDateTime"
+    ],
+    [
+     "itemsCount",
+     "int"
+    ]
+   ]
+  },
+  "DepositsResponse": {
+   "fields": [
+    [
+     "availableAmount",
+     "BigDecimal"
+    ],
+    [
+     "pendingAmount",
+     "BigDecimal"
+    ],
+    [
+     "isAutomaticRedemption",
+     "boolean"
+    ],
+    [
+     "deposits",
+     "List<DepositItemResponse>"
+    ],
+    [
+     "qrInfo",
+     "QRInfoResponse"
+    ]
+   ]
+  },
+  "DepositItemResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "status",
+     "lo8"
+    ],
+    [
+     "barcode",
+     "String"
+    ],
+    [
+     "amount",
+     "BigDecimal"
+    ],
+    [
+     "depositStore",
+     "StoreResponse"
+    ],
+    [
+     "depositDate",
+     "OffsetDateTime"
+    ],
+    [
+     "itemsCount",
+     "int"
+    ],
+    [
+     "redeemedDate",
+     "OffsetDateTime"
+    ],
+    [
+     "redeemedStore",
+     "StoreResponse"
+    ]
+   ]
+  },
+  "lo8": {
+   "enum": [
+    "A",
+    "P",
+    "R"
+   ]
+  },
+  "QRInfoResponse": {
+   "fields": [
+    [
+     "prefix",
+     "String"
+    ],
+    [
+     "barcodeLength",
+     "int"
+    ],
+    [
+     "totalBarcodes",
+     "int"
+    ],
+    [
+     "separator",
+     "String"
+    ],
+    [
+     "fillCharacter",
+     "String"
+    ]
+   ]
+  },
+  "DepositDetailResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "store",
+     "StoreResponse"
+    ],
+    [
+     "items",
+     "List<DepositDetailItemResponse>"
+    ],
+    [
+     "depositDate",
+     "OffsetDateTime"
+    ],
+    [
+     "redemption",
+     "DepositDetailRedemptionResponse"
+    ]
+   ]
+  },
+  "DepositDetailItemResponse": {
+   "fields": [
+    [
+     "usageType",
+     "okw"
+    ],
+    [
+     "amount",
+     "BigDecimal"
+    ],
+    [
+     "totalAmount",
+     "BigDecimal"
+    ],
+    [
+     "count",
+     "int"
+    ]
+   ]
+  },
+  "okw": {
+   "enum": [
+    "U",
+    "S",
+    "M"
+   ]
+  },
+  "DepositDetailRedemptionResponse": {
+   "fields": [
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "store",
+     "StoreResponse"
+    ]
+   ]
+  },
+  "SettingsRequest": {
+   "fields": [
+    [
+     "isAutomaticRedemption",
+     "boolean"
+    ]
+   ]
+  },
+  "ConfigurationResponse": {
+   "fields": [
+    [
+     "features",
+     "List<ConfigurationFeaturesResponse>"
+    ],
+    [
+     "walletItems",
+     "List<String>"
+    ],
+    [
+     "paymentMethodsAllowed",
+     "List<ConfigurationMethodsAllowedResponse>"
+    ],
+    [
+     "cacheTTL",
+     "Integer"
+    ]
+   ]
+  },
+  "ConfigurationFeaturesResponse": {
+   "fields": [
+    [
+     "name",
+     "String"
+    ],
+    [
+     "enabled",
+     "boolean"
+    ]
+   ]
+  },
+  "ConfigurationMethodsAllowedResponse": {
+   "fields": [
+    [
+     "name",
+     "String"
+    ],
+    [
+     "businessModels",
+     "List<String>"
+    ],
+    [
+     "maxItemEnrolled",
+     "Integer"
+    ],
+    [
+     "requiresPushNotifications",
+     "Boolean"
+    ],
+    [
+     "image",
+     "String"
+    ]
+   ]
+  },
+  "PersonalData": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "gender",
+     "String"
+    ],
+    [
+     "firstName",
+     "String"
+    ],
+    [
+     "surname",
+     "String"
+    ],
+    [
+     "birthdate",
+     "ZonedDateTime"
+    ]
+   ]
+  },
+  "CampaignDetailDTO": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "defaultPoints",
+     "int"
+    ],
+    [
+     "startDate",
+     "Instant"
+    ],
+    [
+     "endDate",
+     "Instant"
+    ],
+    [
+     "status",
+     "CampaignDetailDTO.a"
+    ],
+    [
+     "stores",
+     "List<CampaignDetailDTO.StoresDTO>"
+    ],
+    [
+     "productList",
+     "List<CampaignDetailDTO.ProductDTO>"
+    ],
+    [
+     "subType",
+     "CampaignDTO.CampaignDetailDTO.a"
+    ],
+    [
+     "operationType",
+     "xck"
+    ],
+    [
+     "minPurchaseValue",
+     "float"
+    ],
+    [
+     "pointsApplied",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "xck": {
+   "enum": [
+    "UNKNOWN",
+    "MULTIPLY",
+    "ADDITION"
+   ]
+  },
+  "ProductDTO": {
+   "fields": [
+    [
+     "code",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ]
+   ]
+  },
+  "StoresDTO": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ]
+   ]
+  },
+  "Response": {
+   "fields": [
+    [
+     "code",
+     "gs0"
+    ]
+   ]
+  },
+  "gs0": {
+   "enum": [
+    "OK",
+    "N",
+    "N",
+    "N"
+   ]
+  },
+  "OfferDetailResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "offerType",
+     "OfferTypes"
+    ],
+    [
+     "redemptionChannel",
+     "RedemptionChannels"
+    ],
+    [
+     "category",
+     "OffersCategory"
+    ],
+    [
+     "images",
+     "List<OfferImageResponse>"
+    ],
+    [
+     "priceBox",
+     "OfferPriceBoxResponse"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "productCodes",
+     "OfferProductResponse"
+    ],
+    [
+     "startValidityDate",
+     "OffsetDateTime"
+    ],
+    [
+     "endValidityDate",
+     "OffsetDateTime"
+    ],
+    [
+     "startValidityDateUTC",
+     "OffsetDateTime"
+    ],
+    [
+     "endValidityDateUTC",
+     "OffsetDateTime"
+    ],
+    [
+     "isFreeShipping",
+     "boolean"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "characteristicsTitle",
+     "String"
+    ],
+    [
+     "characteristicsDescription",
+     "String"
+    ],
+    [
+     "termsAndConditionsTitle",
+     "String"
+    ],
+    [
+     "termsAndConditionsDescription",
+     "String"
+    ],
+    [
+     "packaging",
+     "String"
+    ],
+    [
+     "pricePerUnit",
+     "String"
+    ],
+    [
+     "lowestPrice",
+     "BigDecimal"
+    ],
+    [
+     "featured",
+     "OfferFeaturedResponse"
+    ],
+    [
+     "navigationUrl",
+     "String"
+    ]
+   ]
+  },
+  "OfferTypes": {
+   "enum": [
+    "S",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S",
+    "S",
+    "O",
+    "O",
+    "O",
+    "O",
+    "O",
+    "unknown"
+   ]
+  },
+  "RedemptionChannels": {
+   "enum": [
+    "O",
+    "S",
+    "V",
+    "U"
+   ]
+  },
+  "OffersCategory": {
+   "enum": [
+    "O",
+    "S",
+    "F",
+    "V",
+    "U"
+   ]
+  },
+  "OfferImageResponse": {
+   "fields": [
+    [
+     "url",
+     "String"
+    ],
+    [
+     "altText",
+     "String"
+    ]
+   ]
+  },
+  "OfferPriceBoxResponse": {
+   "fields": [
+    [
+     "hasAsterisk",
+     "boolean"
+    ],
+    [
+     "strikethrough",
+     "boolean"
+    ],
+    [
+     "firstColor",
+     "String"
+    ],
+    [
+     "firstFontColor",
+     "String"
+    ],
+    [
+     "secondColor",
+     "String"
+    ],
+    [
+     "secondFontColor",
+     "String"
+    ],
+    [
+     "priceSymbol",
+     "String"
+    ],
+    [
+     "discountMessage",
+     "String"
+    ],
+    [
+     "largePartNumeric",
+     "BigDecimal"
+    ],
+    [
+     "largePartString",
+     "String"
+    ],
+    [
+     "smallPartNumeric",
+     "BigDecimal"
+    ],
+    [
+     "smallPartString",
+     "String"
+    ]
+   ]
+  },
+  "OfferProductResponse": {
+   "fields": [
+    [
+     "mainProducts",
+     "List<OfferProductDetailResponse>"
+    ],
+    [
+     "secondaryProducts",
+     "List<OfferProductDetailResponse>"
+    ]
+   ]
+  },
+  "OfferProductDetailResponse": {
+   "fields": [
+    [
+     "code",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "brand",
+     "String"
+    ]
+   ]
+  },
+  "OfferFeaturedResponse": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "backgroundColor",
+     "String"
+    ],
+    [
+     "fontColor",
+     "String"
+    ]
+   ]
+  },
+  "OfferListResponse": {
+   "fields": [
+    [
+     "totalOffers",
+     "BigDecimal"
+    ],
+    [
+     "offers",
+     "List<OfferItemListResponse>"
+    ]
+   ]
+  },
+  "OfferItemListResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "offerType",
+     "OfferTypes"
+    ],
+    [
+     "redemptionChannel",
+     "RedemptionChannels"
+    ],
+    [
+     "category",
+     "OffersCategory"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "imageAltText",
+     "String"
+    ],
+    [
+     "priceBox",
+     "OfferPriceBoxResponse"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "startValidityDate",
+     "OffsetDateTime"
+    ],
+    [
+     "endValidityDate",
+     "OffsetDateTime"
+    ],
+    [
+     "startValidityDateUTC",
+     "OffsetDateTime"
+    ],
+    [
+     "endValidityDateUTC",
+     "OffsetDateTime"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "packaging",
+     "String"
+    ],
+    [
+     "pricePerUnit",
+     "String"
+    ],
+    [
+     "featured",
+     "OfferFeaturedResponse"
+    ],
+    [
+     "productIds",
+     "List<String>"
+    ]
+   ]
+  },
+  "ScheduleModel": {
+   "fields": [
+    [
+     "isOpen",
+     "boolean"
+    ],
+    [
+     "isTemporarilyClosed",
+     "boolean"
+    ],
+    [
+     "isPermanentlyClosed",
+     "boolean"
+    ],
+    [
+     "openingHours",
+     "List<OpeningHoursModel>"
+    ],
+    [
+     "reopensOn",
+     "String"
+    ],
+    [
+     "willCloseOn",
+     "Integer"
+    ],
+    [
+     "willOpenAt",
+     "WillOpenAtModel"
+    ]
+   ]
+  },
+  "OpeningHoursModel": {
+   "fields": [
+    [
+     "from",
+     "String"
+    ],
+    [
+     "to",
+     "String"
+    ]
+   ]
+  },
+  "WillOpenAtModel": {
+   "fields": [
+    [
+     "day",
+     "int"
+    ],
+    [
+     "hour",
+     "String"
+    ]
+   ]
+  },
+  "ManualCampaignResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "introductoryTextTitle",
+     "String"
+    ],
+    [
+     "introductoryTextDescription",
+     "String"
+    ],
+    [
+     "endTextTitle",
+     "String"
+    ],
+    [
+     "endTextDescription",
+     "String"
+    ],
+    [
+     "secondaryEndTextTitle",
+     "String"
+    ],
+    [
+     "secondaryEndTextDescription",
+     "String"
+    ],
+    [
+     "type",
+     "z04"
+    ],
+    [
+     "survey",
+     "UserSurveyResponse"
+    ],
+    [
+     "status",
+     "o04"
+    ],
+    [
+     "userStatus",
+     "psw"
+    ],
+    [
+     "termsAndConditions",
+     "String"
+    ],
+    [
+     "moreInfoUrl",
+     "String"
+    ]
+   ]
+  },
+  "z04": {
+   "enum": [
+    "P",
+    "A",
+    "A",
+    "CSATA",
+    "CSATS",
+    "R",
+    "U"
+   ]
+  },
+  "UserSurveyResponse": {
+   "fields": [
+    [
+     "questions",
+     "List<SurveyQuestionResponse>"
+    ],
+    [
+     "logics",
+     "List<SurveyLogicResponse>"
+    ]
+   ]
+  },
+  "SurveyQuestionResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "text",
+     "String"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "answerType",
+     "ul0"
+    ],
+    [
+     "answerSubtype",
+     "jl0"
+    ],
+    [
+     "answers",
+     "List<AnswerResponse>"
+    ],
+    [
+     "isOptional",
+     "boolean"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ]
+   ]
+  },
+  "ul0": {
+   "enum": [
+    "S",
+    "F",
+    "M",
+    "R"
+   ]
+  },
+  "jl0": {
+   "enum": [
+    "N",
+    "S",
+    "N",
+    "C"
+   ]
+  },
+  "AnswerResponse": {
+   "fields": [
+    [
+     "label",
+     "String"
+    ],
+    [
+     "value",
+     "String"
+    ],
+    [
+     "order",
+     "int"
+    ]
+   ]
+  },
+  "SurveyLogicResponse": {
+   "fields": [
+    [
+     "reference",
+     "String"
+    ],
+    [
+     "actions",
+     "List<ActionResponse>"
+    ]
+   ]
+  },
+  "ActionResponse": {
+   "fields": [
+    [
+     "type",
+     "pd"
+    ],
+    [
+     "details",
+     "ActionDetailsResponse"
+    ],
+    [
+     "condition",
+     "ActionConditionResponse"
+    ]
+   ]
+  },
+  "class": {
+   "enum": [
+    "J"
+   ]
+  },
+  "ActionDetailsResponse": {
+   "fields": [
+    [
+     "to",
+     "ToResponse"
+    ]
+   ]
+  },
+  "ToResponse": {
+   "fields": [
+    [
+     "type",
+     "g8v"
+    ],
+    [
+     "value",
+     "String"
+    ]
+   ]
+  },
+  "g8v": {
+   "enum": [
+    "Q",
+    "T",
+    "S"
+   ]
+  },
+  "ActionConditionResponse": {
+   "fields": [
+    [
+     "operation",
+     "ldk"
+    ],
+    [
+     "vars",
+     "List<ActionConditionResponse>"
+    ],
+    [
+     "type",
+     "ayw"
+    ],
+    [
+     "value",
+     "String"
+    ]
+   ]
+  },
+  "ldk": {
+   "enum": [
+    "E",
+    "A",
+    "O",
+    "S",
+    "A",
+    "N"
+   ]
+  },
+  "ayw": {
+   "enum": [
+    "Q",
+    "A",
+    "C"
+   ]
+  },
+  "o04": {
+   "enum": [
+    "R",
+    "A",
+    "F",
+    "C"
+   ]
+  },
+  "psw": {
+   "enum": [
+    "A",
+    "P",
+    "C"
+   ]
+  },
+  "CampaignResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "introductoryTextTitle",
+     "String"
+    ],
+    [
+     "introductoryTextDescription",
+     "String"
+    ],
+    [
+     "endTextTitle",
+     "String"
+    ],
+    [
+     "endTextDescription",
+     "String"
+    ],
+    [
+     "secondaryEndTextTitle",
+     "String"
+    ],
+    [
+     "secondaryEndTextDescription",
+     "String"
+    ],
+    [
+     "type",
+     "z04"
+    ],
+    [
+     "survey",
+     "UserSurveyResponse"
+    ],
+    [
+     "url",
+     "String"
+    ],
+    [
+     "structure",
+     "List<Integer>"
+    ],
+    [
+     "termsAndConditions",
+     "String"
+    ],
+    [
+     "moreInfoUrl",
+     "String"
+    ]
+   ]
+  },
+  "CompleteUserCampaignRequest": {
+   "fields": [
+    [
+     "answers",
+     "List<AnswerCompletedRequest>"
+    ]
+   ]
+  },
+  "AnswerCompletedRequest": {
+   "fields": [
+    [
+     "questionId",
+     "String"
+    ],
+    [
+     "value",
+     "String"
+    ],
+    [
+     "order",
+     "Integer"
+    ],
+    [
+     "skipped",
+     "boolean"
+    ]
+   ]
+  },
+  "CouponPlusApiModel": {
+   "fields": [
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "promotionCode",
+     "String"
+    ],
+    [
+     "type",
+     "CouponPlusApiModel.a"
+    ],
+    [
+     "endDate",
+     "Instant"
+    ],
+    [
+     "clusters",
+     "List<CouponPlusApiModel.Cluster>"
+    ]
+   ]
+  },
+  "Cluster": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "type",
+     "CouponPlusApiModel.b"
+    ],
+    [
+     "order",
+     "int"
+    ],
+    [
+     "status",
+     "CouponPlusApiModel.a"
+    ],
+    [
+     "reachedAmount",
+     "BigDecimal"
+    ],
+    [
+     "reachedPercent",
+     "float"
+    ],
+    [
+     "configuration",
+     "CouponPlusApiModel.Configuration"
+    ],
+    [
+     "goals",
+     "List<CouponPlusApiModel.Goal>"
+    ],
+    [
+     "intro",
+     "CouponPlusApiModel.Intro"
+    ],
+    [
+     "initialMessage",
+     "CouponPlusApiModel.InitialMessage"
+    ]
+   ]
+  },
+  "Goal": {
+   "fields": [
+    [
+     "status",
+     "CouponPlusApiModel.a"
+    ],
+    [
+     "value",
+     "BigDecimal"
+    ],
+    [
+     "prize",
+     "CouponPlusApiModel.Prize"
+    ]
+   ]
+  },
+  "Discount": {
+   "fields": [
+    [
+     "amount",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "Subscription": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "parentId",
+     "String"
+    ]
+   ]
+  },
+  "Branding": {
+   "fields": [
+    [
+     "backgroundColor",
+     "String"
+    ],
+    [
+     "amountTextColor",
+     "String"
+    ],
+    [
+     "iconUrl",
+     "String"
+    ]
+   ]
+  },
+  "DetailInformation": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ]
+   ]
+  },
+  "Partner": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "backgroundColor",
+     "String"
+    ],
+    [
+     "amountTextColor",
+     "String"
+    ],
+    [
+     "goalIconUrl",
+     "String"
+    ]
+   ]
+  },
+  "InitialMessage": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "ctaText",
+     "String"
+    ],
+    [
+     "altTextImage",
+     "String"
+    ]
+   ]
+  },
+  "ClickandpickCartAddProductRequestModel": {
+   "fields": [
+    [
+     "quantity",
+     "int"
+    ]
+   ]
+  },
+  "ClickandpickCartCartResponseModel": {
+   "fields": [
+    [
+     "storeId",
+     "String"
+    ],
+    [
+     "price",
+     "ClickandpickCartPriceModel"
+    ],
+    [
+     "totalItems",
+     "int"
+    ],
+    [
+     "productsInTheShop",
+     "List<ClickandpickCartProductResponseModel>"
+    ],
+    [
+     "productsNotAvailable",
+     "List<ClickandpickCartProductResponseModel>"
+    ],
+    [
+     "pickUpDate",
+     "ClickandpickPickUpDateModel"
+    ]
+   ]
+  },
+  "ClickandpickCartProductResponseModel": {
+   "fields": [
+    [
+     "productId",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "quantity",
+     "int"
+    ],
+    [
+     "price",
+     "BigDecimal"
+    ],
+    [
+     "stock",
+     "int"
+    ],
+    [
+     "maxProductsReservation",
+     "int"
+    ],
+    [
+     "status",
+     "zd5"
+    ],
+    [
+     "originalAmount",
+     "BigDecimal"
+    ],
+    [
+     "infoText",
+     "String"
+    ],
+    [
+     "brand",
+     "String"
+    ]
+   ]
+  },
+  "zd5": {
+   "enum": [
+    "Ok",
+    "Partial",
+    "Out"
+   ]
+  },
+  "ClickandpickCartAddProductResponseModel": {
+   "fields": [
+    [
+     "quantityAdded",
+     "int"
+    ],
+    [
+     "quantityOfProductInCart",
+     "int"
+    ],
+    [
+     "totalItems",
+     "int"
+    ],
+    [
+     "location_table",
+     "List<String>"
+    ]
+   ]
+  },
+  "ClickandpickCartCheckoutRequestModel": {
+   "fields": [
+    [
+     "products",
+     "List<ClickandpickCartCheckoutProductModel>"
+    ],
+    [
+     "totalPrice",
+     "BigDecimal"
+    ]
+   ]
+  },
+  "ClickandpickCartCheckoutProductModel": {
+   "fields": [
+    [
+     "productId",
+     "String"
+    ],
+    [
+     "quantity",
+     "int"
+    ]
+   ]
+  },
+  "ShortcutDTO": {
+   "fields": [
+    [
+     "productId",
+     "String"
+    ],
+    [
+     "icon",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "deeplink",
+     "String"
+    ]
+   ]
+  },
+  "FlyerCategory": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ],
+    [
+     "flyers",
+     "List<Flyer>"
+    ]
+   ]
+  },
+  "Flyer": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "name",
+     "String"
+    ],
+    [
+     "endDate",
+     "LocalDateTime"
+    ],
+    [
+     "startDate",
+     "LocalDateTime"
+    ],
+    [
+     "offerEndDate",
+     "LocalDateTime"
+    ],
+    [
+     "offerStartDate",
+     "LocalDateTime"
+    ],
+    [
+     "thumbnailUrl",
+     "String"
+    ],
+    [
+     "viewUrl",
+     "String"
+    ],
+    [
+     "downloadUrl",
+     "String"
+    ]
+   ]
+  },
+  "StampCardBenefitsModel": {
+   "fields": [
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "endDate",
+     "OffsetDateTime"
+    ],
+    [
+     "status",
+     "StampCardBenefitsModel.a"
+    ],
+    [
+     "configuration",
+     "StampCardBenefitsModel.ConfigurationModel"
+    ],
+    [
+     "userPromotion",
+     "StampCardBenefitsModel.UserPromotionModel"
+    ],
+    [
+     "intro",
+     "StampCardBenefitsModel.IntroModel"
+    ]
+   ]
+  },
+  "ConfigurationModel": {
+   "fields": [
+    [
+     "stampIconUrl",
+     "String"
+    ],
+    [
+     "unitsPerPrize",
+     "int"
+    ],
+    [
+     "unitValue",
+     "BigDecimal"
+    ],
+    [
+     "maxUnitsPerPurchase",
+     "Integer"
+    ],
+    [
+     "maxBenefitsPerUser",
+     "Integer"
+    ],
+    [
+     "unitsAvailable",
+     "StampCardBenefitsModel.UnitsAvailable"
+    ]
+   ]
+  },
+  "UnitsAvailable": {
+   "fields": [
+    [
+     "total",
+     "int"
+    ],
+    [
+     "available",
+     "int"
+    ]
+   ]
+  },
+  "IntroModel": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "altTextImage",
+     "String"
+    ]
+   ]
+  },
+  "UserPromotionModel": {
+   "fields": [
+    [
+     "unitsAchieved",
+     "int"
+    ],
+    [
+     "completedCards",
+     "int"
+    ],
+    [
+     "hasCards",
+     "StampCardBenefitsModel.a"
+    ]
+   ]
+  },
+  "Card": {
+   "fields": [
+    [
+     "id",
+     "UUID"
+    ],
+    [
+     "benefitId",
+     "String"
+    ]
+   ]
+  },
+  "DetailModel": {
+   "fields": [
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "endDate",
+     "OffsetDateTime"
+    ],
+    [
+     "information",
+     "DetailModel.Information"
+    ],
+    [
+     "prizes",
+     "List<DetailModel.Prize>"
+    ],
+    [
+     "configuration",
+     "DetailModel.Configuration"
+    ],
+    [
+     "userPromotion",
+     "DetailModel.UserPromotion"
+    ]
+   ]
+  },
+  "Benefit": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "completedDate",
+     "Instant"
+    ]
+   ]
+  },
+  "PurchaseSummaryAggregatorResponse": {
+   "fields": [
+    [
+     "ticketId",
+     "String"
+    ],
+    [
+     "purchaseAmountWithoutCurrency",
+     "String"
+    ],
+    [
+     "purchaseAmount",
+     "BigDecimal"
+    ],
+    [
+     "isDeletedTicket",
+     "boolean"
+    ],
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "isHtml",
+     "boolean"
+    ],
+    [
+     "externalProducts",
+     "Map<String, ? extends Object>"
+    ],
+    [
+     "hasHtmlDocument",
+     "boolean"
+    ],
+    [
+     "origin",
+     "PurchaseSummaryAggregatorResponse.a"
+    ],
+    [
+     "purchaseSavingsWithoutCurrency",
+     "String"
+    ],
+    [
+     "purchaseSavings",
+     "BigDecimal"
+    ],
+    [
+     "vendor",
+     "VendorResponse"
+    ]
+   ]
+  },
+  "MarketPlaceDTO": {
+   "fields": [
+    [
+     "sortByControls",
+     "List<SortByDTO>"
+    ],
+    [
+     "items",
+     "List<RewardDTO>"
+    ],
+    [
+     "total",
+     "int"
+    ],
+    [
+     "filterControls",
+     "List<? extends FiltersDTOInterface>"
+    ],
+    [
+     "availablePoints",
+     "int"
+    ],
+    [
+     "marketplaceBannerIndex",
+     "Integer"
+    ],
+    [
+     "pointsToExpire",
+     "int"
+    ],
+    [
+     "nextExpirationDate",
+     "Instant"
+    ]
+   ]
+  },
+  "SortByDTO": {
+   "fields": [
+    [
+     "id",
+     "int"
+    ],
+    [
+     "translationKey",
+     "String"
+    ],
+    [
+     "isEnabled",
+     "boolean"
+    ],
+    [
+     "isSelected",
+     "boolean"
+    ]
+   ]
+  },
+  "RewardDTO": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "points",
+     "int"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "subType",
+     "RewardDTO.a"
+    ],
+    [
+     "summary",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "state",
+     "RewardDTO.b"
+    ],
+    [
+     "isBlocked",
+     "boolean"
+    ],
+    [
+     "isExchangedPreviously",
+     "boolean"
+    ],
+    [
+     "isFavorite",
+     "boolean"
+    ],
+    [
+     "isDisabled",
+     "boolean"
+    ],
+    [
+     "availablePromotions",
+     "int"
+    ],
+    [
+     "exchangeButtonIsEnabled",
+     "boolean"
+    ],
+    [
+     "availableOn",
+     "Instant"
+    ],
+    [
+     "discountValue",
+     "double"
+    ],
+    [
+     "discountTitle",
+     "String"
+    ],
+    [
+     "daysUntilExpiration",
+     "int"
+    ],
+    [
+     "relatedOnlineArticleNumber",
+     "String"
+    ],
+    [
+     "price",
+     "Float"
+    ],
+    [
+     "level",
+     "int"
+    ]
+   ]
+  },
+  "FiltersDTOInterface": {
+   "fields": [
+    [
+     "id",
+     "f3b"
+    ]
+   ]
+  },
+  "f3b": {
+   "enum": [
+    "POINTS",
+    "CATEGORIES",
+    "QUICK_CATEGORY"
+   ]
+  },
+  "RewardDetailDTO": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "summary",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "state",
+     "RewardDTO.b"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "subType",
+     "RewardDTO.a"
+    ],
+    [
+     "points",
+     "int"
+    ],
+    [
+     "availablePoints",
+     "int"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "discountValue",
+     "double"
+    ],
+    [
+     "expirationRewardDate",
+     "Instant"
+    ],
+    [
+     "daysUntilExpiration",
+     "Integer"
+    ],
+    [
+     "productCode",
+     "List<ProductCodeDTO>"
+    ],
+    [
+     "legalTerms",
+     "String"
+    ],
+    [
+     "isBlocked",
+     "boolean"
+    ],
+    [
+     "isFavorite",
+     "boolean"
+    ],
+    [
+     "availablePromotions",
+     "int"
+    ],
+    [
+     "exchangeButtonIsEnabled",
+     "boolean"
+    ],
+    [
+     "availableOn",
+     "Instant"
+    ],
+    [
+     "discountTitle",
+     "String"
+    ],
+    [
+     "minimumTotalPurchaseExpense",
+     "Double"
+    ],
+    [
+     "price",
+     "Float"
+    ],
+    [
+     "level",
+     "int"
+    ]
+   ]
+  },
+  "ProductCodeDTO": {
+   "fields": [
+    [
+     "articleNumber",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ]
+   ]
+  },
+  "PaymentProfileResponse": {
+   "fields": [
+    [
+     "status",
+     "String"
+    ],
+    [
+     "addressId",
+     "String"
+    ],
+    [
+     "countryHasOnlyStore",
+     "boolean"
+    ],
+    [
+     "hasLidlPayActive",
+     "boolean"
+    ],
+    [
+     "paymentMethods",
+     "List<GenericPaymentMethodResponse>"
+    ]
+   ]
+  },
+  "ValidateOTPRequest": {
+   "fields": [
+    [
+     "otp",
+     "String"
+    ]
+   ]
+  },
+  "ValidateOTPResultResponse": {
+   "fields": [
+    [
+     "token",
+     "String"
+    ]
+   ]
+  },
+  "ForgotPinRequest": {
+   "fields": [
+    [
+     "pin",
+     "String"
+    ]
+   ]
+  },
+  "AddressRequest": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "country",
+     "String"
+    ],
+    [
+     "street",
+     "String"
+    ],
+    [
+     "number",
+     "String"
+    ],
+    [
+     "door",
+     "String"
+    ],
+    [
+     "postCode",
+     "String"
+    ],
+    [
+     "city",
+     "String"
+    ]
+   ]
+  },
+  "ChangePinRequest": {
+   "fields": [
+    [
+     "pin",
+     "String"
+    ]
+   ]
+  },
+  "ActivateRequest": {
+   "fields": [
+    [
+     "isActive",
+     "boolean"
+    ]
+   ]
+  },
+  "ActivateResult": {
+   "fields": [
+    [
+     "hasLidlPayActive",
+     "boolean"
+    ]
+   ]
+  },
+  "IsMailVerifiedResult": {
+   "fields": [
+    [
+     "isMailVerified",
+     "boolean"
+    ]
+   ]
+  },
+  "CreateProfileRequest": {
+   "fields": [
+    [
+     "favoriteStore",
+     "String"
+    ]
+   ]
+  },
+  "CreatePinRequest": {
+   "fields": [
+    [
+     "pin",
+     "String"
+    ]
+   ]
+  },
+  "IsMailSentResult": {
+   "fields": [
+    [
+     "isMailSent",
+     "boolean"
+    ]
+   ]
+  },
+  "ValidatePinRequest": {
+   "fields": [
+    [
+     "pin",
+     "String"
+    ]
+   ]
+  },
+  "ValidatePinResult": {
+   "fields": [
+    [
+     "status",
+     "PinValidationStatusResponse"
+    ],
+    [
+     "failedAttempts",
+     "int"
+    ],
+    [
+     "token",
+     "String"
+    ]
+   ]
+  },
+  "DispatchEventBody": {
+   "fields": [
+    [
+     "adTemplateId",
+     "String"
+    ],
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "placementId",
+     "String"
+    ],
+    [
+     "adType",
+     "String"
+    ],
+    [
+     "initialPosition",
+     "Integer"
+    ],
+    [
+     "triggerPosition",
+     "Integer"
+    ]
+   ]
+  },
+  "BrandDealsSessionResponse": {
+   "fields": [
+    [
+     "settings",
+     "BrandDealsSettingsResponse"
+    ],
+    [
+     "visibleAds",
+     "List<BrandDealModel>"
+    ]
+   ]
+  },
+  "BrandDealsSettingsResponse": {
+   "fields": [
+    [
+     "format",
+     "BrandDealsSettingsResponse.a"
+    ],
+    [
+     "autoscroll",
+     "BrandDealsSettingsResponse.AutoScrollSettingsResponse"
+    ]
+   ]
+  },
+  "AutoScrollSettingsResponse": {
+   "fields": [
+    [
+     "enabled",
+     "boolean"
+    ],
+    [
+     "timeIntervalMs",
+     "int"
+    ]
+   ]
+  },
+  "BrandDealModel": {
+   "fields": [
+    [
+     "type",
+     "BrandDealModel.a"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "adId",
+     "String"
+    ],
+    [
+     "adTemplateId",
+     "String"
+    ],
+    [
+     "url",
+     "String"
+    ],
+    [
+     "promotion",
+     "BrandDealModel.PromotionContent"
+    ],
+    [
+     "altText",
+     "String"
+    ],
+    [
+     "adType",
+     "BrandDealModel.b"
+    ],
+    [
+     "position",
+     "int"
+    ],
+    [
+     "sponsoredContent",
+     "BrandDealModel.SponsoredContent"
+    ]
+   ]
+  },
+  "PromotionContent": {
+   "fields": [
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "discount",
+     "String"
+    ]
+   ]
+  },
+  "SponsoredContent": {
+   "fields": [
+    [
+     "advertiserName",
+     "String"
+    ],
+    [
+     "financerName",
+     "String"
+    ]
+   ]
+  },
+  "ClaimEventBody": {
+   "fields": [
+    [
+     "placementId",
+     "String"
+    ],
+    [
+     "initialPosition",
+     "Integer"
+    ],
+    [
+     "triggerPosition",
+     "Integer"
+    ]
+   ]
+  },
+  "CouponCard": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "image",
+     "String"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "offerTitle",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "offerDescriptionShort",
+     "String"
+    ],
+    [
+     "startValidityDate",
+     "Instant"
+    ],
+    [
+     "endValidityDate",
+     "Instant"
+    ],
+    [
+     "isActivated",
+     "boolean"
+    ],
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "isSpecial",
+     "boolean"
+    ],
+    [
+     "hasAsterisk",
+     "boolean"
+    ],
+    [
+     "isHappyHour",
+     "boolean"
+    ],
+    [
+     "tagSpecial",
+     "String"
+    ],
+    [
+     "firstColor",
+     "String"
+    ],
+    [
+     "firstFontColor",
+     "String"
+    ],
+    [
+     "secondaryColor",
+     "String"
+    ],
+    [
+     "secondaryFontColor",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseCampaignGroupsModel": {
+   "fields": [
+    [
+     "groups",
+     "List<DigitalLeafletResponseCampaignGroupModel>"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseCampaignGroupModel": {
+   "fields": [
+    [
+     "campaigns",
+     "List<DigitalLeafletResponseCampaignModel>"
+    ],
+    [
+     "title",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseCampaignModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "kind",
+     "k99"
+    ],
+    [
+     "image4x3Url",
+     "String"
+    ]
+   ]
+  },
+  "k99": {
+   "enum": [
+    "S",
+    "O"
+   ]
+  },
+  "DigitalLeafletResponseCampaignDetailModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "products",
+     "List<DigitalLeafletResponseProductModel>"
+    ],
+    [
+     "config",
+     "DigitalLeafletResponseCampaignDetailConfigModel"
+    ],
+    [
+     "related",
+     "List<DigitalLeafletResponseCampaignRelatedModel>"
+    ],
+    [
+     "disclaimers",
+     "DigitalLeafletResponseCampaignDetailDisclaimersModel"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseProductModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "wawiId",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "additionalInfo",
+     "String"
+    ],
+    [
+     "logos",
+     "List<DigitalLeafletResponseProductDetailLogoModel>"
+    ],
+    [
+     "mainPrice",
+     "DigitalLeafletResponsePriceModel"
+    ],
+    [
+     "isOnline",
+     "boolean"
+    ],
+    [
+     "isStore",
+     "boolean"
+    ],
+    [
+     "energeticTypes",
+     "List<? extends l99>"
+    ],
+    [
+     "badges",
+     "List<DigitalLeafletResponseProductDetailBadgeModel>"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "articleNumber",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseCampaignDetailConfigModel": {
+   "fields": [
+    [
+     "showViewedBadge",
+     "boolean"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseCampaignRelatedModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "image4x3Url",
+     "String"
+    ]
+   ]
+  },
+  "DigitalLeafletResponseCampaignDetailDisclaimersModel": {
+   "fields": [
+    [
+     "content",
+     "List<String>"
+    ]
+   ]
+  },
+  "StampCardLotteryModel": {
+   "fields": [
+    [
+     "promotionId",
+     "UUID"
+    ],
+    [
+     "promotionCode",
+     "String"
+    ],
+    [
+     "endDate",
+     "OffsetDateTime"
+    ],
+    [
+     "status",
+     "StampCardLotteryModel.a"
+    ],
+    [
+     "configuration",
+     "StampCardLotteryModel.Configuration"
+    ],
+    [
+     "userPromotion",
+     "StampCardLotteryModel.UserPromotion"
+    ],
+    [
+     "intro",
+     "StampCardLotteryModel.Intro"
+    ],
+    [
+     "outro",
+     "StampCardLotteryModel.Outro"
+    ]
+   ]
+  },
+  "Outro": {
+   "fields": [
+    [
+     "description",
+     "String"
+    ],
+    [
+     "winnersUrl",
+     "String"
+    ]
+   ]
+  },
+  "Participation": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "isSent",
+     "boolean"
+    ],
+    [
+     "creationDate",
+     "OffsetDateTime"
+    ]
+   ]
+  },
+  "OnBoardingDTO": {
+   "fields": [
+    [
+     "hasCompletedOnboarding",
+     "boolean"
+    ],
+    [
+     "pointsToBeAdded",
+     "int"
+    ]
+   ]
+  },
+  "OnboardingCompletedDTO": {
+   "fields": [
+    [
+     "pointsAdded",
+     "int"
+    ]
+   ]
+  },
+  "LidlPlusConfigurationAppApiFeaturesGetCountriesV3ModelsCountryResponse": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "defaultName",
+     "String"
+    ],
+    [
+     "enDefaultName",
+     "String"
+    ],
+    [
+     "active",
+     "Boolean"
+    ],
+    [
+     "languages",
+     "List<LidlPlusConfigurationAppApiDomainLanguage>"
+    ],
+    [
+     "minimunAge",
+     "Integer"
+    ],
+    [
+     "defaultGeoLocation",
+     "LidlPlusConfigurationAppApiDomainGeoLocation"
+    ]
+   ]
+  },
+  "LidlPlusConfigurationAppApiDomainLanguage": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "defaultName",
+     "String"
+    ],
+    [
+     "enDefaultName",
+     "String"
+    ],
+    [
+     "active",
+     "Boolean"
+    ],
+    [
+     "default",
+     "Boolean"
+    ]
+   ]
+  },
+  "LidlPlusConfigurationAppApiDomainGeoLocation": {
+   "fields": [
+    [
+     "latitude",
+     "Double"
+    ],
+    [
+     "longitude",
+     "Double"
+    ]
+   ]
+  },
+  "SessionsCreateResponseModel": {
+   "fields": [
+    [
+     "url",
+     "String"
+    ]
+   ]
+  },
+  "SessionsShareCreateResponseModel": {
+   "fields": [
+    [
+     "url",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ]
+   ]
+  },
+  "UndoRewardBody": {
+   "fields": [
+    [
+     "userPromotionId",
+     "String"
+    ]
+   ]
+  },
+  "UndoRewardDataDTO": {
+   "fields": [
+    [
+     "expiredPoints",
+     "int"
+    ],
+    [
+     "pointsToReturn",
+     "int"
+    ],
+    [
+     "userPromotionId",
+     "String"
+    ]
+   ]
+  },
+  "DeleteAllAlertsModel": {
+   "fields": [
+    [
+     "count",
+     "String"
+    ]
+   ]
+  },
+  "DeleteAlertModel": {
+   "fields": [
+    [
+     "alertId",
+     "String"
+    ]
+   ]
+  },
+  "GetTipcardModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "type",
+     "String"
+    ]
+   ]
+  },
+  "DeviceStatusModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "status",
+     "String"
+    ]
+   ]
+  },
+  "RVMRequest": {
+   "fields": [
+    [
+     "qrCode",
+     "String"
+    ]
+   ]
+  },
+  "PromotionEventModel": {
+   "fields": [
+    [
+     "actionLocation",
+     "?"
+    ],
+    [
+     "endValidityDate",
+     "?"
+    ],
+    [
+     "userPromotionId",
+     "?"
+    ],
+    [
+     "redemptionChannel",
+     "?"
+    ],
+    [
+     "elementLevel",
+     "?"
+    ],
+    [
+     "skin",
+     "?"
+    ]
+   ]
+  },
+  "PendingAlertsRequestModel": {
+   "fields": [
+    [
+     "alerts",
+     "List<PendingAlertsModel>"
+    ]
+   ]
+  },
+  "PendingAlertsModel": {
+   "fields": [
+    [
+     "userAlertId",
+     "String"
+    ],
+    [
+     "sharedAlertId",
+     "String"
+    ]
+   ]
+  },
+  "AnnouncementViewedRequest": {
+   "fields": [
+    [
+     "notificationId",
+     "String"
+    ]
+   ]
+  },
+  "AnnouncementModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "primaryText",
+     "String"
+    ],
+    [
+     "secondaryText",
+     "String"
+    ],
+    [
+     "url",
+     "String"
+    ],
+    [
+     "notificationId",
+     "String"
+    ],
+    [
+     "deepLink",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "acceptButtonText",
+     "String"
+    ],
+    [
+     "storeKey",
+     "String"
+    ],
+    [
+     "alternativeTextImage",
+     "String"
+    ]
+   ]
+  },
+  "LocalizationResponse": {
+   "fields": [
+    [
+     "country",
+     "String"
+    ],
+    [
+     "language",
+     "String"
+    ],
+    [
+     "version",
+     "String"
+    ],
+    [
+     "resources",
+     "Map<String, String>"
+    ]
+   ]
+  },
+  "AlertModel": {
+   "fields": [
+    [
+     "alertId",
+     "String"
+    ],
+    [
+     "alertConfigId",
+     "String"
+    ],
+    [
+     "alertUniId",
+     "String"
+    ],
+    [
+     "section",
+     "qw"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "text",
+     "String"
+    ],
+    [
+     "date",
+     "OffsetDateTime"
+    ],
+    [
+     "elementId",
+     "String"
+    ],
+    [
+     "hasNewFeature",
+     "boolean"
+    ],
+    [
+     "status",
+     "AlertModel.a"
+    ],
+    [
+     "sharedAlertId",
+     "String"
+    ]
+   ]
+  },
+  "qw": {
+   "enum": [
+    "Leaflets",
+    "Coupons",
+    "CouponPlus",
+    "CouponPersonalized",
+    "Scratch",
+    "Roulette",
+    "Penalty",
+    "Brochures",
+    "Purchase",
+    "InviteYourFriends",
+    "Benefits",
+    "CollectingModel",
+    "MyDeposits",
+    "AskAboutMe",
+    "BadgesStarted",
+    "BadgesReached",
+    "Offers",
+    "BadgesExpire",
+    "BadgesNew",
+    "OnlineShop",
+    "ShoppingList",
+    "AboutMe",
+    "EmployeeBenefits",
+    "ClickAndCollect",
+    "OpenGiftSecretBoxes",
+    "OpenGiftDailyDeals",
+    "LidlConnectPortingRejected",
+    "LidlConnectPortingCanceled",
+    "LidlConnectPortingCompleted",
+    "LidlConnectInvoiceAdded",
+    "LidlConnectPrePaymentFailed",
+    "LidlConnectPaymentFailure",
+    "LidlConnectWarningBeforeSuspension",
+    "LidlConnectEmergencyServicesAvailability",
+    "LidlConnectFinalTermination",
+    "LidlConnectDeleteAccount",
+    "LidlConnectDropOffOnboarding",
+    "LidlConnectPreLaunch",
+    "LidlConnectLaunchDay",
+    "LidlConnectNewContractLimit",
+    "Unknown"
+   ]
+  },
+  "ActivePromotionsCount": {
+   "fields": [
+    [
+     "activeCount",
+     "int"
+    ]
+   ]
+  },
+  "PromotionsByArticleResponseModel": {
+   "fields": [
+    [
+     "promotions",
+     "List<ResponsePromotionByArticleModel>"
+    ]
+   ]
+  },
+  "ResponsePromotionByArticleModel": {
+   "fields": [
+    [
+     "articlesIds",
+     "List<String>"
+    ],
+    [
+     "categoriesIds",
+     "List<String>"
+    ],
+    [
+     "expiresInDays",
+     "int"
+    ],
+    [
+     "happyHourValidity",
+     "HappyHourValidityModel"
+    ],
+    [
+     "hasAsterisk",
+     "boolean"
+    ],
+    [
+     "id",
+     "String"
+    ],
+    [
+     "isHappyHour",
+     "boolean"
+    ],
+    [
+     "isMultiArticle",
+     "boolean"
+    ],
+    [
+     "minimumConditions",
+     "List<MinimumConditionModel>"
+    ],
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "redemptionChannels",
+     "List<String>"
+    ],
+    [
+     "status",
+     "String"
+    ],
+    [
+     "texts",
+     "TextsModel"
+    ],
+    [
+     "validity",
+     "ValidityModel"
+    ],
+    [
+     "isTest",
+     "boolean"
+    ],
+    [
+     "level",
+     "Integer"
+    ],
+    [
+     "combinable",
+     "boolean"
+    ]
+   ]
+  },
+  "HappyHourValidityModel": {
+   "fields": [
+    [
+     "fromHour",
+     "String"
+    ],
+    [
+     "toHour",
+     "String"
+    ]
+   ]
+  },
+  "MinimumConditionModel": {
+   "fields": [
+    [
+     "value",
+     "String"
+    ],
+    [
+     "type",
+     "String"
+    ]
+   ]
+  },
+  "TextsModel": {
+   "fields": [
+    [
+     "discountTitle",
+     "String"
+    ],
+    [
+     "termsAndCondition",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ]
+   ]
+  },
+  "ValidityModel": {
+   "fields": [
+    [
+     "start",
+     "OffsetDateTime"
+    ],
+    [
+     "end",
+     "OffsetDateTime"
+    ]
+   ]
+  },
+  "ArticleSelection": {
+   "fields": [
+    [
+     "articleSelection",
+     "List<PromotionArticleSelected>"
+    ]
+   ]
+  },
+  "PromotionArticleSelected": {
+   "fields": [
+    [
+     "groupId",
+     "String"
+    ],
+    [
+     "articleId",
+     "String"
+    ]
+   ]
+  },
+  "PromotionTitleModel": {
+   "fields": [
+    [
+     "id",
+     "?"
+    ],
+    [
+     "title",
+     "?"
+    ]
+   ]
+  },
+  "PromotionCardModel": {
+   "fields": [
+    [
+     "prices",
+     "PromotionOfferModel"
+    ],
+    [
+     "levels",
+     "PromotionLevelsModel"
+    ]
+   ]
+  },
+  "PromotionOfferModel": {
+   "fields": [
+    [
+     "type",
+     "min"
+    ],
+    [
+     "originalPrice",
+     "String"
+    ],
+    [
+     "promotionPrice",
+     "String"
+    ],
+    [
+     "basePrice",
+     "String"
+    ],
+    [
+     "lowestPrice",
+     "String"
+    ],
+    [
+     "packaging",
+     "String"
+    ]
+   ]
+  },
+  "min": {
+   "enum": [
+    "MonetaryDiscount",
+    "FreeProduct",
+    "SpecialPrice"
+   ]
+  },
+  "PromotionLevelsModel": {
+   "fields": [
+    [
+     "level",
+     "int"
+    ],
+    [
+     "isLocked",
+     "boolean"
+    ]
+   ]
+  },
+  "PromotionListModel": {
+   "fields": [
+    [
+     "sections",
+     "List<PromotionListSectionModel>"
+    ]
+   ]
+  },
+  "PromotionListSectionModel": {
+   "fields": [
+    [
+     "name",
+     "String"
+    ],
+    [
+     "promotions",
+     "List<PromotionModel>"
+    ]
+   ]
+  },
+  "PromotionModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "image",
+     "PromotionImageModel"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "discount",
+     "PromotionDiscountModel"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "validity",
+     "PromotionValidityModel"
+    ],
+    [
+     "isActivated",
+     "boolean"
+    ],
+    [
+     "isProcessing",
+     "boolean"
+    ],
+    [
+     "availability",
+     "PromotionAvailabilityModel"
+    ],
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "isHappyHour",
+     "boolean"
+    ],
+    [
+     "isSpecial",
+     "boolean"
+    ],
+    [
+     "channel",
+     "String"
+    ],
+    [
+     "channels",
+     "List<String>"
+    ],
+    [
+     "stores",
+     "List<String>"
+    ],
+    [
+     "groups",
+     "List<PromotionGroupModel>"
+    ],
+    [
+     "specialPromotion",
+     "PromotionSpecialModel"
+    ],
+    [
+     "prices",
+     "PromotionOfferModel"
+    ],
+    [
+     "navigationURL",
+     "String"
+    ],
+    [
+     "isTest",
+     "boolean"
+    ],
+    [
+     "articleIds",
+     "List<String>"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "levels",
+     "PromotionLevelsModel"
+    ],
+    [
+     "skin",
+     "String"
+    ]
+   ]
+  },
+  "PromotionImageModel": {
+   "fields": [
+    [
+     "url",
+     "String"
+    ],
+    [
+     "altText",
+     "String"
+    ]
+   ]
+  },
+  "PromotionDiscountModel": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "hasAsterisk",
+     "boolean"
+    ],
+    [
+     "scope",
+     "String"
+    ],
+    [
+     "purchaseType",
+     "String"
+    ],
+    [
+     "posType",
+     "String"
+    ]
+   ]
+  },
+  "PromotionValidityModel": {
+   "fields": [
+    [
+     "start",
+     "OffsetDateTime"
+    ],
+    [
+     "end",
+     "OffsetDateTime"
+    ]
+   ]
+  },
+  "PromotionAvailabilityModel": {
+   "fields": [
+    [
+     "apologizeStatus",
+     "boolean"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "text",
+     "String"
+    ]
+   ]
+  },
+  "PromotionGroupModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "articles",
+     "List<PromotionGroupArticle>"
+    ],
+    [
+     "title",
+     "String"
+    ]
+   ]
+  },
+  "PromotionGroupArticle": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "image",
+     "PromotionImageModel"
+    ],
+    [
+     "selected",
+     "boolean"
+    ]
+   ]
+  },
+  "PromotionSpecialModel": {
+   "fields": [
+    [
+     "ConstraintLayout",
+     "String"
+    ],
+    [
+     "color",
+     "String"
+    ],
+    [
+     "fontColor",
+     "String"
+    ]
+   ]
+  },
+  "PromotionDetailModel": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "promotionId",
+     "String"
+    ],
+    [
+     "images",
+     "List<PromotionImageModel>"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "crossSelling",
+     "String"
+    ],
+    [
+     "discount",
+     "PromotionDiscountModel"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "validity",
+     "PromotionValidityModel"
+    ],
+    [
+     "isSpecial",
+     "boolean"
+    ],
+    [
+     "isActivated",
+     "boolean"
+    ],
+    [
+     "isProcessing",
+     "boolean"
+    ],
+    [
+     "availability",
+     "PromotionAvailabilityModel"
+    ],
+    [
+     "isRedeemed",
+     "boolean"
+    ],
+    [
+     "isHappyHour",
+     "boolean"
+    ],
+    [
+     "isSegmented",
+     "boolean"
+    ],
+    [
+     "stores",
+     "List<String>"
+    ],
+    [
+     "groups",
+     "List<PromotionGroupModel>"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "characteristics",
+     "PromotionCharacteristicsModel"
+    ],
+    [
+     "conditions",
+     "PromotionConditionsModel"
+    ],
+    [
+     "specialPromotion",
+     "PromotionSpecialModel"
+    ],
+    [
+     "prices",
+     "PromotionOfferModel"
+    ],
+    [
+     "articles",
+     "List<PromotionArticleModel>"
+    ],
+    [
+     "articlesDiscounted",
+     "List<PromotionArticleModel>"
+    ],
+    [
+     "channel",
+     "String"
+    ],
+    [
+     "channels",
+     "List<String>"
+    ],
+    [
+     "navigationURL",
+     "String"
+    ],
+    [
+     "levels",
+     "PromotionLevelsModel"
+    ],
+    [
+     "skin",
+     "String"
+    ]
+   ]
+  },
+  "PromotionCharacteristicsModel": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ]
+   ]
+  },
+  "PromotionConditionsModel": {
+   "fields": [
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ]
+   ]
+  },
+  "PromotionArticleModel": {
+   "fields": [
+    [
+     "id",
+     "long"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "units",
+     "String"
+    ],
+    [
+     "image",
+     "String"
+    ],
+    [
+     "brand",
+     "String"
+    ],
+    [
+     "channel",
+     "String"
+    ]
+   ]
+  },
+  "FreePointsDTO": {
+   "fields": [
+    [
+     "campaigns",
+     "List<CampaignDTO>"
+    ],
+    [
+     "internalRewards",
+     "List<InternalRewardDTO>"
+    ],
+    [
+     "finished",
+     "FinishedDTO"
+    ]
+   ]
+  },
+  "InternalRewardDTO": {
+   "fields": [
+    [
+     "id",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "description",
+     "String"
+    ],
+    [
+     "points",
+     "int"
+    ],
+    [
+     "status",
+     "String"
+    ],
+    [
+     "type",
+     "String"
+    ],
+    [
+     "isBlocked",
+     "boolean"
+    ]
+   ]
+  },
+  "FinishedDTO": {
+   "fields": [
+    [
+     "campaigns",
+     "List<CampaignDTO>"
+    ],
+    [
+     "internalRewards",
+     "List<InternalRewardDTO>"
+    ]
+   ]
+  },
+  "ClickandpickCampaignResponseModel": {
+   "fields": [
+    [
+     "areReservationsPossible",
+     "boolean"
+    ]
+   ]
+  },
+  "TravelListResponse": {
+   "fields": [
+    [
+     "listUrl",
+     "String"
+    ],
+    [
+     "priceFormat",
+     "PriceFormat"
+    ],
+    [
+     "travels",
+     "List<Travel>"
+    ]
+   ]
+  },
+  "PriceFormat": {
+   "fields": [
+    [
+     "currency",
+     "String"
+    ],
+    [
+     "currencyPosition",
+     "hp7"
+    ],
+    [
+     "decimalDelimiter",
+     "String"
+    ],
+    [
+     "groupingSeparator",
+     "String"
+    ]
+   ]
+  },
+  "hp7": {
+   "enum": [
+    "Left",
+    "Right"
+   ]
+  },
+  "Travel": {
+   "fields": [
+    [
+     "hasAdditionalInfo",
+     "boolean"
+    ],
+    [
+     "detailUrl",
+     "String"
+    ],
+    [
+     "id",
+     "String"
+    ],
+    [
+     "imageUrl",
+     "String"
+    ],
+    [
+     "includedFlight",
+     "boolean"
+    ],
+    [
+     "nightsCount",
+     "int"
+    ],
+    [
+     "price",
+     "Price"
+    ],
+    [
+     "subtitle",
+     "String"
+    ],
+    [
+     "title",
+     "String"
+    ],
+    [
+     "type",
+     "String"
+    ]
+   ]
+  },
+  "Price": {
+   "fields": [
+    [
+     "discountMessage",
+     "String"
+    ],
+    [
+     "discounted",
+     "BigDecimal"
+    ],
+    [
+     "original",
+     "BigDecimal"
+    ]
+   ]
+  }
+ },
+ "rn": [
+  {
+   "group": "Lidl Connect, Mobilfunk",
+   "host": "https://connect.lidlplus.com/app-api",
+   "paths": [
+    "/v1/:countryCode/accounts",
+    "/v1/:countryCode/accounts/dashboard",
+    "/v1/:countryCode/accounts/subscriptions/:subscriptionId",
+    "/v1/:countryCode/accounts/subscriptions/:subscriptionId/download-contract-summary",
+    "/v1/:countryCode/accounts/subscriptions/:subscriptionId/security-info",
+    "/v1/:countryCode/accounts/subscriptions/:subscriptionId/sim-profile",
+    "/v1/:countryCode/accounts/subscriptions/:subscriptionId/sim-swap",
+    "/v1/:countryCode/accounts/subscriptions/:subscriptionId/sms-preferences",
+    "/v1/:countryCode/activation-code",
+    "/v1/:countryCode/billing-address",
+    "/v1/:countryCode/invoice/:invoiceId/download",
+    "/v1/:countryCode/invoice/:subscriptionId",
+    "/v1/:countryCode/offboarding",
+    "/v1/:countryCode/onboarding/complete",
+    "/v1/:countryCode/onboarding/enroll",
+    "/v1/:countryCode/onboarding/images",
+    "/v1/:countryCode/orders/:orderId/retrypayment",
+    "/v1/:countryCode/orders/:orderId/status",
+    "/v1/:countryCode/otp/:sessionId/validate",
+    "/v1/:countryCode/otp/send",
+    "/v1/:countryCode/payment-method",
+    "/v1/:countryCode/payment-method/:paymentMethodId",
+    "/v1/:countryCode/plans/:SubscriptionId/alias",
+    "/v1/:countryCode/plans/:SubscriptionId/cancel",
+    "/v1/:countryCode/plans/:SubscriptionId/cancel-portability",
+    "/v1/:countryCode/plans/:SubscriptionId/reactivate",
+    "/v1/:countryCode/plans/:SubscriptionId/withdrawal",
+    "/v1/:countryCode/plans/activate",
+    "/v1/:countryCode/portability/:portabilityId/viewed",
+    "/v1/:countryCode/products"
+   ]
+  },
+  {
+   "group": "Mitarbeiterprogramm",
+   "host": "https://employeeprogram.lidlplus.com/bff-api",
+   "paths": [
+    "/v1/:countryCode/employee/activate-coupon",
+    "/v1/:countryCode/employee/deactivate-coupon",
+    "/v1/:countryCode/events/ingest",
+    "/v1/:countryCode/home",
+    "/v1/:countryCode/home/user-model",
+    "/v1/:countryCode/usermodel",
+    "/v4/:countryCode/employee/section",
+    "/v4/:countryCode/home-module"
+   ]
+  },
+  {
+   "group": "Family Club",
+   "host": "https://familyclub.lidl.com",
+   "paths": [
+    "/api/translations/familyclub/v1/",
+    "/api/user-login?country_code=",
+    "/api/user/familyclub/v1/",
+    "/api/user/familyclub/v1/child",
+    "/api/user/familyclub/v1/children",
+    "/api/user/familyclub/v1/pregnancy",
+    "/api/user/familyclub/v1/userinfo/reactivate",
+    "/api/user/familyclub/v1/userinfo/unsubscribe"
+   ]
+  },
+  {
+   "group": "Badges, Achievements, Store-Challenge",
+   "host": "https://badges.lidl.com",
+   "paths": [
+    "/achievements/",
+    "/achievements/:id",
+    "/achievements/me/",
+    "/achievements/me/unread?language=",
+    "/achievements/me/visualize/",
+    "/achievements/me/visualize?language=",
+    "/assignreward?language=",
+    "/badges/",
+    "/badges/:id",
+    "/badges/:id/riddle",
+    "/badges/me/",
+    "/badges/me/visualize/new?language=",
+    "/badges/me?language=",
+    "/benefits",
+    "/benefits/me?language=",
+    "/inputs?language=",
+    "/promotions?countryCode=",
+    "/settings/me?language=",
+    "/startPeriod/visualize",
+    "/termsAndConditions?language=",
+    "/translations?language=",
+    "/userStatus/me?language="
+   ]
+  },
+  {
+   "group": "Rezepte",
+   "host": "https://recipes-core-api-stackit.recipes.lidl",
+   "paths": [
+    "/api/V1/products/",
+    "/api/V1/recipes/slug/",
+    "/api/v1/recommendations/recipes/personalized/generic",
+    "/api/v1/recommendations/recipes/personalized/generic-no-user",
+    "/api/v1/translations"
+   ]
+  },
+  {
+   "group": "Coupid, Spiel",
+   "host": "https://coupid.lidlplus.com",
+   "paths": [
+    "/play/v1/game/",
+    "/play/v1/game?countryCode="
+   ]
+  },
+  {
+   "group": "Sonstiges",
+   "host": "",
+   "paths": [
+    "/address/redirect?client_id=",
+    "/api/v1/",
+    "/api/v1/authenticated",
+    "/api/v1/mobile/profile",
+    "/api/v1/mobile/version",
+    "/api/v2/",
+    "/api/v3/",
+    "/home-integrations/api/v1/loyalty/me?country_code=",
+    "/integrations/api/v1/",
+    "/users/api/v1/",
+    "/v1/"
+   ]
   }
  ]
 }

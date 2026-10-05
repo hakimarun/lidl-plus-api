@@ -13,7 +13,7 @@ Dann http://127.0.0.1:8777 oeffnen.
 Bindet absichtlich nur an 127.0.0.1. Tokens liegen in tokens.json neben
 dieser Datei im Klartext, nicht teilen oder committen.
 """
-import base64, hashlib, http.server, json, os, secrets, socketserver, ssl
+import base64, hashlib, http.server, json, os, re, secrets, socketserver, ssl
 import time, urllib.parse, urllib.request, urllib.error
 
 HERE        = os.path.dirname(os.path.abspath(__file__))
@@ -276,12 +276,23 @@ class H(http.server.BaseHTTPRequestHandler):
                 data = str(raw_body).encode()
         t0 = time.time()
         st, rh, rb = http_call(method, url, headers, data)
+        retried = False
+        # Manche Endpunkte verlangen Accept-Language mit genau 2 Zeichen.
+        # Bei 400 mit Sprach-Laengenfehler einmal mit Kurzform nachfassen.
+        al = headers.get("Accept-Language", "")
+        if st == 400 and "-" in al and re.search(rb"(?i)language", rb or b"") and (b"2" in (rb or b"")):
+            short_al = al.split("-")[0]
+            if short_al and short_al != al:
+                h2 = dict(headers); h2["Accept-Language"] = short_al
+                st2, rh2, rb2 = http_call(method, url, h2, data)
+                if st2 != 400:
+                    st, rh, rb, headers, retried = st2, rh2, rb2, h2, True
         dt = int((time.time() - t0) * 1000)
         ct = rh.get("Content-Type", "")
         try: parsed = json.loads(rb); text = None
         except Exception: parsed = None; text = rb.decode(errors="replace")
         self._send(200, {"status": st, "ms": dt, "content_type": ct,
-                         "json": parsed, "text": text,
+                         "json": parsed, "text": text, "retried_short_lang": retried,
                          "sent_headers": {k: ("Bearer ..." if k == "Authorization" else v)
                                           for k, v in headers.items()},
                          "final_url": url})
