@@ -291,8 +291,10 @@ class H(http.server.BaseHTTPRequestHandler):
         ct = rh.get("Content-Type", "")
         try: parsed = json.loads(rb); text = None
         except Exception: parsed = None; text = rb.decode(errors="replace")
+        allow = rh.get("Allow") or rh.get("allow")
         self._send(200, {"status": st, "ms": dt, "content_type": ct,
                          "json": parsed, "text": text, "retried_short_lang": retried,
+                         "allow": allow,
                          "sent_headers": {k: ("Bearer ..." if k == "Authorization" else v)
                                           for k, v in headers.items()},
                          "final_url": url})
