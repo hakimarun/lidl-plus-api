@@ -439,7 +439,40 @@ function buildBody(ep,body){
   let bodyTa=null
   const bodyParam=ep.params.find(p=>p.kind==="Body")
   if(bodyParam){
-    body.append(el("div",{class:"k",style:"margin:6px 0 4px"},"Body JSON, Typ "+bodyParam.type))
+    const bm=ep.bodyModel&&DATA.models&&DATA.models[ep.bodyModel]
+    // Aus dem Body-Modell echte Eingabefelder bauen, die das JSON zusammensetzen
+    if(bm&&bm.fields&&bm.fields.length){
+      body.append(el("div",{class:"k",style:"margin:6px 0 4px"},"Body-Felder, Typ "+bodyParam.type))
+      const ftbl=el("table",{class:"params"})
+      ftbl.append(el("tr",{},el("th",{},"Feld"),el("th",{},"Typ"),el("th",{},"Wert")))
+      const finputs=[]
+      const isNum=t=>/^(int|Integer|long|Long|short|Short|Byte|byte)$/.test(t)
+      const isDec=t=>/^(Double|double|Float|float|BigDecimal)$/.test(t)
+      const isBool=t=>/^(Boolean|boolean)$/.test(t)
+      const rebuild=()=>{
+        const o={}
+        for(const fi of finputs){
+          const v=fi.inp.value
+          if(v==="")continue
+          if(isBool(fi.type))o[fi.name]=(v==="true"||v==="1")
+          else if(isNum(fi.type))o[fi.name]=parseInt(v,10)
+          else if(isDec(fi.type))o[fi.name]=parseFloat(v)
+          else if(/^[\[{]/.test(v.trim())){try{o[fi.name]=JSON.parse(v)}catch(e){o[fi.name]=v}}
+          else o[fi.name]=v
+        }
+        bodyTa.value=JSON.stringify(o,null,2)
+      }
+      for(const [fn,ft] of bm.fields){
+        const inp=el("input",{class:"mono",placeholder:isBool(ft)?"true / false":ft})
+        inp.oninput=rebuild
+        finputs.push({name:fn,type:ft,inp})
+        ftbl.append(el("tr",{},el("td",{class:"mono"},fn),el("td",{class:"k mono"},ft),el("td",{},inp)))
+      }
+      body.append(ftbl)
+      body.append(el("div",{class:"k",style:"margin:10px 0 4px"},"oder Body direkt als JSON"))
+    }else{
+      body.append(el("div",{class:"k",style:"margin:6px 0 4px"},"Body JSON, Typ "+bodyParam.type))
+    }
     bodyTa=el("textarea",{placeholder:"{ }"})
     body.append(bodyTa)
   }
