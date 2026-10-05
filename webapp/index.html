@@ -379,9 +379,6 @@ function buildBody(ep,body){
   body.append(meta)
   for(const h of ep.headers)body.append(el("span",{class:"pill"},"Header "+h))
   for(const f of ep.flags)body.append(el("span",{class:"pill"},f))
-  if(ep.verb!=="GET"&&ep.verb!=="HEAD")
-    body.append(el("div",{class:"warn",style:"margin:10px 0"},
-      "Dieser Endpunkt veraendert Daten. Senden fragt noch einmal nach."))
   const mb=modelBox("Antwort-Modell",ep.respModel); if(mb)body.append(mb)
   const bb=modelBox("Body-Modell",ep.bodyModel); if(bb)body.append(bb)
 
