@@ -68,6 +68,7 @@ Die Tokens werden lokal in `webapp/tokens.json` abgelegt. Diese Datei steht in
 - Der Proxy wiederholt bei einem Sprach-Längenfehler automatisch mit zweistelligem Accept-Language.
 - Die React-Native-Pfade erscheinen als eigener, nur lesender Abschnitt.
 - Eine Postman-Collection liegt unter `webapp/postman_collection.json` und ist in der App verlinkt.
+- Eine OpenAPI-3.1-Datei liegt unter `webapp/openapi.json`, ebenfalls verlinkt. Hosts stehen je Operation unter `servers`, geteilte Pfade listen mehrere Hosts.
 
 ## Abhängigkeiten
 
@@ -85,6 +86,7 @@ pip install -r requirements.txt
 - `webapp/index.html` die Oberfläche
 - `webapp/endpoints.json` die Endpunkt-Daten, Modelle und RN-Pfade
 - `webapp/postman_collection.json` importierbare Postman-Collection
+- `webapp/openapi.json` OpenAPI-3.1-Spezifikation
 - `webapp/url-handler/` optionaler Handler für das App-Schema
 - `lidl_auth.py` dasselbe als Kommandozeilen-Werkzeug
 - `LIDL_PLUS_API.md` und `lidl_plus_api.json` die rekonstruierte API-Doku

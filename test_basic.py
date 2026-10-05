@@ -36,7 +36,17 @@ def test_postman():
     assert p["info"]["name"] and p["item"]
     print(f"ok postman ({sum(len(f['item']) for f in p['item'])} requests)")
 
+def test_openapi():
+    o = json.load(open(os.path.join(HERE, "webapp", "openapi.json")))
+    assert o["openapi"].startswith("3.")
+    assert o["paths"] and o["components"]["schemas"]
+    for path, item in o["paths"].items():
+        assert path.startswith("/")
+        for method, op in item.items():
+            assert op["responses"]  # jede Operation hat Responses
+    print(f"ok openapi ({len(o['paths'])} paths, {len(o['components']['schemas'])} schemas)")
+
 if __name__ == "__main__":
     srv = load(os.path.join(HERE, "webapp", "server.py"))
-    test_pkce(srv); test_decompress(srv); test_endpoints(); test_postman()
+    test_pkce(srv); test_decompress(srv); test_endpoints(); test_postman(); test_openapi()
     print("alle Tests bestanden")
