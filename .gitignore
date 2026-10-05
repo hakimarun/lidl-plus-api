@@ -1,0 +1,19 @@
+# Zugangsdaten, niemals committen
+tokens.json
+tokens*.json
+client_secret.txt
+.env
+.env.*
+.vercel
+
+# Build- und Laufzeitartefakte
+__pycache__/
+*.pyc
+webapp/url-handler/LidlPlusCatcher.app/
+catch.log
+
+# Testartefakte und lokale Daten
+endpoint_test_report.txt
+
+# macOS
+.DS_Store

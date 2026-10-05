@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lidl Plus API</title>
+<style>
+:root{
+  --bg:#ffffff; --fg:#141414; --muted:#6b6b6b; --line:#e6e6e6;
+  --soft:#f6f6f6; --accent:#111111; --field:#fafafa;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);
+  font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:inherit}
+code,pre,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+header{position:sticky;top:0;z-index:5;background:var(--bg);
+  border-bottom:1px solid var(--line);padding:18px 24px;display:flex;
+  gap:20px;align-items:center;flex-wrap:wrap}
+header h1{font-size:17px;font-weight:600;margin:0;letter-spacing:.2px}
+header .sub{color:var(--muted);font-size:13px}
+.spacer{flex:1}
+.auth-mini{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted)}
+.dot{width:8px;height:8px;border-radius:50%;background:#c9c9c9;display:inline-block}
+.dot.on{background:#1f9d55}
+.btn{appearance:none;border:1px solid var(--line);background:var(--bg);color:var(--fg);
+  padding:7px 13px;border-radius:7px;font-size:13px;cursor:pointer}
+.btn:hover{background:var(--soft)}
+.btn.solid{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.solid:hover{opacity:.9}
+.btn.small{padding:5px 10px;font-size:12px}
+.layout{display:grid;grid-template-columns:256px 1fr;min-height:calc(100vh - 61px)}
+nav{border-right:1px solid var(--line);padding:16px 10px;position:sticky;top:61px;
+  height:calc(100vh - 61px);overflow:auto}
+nav input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;
+  background:var(--field);font-size:13px;margin-bottom:12px}
+nav a{display:flex;justify-content:space-between;gap:8px;padding:6px 10px;border-radius:7px;
+  text-decoration:none;color:var(--fg);font-size:13px}
+nav a:hover{background:var(--soft)}
+nav a .n{color:var(--muted);font-size:11px}
+main{padding:28px 32px;max-width:1000px}
+.intro{color:var(--muted);font-size:13px;margin-bottom:26px;max-width:720px}
+.mod{margin-bottom:40px}
+.mod h2{font-size:15px;font-weight:600;margin:0 0 2px}
+.mod .mdesc{color:var(--muted);font-size:13px;margin-bottom:4px}
+.mod .base{color:var(--muted);font-size:12px;margin-bottom:14px}
+.ep{border:1px solid var(--line);border-radius:10px;margin-bottom:12px;overflow:hidden}
+.ep .top{display:flex;gap:12px;align-items:center;padding:12px 14px;cursor:pointer}
+.ep .top:hover{background:var(--soft)}
+.verb{font:600 11px/1 ui-monospace,Menlo,monospace;padding:5px 7px;border-radius:5px;
+  border:1px solid var(--line);min-width:52px;text-align:center;color:var(--muted)}
+.verb.GET{color:#15803d;border-color:#bfe3c6}
+.verb.POST{color:#1d4ed8;border-color:#c3d2f7}
+.verb.PUT,.verb.PATCH{color:#b45309;border-color:#eddab0}
+.verb.DELETE{color:#b91c1c;border-color:#efc4c4}
+.ep .path{font-size:13px;flex:1;word-break:break-all}
+.ep .d{color:var(--muted);font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:40%}
+.body{display:none;border-top:1px solid var(--line);padding:16px 14px;background:#fcfcfc}
+.body.open{display:block}
+.meta{color:var(--muted);font-size:12px;margin-bottom:12px;word-break:break-all}
+.pill{display:inline-block;border:1px solid var(--line);border-radius:20px;padding:2px 9px;
+  font-size:11px;color:var(--muted);margin:0 6px 6px 0}
+table.params{width:100%;border-collapse:collapse;margin:8px 0 16px;font-size:13px}
+table.params th,table.params td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+table.params th{color:var(--muted);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+table.params input{width:100%;padding:6px 8px;border:1px solid var(--line);border-radius:6px;
+  background:var(--field);font-size:13px;font-family:ui-monospace,Menlo,monospace}
+.k{color:var(--muted);font-size:11px}
+textarea{width:100%;min-height:90px;padding:9px;border:1px solid var(--line);border-radius:8px;
+  background:var(--field);font:12px/1.5 ui-monospace,Menlo,monospace;resize:vertical}
+.row{display:flex;gap:10px;align-items:center;margin:10px 0}
+.urlbox{flex:1;padding:8px 10px;border:1px solid var(--line);border-radius:8px;
+  background:#fff;font:12px/1.4 ui-monospace,Menlo,monospace;word-break:break-all}
+.resp{margin-top:14px;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:none}
+.resp.show{display:block}
+.resp .st{display:flex;gap:14px;align-items:center;padding:9px 12px;background:var(--soft);
+  font-size:12px;border-bottom:1px solid var(--line)}
+.resp pre{margin:0;padding:12px;max-height:380px;overflow:auto;font-size:12px}
+.code{font-weight:600}
+.code.ok{color:#15803d}.code.err{color:#b91c1c}
+.note{color:var(--muted);font-size:12px}
+dialog{border:1px solid var(--line);border-radius:12px;padding:0;width:min(560px,92vw)}
+dialog::backdrop{background:rgba(0,0,0,.28)}
+.dlg{padding:22px}
+.dlg h3{margin:0 0 4px;font-size:16px}
+.dlg p{color:var(--muted);font-size:13px;margin:6px 0 14px}
+.dlg label{display:block;font-size:12px;color:var(--muted);margin:12px 0 4px}
+.dlg input{width:100%;padding:9px 11px;border:1px solid var(--line);border-radius:8px;
+  background:var(--field);font-size:13px}
+.dlg .acts{display:flex;gap:10px;justify-content:flex-end;margin-top:18px}
+.inline2{display:flex;gap:10px}
+.inline2>div{flex:1}
+.warn{background:#fcf8ec;border:1px solid #ecdca6;color:#7a5c12;border-radius:8px;
+  padding:9px 11px;font-size:12px;margin-bottom:14px}
+@media(max-width:820px){.layout{grid-template-columns:1fr}nav{display:none}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Lidl Plus API</h1>
+    <div class="sub">Statisch aus der App 17.11.4 rekonstruiert. Produktionsumgebung.</div>
+  </div>
+  <div class="spacer"></div>
+  <div class="auth-mini">
+    <span class="dot" id="authDot"></span>
+    <span id="authText">nicht angemeldet</span>
+  </div>
+  <button class="btn" id="btnAuth">Anmelden</button>
+  <button class="btn small" id="btnRefresh" style="display:none">Token erneuern</button>
+  <button class="btn small" id="btnLogout" style="display:none">Abmelden</button>
+</header>
+
+<div class="layout">
+  <nav>
+    <input id="filter" placeholder="Suchen nach Pfad oder Modul">
+    <div id="navlist"></div>
+  </nav>
+  <main>
+    <div class="intro">
+      Alle Aufrufe laufen über den lokalen Proxy, damit CORS kein Problem ist. Angemeldete
+      Endpunkte brauchen ein Token, das du oben über Anmelden mit deinem eigenen Konto holst.
+      Die Beschreibungen sind aus Pfad und Methode abgeleitet und daher knapp.
+    </div>
+    <div class="warn">
+      Nur dein eigenes Konto und deine eigenen Daten. Antworten kommen direkt vom Lidl Server und
+      sind nicht gefiltert. Manche Endpunkte verändern Daten, zum Beispiel Löschen oder Senden.
+    </div>
+    <div id="list"></div>
+  </main>
+</div>
+
+<dialog id="authDlg">
+  <div class="dlg">
+    <h3>Anmelden</h3>
+    <p>Login läuft über OAuth2 mit PKCE gegen accounts.lidl.com. Nach dem Login antwortet
+       Lidl mit einer Weiterleitung auf com.lidlplus.app als Schema. Dieses Schema gehört
+       der App, der Browser kann es nicht öffnen und meldet einen Fehler. Das ist normal.
+       Der Code steckt in dieser Weiterleitung, du liest ihn aus dem Netzwerk Protokoll
+       und fügst ihn unten ein.</p>
+    <details style="font-size:12px;color:var(--muted);margin:0 0 6px">
+      <summary style="cursor:pointer">Code mit dem Web Inspector abgreifen</summary>
+      <div style="margin-top:8px;line-height:1.6">
+        1. In Safari einmalig das Entwickler Menü aktivieren unter Einstellungen,
+           Erweitert, Funktionen für Webentwickler anzeigen.<br>
+        2. Vor dem Login den Web Inspector öffnen mit Wahl Befehl I, Reiter Netzwerk,
+           und Protokoll behalten einschalten.<br>
+        3. Einloggen. In der Liste die Zeile callback suchen, Status 302.<br>
+        4. Diese Zeile anklicken, bei den Antwort Kopfzeilen das Feld Location kopieren
+           oder nur den Wert hinter code daraus.<br>
+        5. Unten einfügen. Die ganze Adresse oder nur der Code funktionieren beide.<br>
+        In Chrome gleich, Reiter Network, Preserve log, Zeile callback, Header Location.
+      </div>
+    </details>
+    <div class="inline2">
+      <div><label>Land</label><input id="aCountry" value="DE"></div>
+      <div><label>Sprache</label><input id="aLang" value="de"></div>
+    </div>
+    <div class="acts">
+      <button class="btn" id="aClose">Schließen</button>
+      <button class="btn solid" id="aStart">Login öffnen</button>
+    </div>
+    <div id="aStep2" style="display:none">
+      <label>Weiterleitungs Adresse oder nur den Code einfügen</label>
+      <input id="aCallback" placeholder="com.lidlplus.app://callback?code=...  oder nur der Code">
+      <div class="acts">
+        <button class="btn solid" id="aExchange">Token holen</button>
+      </div>
+      <div class="note" id="aMsg"></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const $=(s,r=document)=>r.querySelector(s)
+const el=(t,a={},...c)=>{const n=document.createElement(t);for(const k in a){if(k==="class")n.className=a[k];else if(k==="html")n.innerHTML=a[k];else n.setAttribute(k,a[k])}for(const x of c)n.append(x);return n}
+let DATA=null
+
+async function j(url,opts){const r=await fetch(url,opts);return r.json()}
+
+async function refreshStatus(){
+  const s=await j("/api/auth/status")
+  const on=s.authenticated
+  $("#authDot").classList.toggle("on",on)
+  let txt=on?("angemeldet "+(s.country||"")):"nicht angemeldet"
+  const lc=s.last_catch
+  if(!on&&lc&&(Date.now()/1000-lc.at)<15)txt="Weiterleitung empfangen: "+lc.msg
+  $("#authText").textContent=txt
+  $("#btnRefresh").style.display=on?"":"none"
+  $("#btnLogout").style.display=on?"":"none"
+  $("#btnAuth").textContent=on?"Konto wechseln":"Anmelden"
+}
+
+// ---- Datenquellen fuer Dropdowns (Vorschlagslisten)
+const _opt={}
+async function proxyGet(url,auth){
+  const cc=DATA.authCountry||"DE", lang=(DATA.authLang||"de")
+  const r=await j("/api/proxy",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({method:"GET",url,headers:{Country:cc,"Accept-Language":lang+"-"+cc},auth:auth!==false})})
+  return r&&r.json
+}
+async function loadCountries(){
+  if(_opt.countries)return _opt.countries
+  const a=await proxyGet("https://appgateway.lidlplus.com/configurationapp/v3/countries",false)
+  _opt.countries=(Array.isArray(a)?a:[]).map(c=>({value:c.id,label:(c.id+" "+(c.defaultName||"")).trim(),
+    languages:(c.languages||[]).map(l=>l.id)}))
+  return _opt.countries
+}
+async function loadLanguages(country){
+  const cs=await loadCountries()
+  const c=cs.find(x=>x.value===country)||cs.find(x=>x.value===(DATA.authCountry))
+  const L=(c&&c.languages&&c.languages.length)?c.languages:["DE","EN"]
+  const out=[]
+  for(const x of L){out.push({value:x.toLowerCase(),label:x.toLowerCase()});out.push({value:x,label:x})}
+  return out
+}
+async function loadStores(country){
+  const k="st:"+country; if(_opt[k])return _opt[k]
+  const a=await proxyGet("https://stores.lidlplus.com/api/v4/"+country,true)
+  _opt[k]=(Array.isArray(a)?a:[]).map(s=>({value:s.storeKey,
+    label:((s.name||"")+" "+(s.locality||"")).trim()||s.storeKey}))
+  return _opt[k]
+}
+async function loadTickets(country){
+  const k="tk:"+country; if(_opt[k])return _opt[k]
+  const a=await proxyGet("https://tickets.lidlplus.com/api/v3/"+country+"/tickets?yearOffset=0",true)
+  const it=Array.isArray(a)?a:((a&&a.tickets)||[])
+  _opt[k]=it.map(t=>({value:t.id,label:((t.date||"").slice(0,10)+" "+(t.totalAmount||"")+" "+(t.id||"")).trim()}))
+  return _opt[k]
+}
+async function loadAcceptLang(country){
+  const cs=await loadCountries(); const c=cs.find(x=>x.value===country)
+  const L=(c&&c.languages&&c.languages.length)?c.languages:["DE"]
+  const out=[]
+  for(const x of L){out.push({value:x.toLowerCase()+"-"+country,label:x.toLowerCase()+"-"+country});out.push({value:x.toLowerCase(),label:x.toLowerCase()})}
+  return out
+}
+async function loadCoupons(country){
+  const k="cp:"+country; if(_opt[k])return _opt[k]
+  const a=await proxyGet("https://coupons.lidlplus.com/app/api/v4/promotionslist",true)
+  const secs=(a&&a.sections)||[]
+  const pr=[].concat(...secs.map(s=>s.promotions||[]))
+  _opt[k]=pr.map(p=>({value:p.id,label:((p.title||"")+" "+(p.discount||"")).trim()||p.id}))
+  return _opt[k]
+}
+async function loadDeposits(country){
+  const k="dp:"+country; if(_opt[k])return _opt[k]
+  const a=await proxyGet("https://deposits.lidlplus.com/api/v1/"+country+"/deposits",true)
+  const it=(a&&a.deposits)||[]
+  _opt[k]=it.map(x=>({value:x.id,label:((x.amount||"")+" "+((x.depositDate||"").slice(0,10))).trim()||x.id}))
+  return _opt[k]
+}
+async function loadTpb(country){
+  const k="tpb:"+country; if(_opt[k])return _opt[k]
+  const a=await proxyGet("https://partnersbenefits.lidlplus.com/app/v2/"+country+"/campaigns",true)
+  const it=Array.isArray(a)?a:[]
+  _opt[k]=it.map(x=>({value:x.id,label:((x.provider||"")+" "+(x.description||"")).trim().slice(0,60)||x.id}))
+  return _opt[k]
+}
+async function loadFlash(country){
+  const k="fs:"+country; if(_opt[k])return _opt[k]
+  const a=await proxyGet("https://flashsales.lidlplus.com/api/v1/"+country+"/all",true)
+  const it=Array.isArray(a)?a:((a&&(a.flashSales||a.items))||[])
+  _opt[k]=it.map(x=>({value:x.id||x.flashSaleId,label:(x.title||x.name||x.id||"").toString()}))
+  return _opt[k]
+}
+async function loadSurveys(country){
+  const k="sv:"+country; if(_opt[k])return _opt[k]
+  // dieser Endpunkt will Accept-Language mit 2 Zeichen
+  const r=await j("/api/proxy",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({method:"GET",url:"https://surveys.lidlplus.com/api/v2/"+country+"/surveys",
+      headers:{Country:country,"Accept-Language":(DATA.authLang||"de")},auth:true})})
+  const a=r&&r.json, it=Array.isArray(a)?a:((a&&(a.surveys||a.items))||[])
+  _opt[k]=it.map(x=>({value:x.campaignId||x.id||x.surveyId,
+    label:(x.title||x.name||x.campaignId||x.id||"").toString()}))
+  return _opt[k]
+}
+// Feldname und Modul -> Quelle. Leicht erweiterbar.
+const LISTSRC=["store","ticketId","couponId","depositId","tpbCampaign","flashSale","survey"]
+function sourceFor(p,module){
+  const n=(p.name||"").toLowerCase()
+  if(["country","countrycode","countryid","isocountrycode","zoneid"].includes(n))return "country"
+  if(["language","languagecode","lang"].includes(n))return "language"
+  if(["storeid","storekey","store"].includes(n))return "store"
+  if(n==="accept-language")return "acceptLang"
+  if(module==="tickets"&&n==="id")return "ticketId"
+  if(module==="coupons"&&n==="id")return "couponId"
+  if(module==="deposits"&&(n==="depositid"||n==="id"))return "depositId"
+  if(module==="thirdpartybenefit"&&(n==="campaignid"||n==="id"))return "tpbCampaign"
+  if(module==="flashsales"&&(n==="flashsaleid"||n==="id"))return "flashSale"
+  if(module==="surveys"&&(n==="campaignid"||n==="surveyid"))return "survey"
+  return null
+}
+async function getOptions(src,country){
+  if(src==="country")return await loadCountries()
+  if(src==="language")return await loadLanguages(country)
+  if(src==="store")return await loadStores(country)
+  if(src==="ticketId")return await loadTickets(country)
+  if(src==="acceptLang")return await loadAcceptLang(country)
+  if(src==="couponId")return await loadCoupons(country)
+  if(src==="depositId")return await loadDeposits(country)
+  if(src==="tpbCampaign")return await loadTpb(country)
+  if(src==="flashSale")return await loadFlash(country)
+  if(src==="survey")return await loadSurveys(country)
+  return []
+}
+
+function fullUrl(ep,vals){
+  let u=ep.url||ep.path||""
+  for(const p of ep.params){if(p.kind==="Path"){const v=encodeURIComponent(vals["P:"+p.name]||("{"+p.name+"}"));u=u.split("{"+p.name+"}").join(v)}}
+  const qs=[]
+  for(const p of ep.params){if(p.kind==="Query"){const v=vals["Q:"+p.name];if(v!==undefined&&v!=="")qs.push(encodeURIComponent(p.name)+"="+encodeURIComponent(v))}}
+  if(qs.length)u+=(u.includes("?")?"&":"?")+qs.join("&")
+  return u
+}
+
+function renderEp(ep){
+  const body=el("div",{class:"body"})
+  const wrap=el("div",{class:"ep"})
+  const top=el("div",{class:"top"},
+    el("span",{class:"verb "+ep.verb},ep.verb),
+    el("span",{class:"path mono"},ep.path||"(dynamische URL)"),
+    el("span",{class:"d"},ep.desc))
+  top.onclick=()=>{body.classList.toggle("open");if(!body.dataset.built){buildBody(ep,body);body.dataset.built="1"}}
+  wrap.append(top,body)
+  return wrap
+}
+
+function buildBody(ep,body){
+  const meta=el("div",{class:"meta"})
+  meta.append(el("span",{},"Interface "+ep.interface+". "))
+  if(ep.dynamic)meta.append(el("span",{},"Basis URL nicht fest ableitbar, bitte volle URL unten prüfen. "))
+  meta.append(el("span",{},"Antwort Typ "+ (ep.returns||"?")))
+  body.append(meta)
+  for(const h of ep.headers)body.append(el("span",{class:"pill"},"Header "+h))
+  for(const f of ep.flags)body.append(el("span",{class:"pill"},f))
+
+  const vals={}
+  const inputs=ep.params.filter(p=>["Path","Query","Header"].includes(p.kind))
+  const authC=(DATA.authCountry||"DE"), authL=(DATA.authLang||"de")
+  function curCountry(){
+    for(const p of ep.params){if(sourceFor(p,ep.module)==="country"){const v=vals[p.kind[0]+":"+p.name];if(v)return v}}
+    return authC
+  }
+  if(inputs.length){
+    const tbl=el("table",{class:"params"})
+    tbl.append(el("tr",{},el("th",{},"Art"),el("th",{},"Name"),el("th",{},"Typ"),el("th",{},"Wert")))
+    for(const p of inputs){
+      const key=p.kind[0]+":"+p.name
+      const src=sourceFor(p,ep.module)
+      let inp,cell
+      if(src){
+        const dlId="dl_"+Math.random().toString(36).slice(2)
+        const dl=el("datalist",{id:dlId})
+        inp=el("input",{class:"mono",list:dlId,autocomplete:"off",placeholder:"Auswahl laden..."})
+        if(src==="country"){inp.value=authC}
+        else if(src==="language"){inp.value=authL}
+        else if(src==="acceptLang"){inp.value=authL+"-"+authC}
+        if(inp.value)vals[key]=inp.value
+        const fill=async()=>{
+          const cc=curCountry()
+          if(inp.dataset.cc===cc&&dl.children.length)return
+          inp.dataset.cc=cc
+          inp.placeholder="lade..."
+          const opts=await getOptions(src,cc)
+          dl.innerHTML=""
+          for(const o of opts.slice(0,5000))dl.append(el("option",{value:o.value},o.label))
+          inp.placeholder=opts.length?(opts.length+" Vorschlaege"):"keine Daten"
+          if(LISTSRC.includes(src)&&opts[0]&&(!inp.value||inp.value===inp.dataset.auto)){
+            inp.value=opts[0].value;inp.dataset.auto=opts[0].value;vals[key]=inp.value;upd()}
+        }
+        if(LISTSRC.includes(src))inp.addEventListener("focus",fill)
+        else fill()
+        cell=el("div",{},inp,dl)
+      }else{
+        inp=el("input",{class:"mono"})
+        cell=inp
+      }
+      inp.oninput=()=>{vals[key]=inp.value;upd()}
+      tbl.append(el("tr",{},el("td",{class:"k"},p.kind),el("td",{class:"mono"},p.name||"-"),
+        el("td",{class:"k mono"},p.type),el("td",{},cell)))
+    }
+    body.append(tbl)
+  }
+
+  let bodyTa=null
+  const bodyParam=ep.params.find(p=>p.kind==="Body")
+  if(bodyParam){
+    body.append(el("div",{class:"k",style:"margin:6px 0 4px"},"Body JSON, Typ "+bodyParam.type))
+    bodyTa=el("textarea",{placeholder:"{ }"})
+    body.append(bodyTa)
+  }
+
+  const urlBox=el("div",{class:"urlbox"})
+  const sendBtn=el("button",{class:"btn solid small"},"Senden")
+  const noAuthBtn=el("button",{class:"btn small"},"Ohne Token")
+  const row=el("div",{class:"row"},urlBox,sendBtn)
+  if(ep.verb==="GET")row.append(noAuthBtn)
+  body.append(row)
+
+  const resp=el("div",{class:"resp"})
+  body.append(resp)
+
+  function upd(){urlBox.textContent=fullUrl(ep,vals)}
+  upd()
+
+  async function send(withAuth){
+    let parsedBody=undefined
+    if(bodyTa&&bodyTa.value.trim()){
+      try{parsedBody=JSON.parse(bodyTa.value)}catch(e){alert("Body ist kein gültiges JSON");return}
+    }
+    const headers={}
+    for(const p of ep.params)if(p.kind==="Header"){const v=vals["H:"+p.name];if(v)headers[p.name]=v}
+    sendBtn.disabled=true;sendBtn.textContent="..."
+    const r=await j("/api/proxy",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({method:ep.verb,url:fullUrl(ep,vals),headers,body:parsedBody,auth:withAuth})})
+    sendBtn.disabled=false;sendBtn.textContent="Senden"
+    resp.classList.add("show");resp.innerHTML=""
+    const ok=r.status>=200&&r.status<300
+    resp.append(el("div",{class:"st"},
+      el("span",{class:"code "+(ok?"ok":"err")},"HTTP "+r.status),
+      el("span",{class:"note"},r.ms+" ms"),
+      el("span",{class:"note mono"},r.content_type||"")))
+    const out=r.json!==null?JSON.stringify(r.json,null,2):(r.text||"")
+    resp.append(el("pre",{class:"mono"},out||"(leer)"))
+  }
+  sendBtn.onclick=()=>send(true)
+  noAuthBtn.onclick=()=>send(false)
+}
+
+function render(){
+  const list=$("#list"),nav=$("#navlist")
+  list.innerHTML="";nav.innerHTML=""
+  const f=$("#filter").value.toLowerCase().trim()
+  const byMod={}
+  for(const ep of DATA.endpoints){
+    if(f&&!(ep.path.toLowerCase().includes(f)||ep.module.toLowerCase().includes(f)||ep.desc.toLowerCase().includes(f)))continue
+    ;(byMod[ep.module]=byMod[ep.module]||[]).push(ep)
+  }
+  const mods=DATA.modules.filter(m=>byMod[m.name])
+  for(const m of mods){
+    const a=el("a",{href:"#m-"+m.name},el("span",{},m.name),el("span",{class:"n"},String(byMod[m.name].length)))
+    nav.append(a)
+    const sec=el("div",{class:"mod",id:"m-"+m.name})
+    sec.append(el("h2",{},m.name))
+    if(m.desc)sec.append(el("div",{class:"mdesc"},m.desc))
+    sec.append(el("div",{class:"base mono"},m.base?("Basis "+m.base):"Basis URL variabel"))
+    for(const ep of byMod[m.name])sec.append(renderEp(ep))
+    list.append(sec)
+  }
+  if(!mods.length)list.append(el("div",{class:"note"},"Keine Treffer"))
+}
+
+// auth dialog
+const dlg=$("#authDlg")
+$("#btnAuth").onclick=()=>{$("#aStep2").style.display="none";dlg.showModal()}
+$("#aClose").onclick=()=>dlg.close()
+$("#aStart").onclick=async()=>{
+  const r=await j("/api/auth/start",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({country:$("#aCountry").value,lang:$("#aLang").value})})
+  window.open(r.authorize_url,"_blank")
+  $("#aStep2").style.display=""
+  $("#aMsg").textContent=""
+}
+$("#aExchange").onclick=async()=>{
+  $("#aMsg").textContent="..."
+  const r=await j("/api/auth/exchange",{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({callback_url:$("#aCallback").value})})
+  if(r.ok){$("#aMsg").textContent="Angemeldet.";await refreshStatus();setTimeout(()=>dlg.close(),700)}
+  else $("#aMsg").textContent="Fehler "+(r.error||"")+" "+(typeof r.detail==="string"?r.detail:JSON.stringify(r.detail||""))
+}
+$("#btnRefresh").onclick=async()=>{const r=await j("/api/auth/refresh",{method:"POST"});await refreshStatus();alert(r.ok?"Token erneuert":"Fehler")}
+$("#btnLogout").onclick=async()=>{await j("/api/auth/logout",{method:"POST"});await refreshStatus()}
+$("#filter").oninput=render
+
+;(async()=>{
+  DATA=await j("/endpoints.json")
+  const s=await j("/api/auth/status");DATA.authCountry=s.country||"DE";DATA.authLang=s.lang||"de"
+  render();await refreshStatus()
+  setInterval(refreshStatus,3000)
+})()
+</script>
+</body>
+</html>
